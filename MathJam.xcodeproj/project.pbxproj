@@ -17,12 +17,16 @@
 		FB15665F1641759200F1C1DF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB15665E1641759200F1C1DF /* Default@2x.png */; };
 		FB1566611641759200F1C1DF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1566601641759200F1C1DF /* Default-568h@2x.png */; };
 		FB1566641641759200F1C1DF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB1566621641759200F1C1DF /* MainStoryboard.storyboard */; };
-		FB1566671641759200F1C1DF /* RZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1566661641759200F1C1DF /* RZViewController.m */; };
+		FB1566671641759200F1C1DF /* MissingNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1566661641759200F1C1DF /* MissingNumberViewController.m */; };
 		FB15666F1641759200F1C1DF /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB15666E1641759200F1C1DF /* SenTestingKit.framework */; };
 		FB1566701641759200F1C1DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB15664A1641759200F1C1DF /* UIKit.framework */; };
 		FB1566711641759200F1C1DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB15664C1641759200F1C1DF /* Foundation.framework */; };
 		FB1566791641759200F1C1DF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB1566771641759200F1C1DF /* InfoPlist.strings */; };
 		FB15667C1641759200F1C1DF /* MathJamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB15667B1641759200F1C1DF /* MathJamTests.m */; };
+		FB1566881641787300F1C1DF /* RZMissingNumberEquation.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1566871641787300F1C1DF /* RZMissingNumberEquation.m */; };
+		FB1566891641787300F1C1DF /* RZMissingNumberEquation.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1566871641787300F1C1DF /* RZMissingNumberEquation.m */; };
+		FB15668C1641788D00F1C1DF /* MathFactTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB15668B1641788D00F1C1DF /* MathFactTests.m */; };
+		FB278F951641AF41001BB6FA /* RZCustomSeque.m in Sources */ = {isa = PBXBuildFile; fileRef = FB278F941641AF41001BB6FA /* RZCustomSeque.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,14 +54,20 @@
 		FB15665E1641759200F1C1DF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		FB1566601641759200F1C1DF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FB1566631641759200F1C1DF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		FB1566651641759200F1C1DF /* RZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RZViewController.h; sourceTree = "<group>"; };
-		FB1566661641759200F1C1DF /* RZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RZViewController.m; sourceTree = "<group>"; };
+		FB1566661641759200F1C1DF /* MissingNumberViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MissingNumberViewController.m; sourceTree = "<group>"; };
 		FB15666D1641759200F1C1DF /* MathJamTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathJamTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB15666E1641759200F1C1DF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		FB1566761641759200F1C1DF /* MathJamTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MathJamTests-Info.plist"; sourceTree = "<group>"; };
 		FB1566781641759200F1C1DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FB15667A1641759200F1C1DF /* MathJamTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MathJamTests.h; sourceTree = "<group>"; };
 		FB15667B1641759200F1C1DF /* MathJamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MathJamTests.m; sourceTree = "<group>"; };
+		FB156685164176E200F1C1DF /* MissingNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissingNumberViewController.h; sourceTree = "<group>"; };
+		FB1566861641787300F1C1DF /* RZMissingNumberEquation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZMissingNumberEquation.h; sourceTree = "<group>"; };
+		FB1566871641787300F1C1DF /* RZMissingNumberEquation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZMissingNumberEquation.m; sourceTree = "<group>"; };
+		FB15668A1641788D00F1C1DF /* MathFactTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathFactTests.h; sourceTree = "<group>"; };
+		FB15668B1641788D00F1C1DF /* MathFactTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathFactTests.m; sourceTree = "<group>"; };
+		FB278F931641AF41001BB6FA /* RZCustomSeque.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZCustomSeque.h; sourceTree = "<group>"; };
+		FB278F941641AF41001BB6FA /* RZCustomSeque.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZCustomSeque.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,9 +130,13 @@
 				FB1566591641759200F1C1DF /* RZAppDelegate.h */,
 				FB15665A1641759200F1C1DF /* RZAppDelegate.m */,
 				FB1566621641759200F1C1DF /* MainStoryboard.storyboard */,
-				FB1566651641759200F1C1DF /* RZViewController.h */,
-				FB1566661641759200F1C1DF /* RZViewController.m */,
+				FB156685164176E200F1C1DF /* MissingNumberViewController.h */,
+				FB1566661641759200F1C1DF /* MissingNumberViewController.m */,
 				FB1566511641759200F1C1DF /* Supporting Files */,
+				FB1566861641787300F1C1DF /* RZMissingNumberEquation.h */,
+				FB1566871641787300F1C1DF /* RZMissingNumberEquation.m */,
+				FB278F931641AF41001BB6FA /* RZCustomSeque.h */,
+				FB278F941641AF41001BB6FA /* RZCustomSeque.m */,
 			);
 			path = MathJam;
 			sourceTree = "<group>";
@@ -147,6 +161,8 @@
 				FB15667A1641759200F1C1DF /* MathJamTests.h */,
 				FB15667B1641759200F1C1DF /* MathJamTests.m */,
 				FB1566751641759200F1C1DF /* Supporting Files */,
+				FB15668A1641788D00F1C1DF /* MathFactTests.h */,
+				FB15668B1641788D00F1C1DF /* MathFactTests.m */,
 			);
 			path = MathJamTests;
 			sourceTree = "<group>";
@@ -273,7 +289,9 @@
 			files = (
 				FB1566571641759200F1C1DF /* main.m in Sources */,
 				FB15665B1641759200F1C1DF /* RZAppDelegate.m in Sources */,
-				FB1566671641759200F1C1DF /* RZViewController.m in Sources */,
+				FB1566671641759200F1C1DF /* MissingNumberViewController.m in Sources */,
+				FB1566881641787300F1C1DF /* RZMissingNumberEquation.m in Sources */,
+				FB278F951641AF41001BB6FA /* RZCustomSeque.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +300,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB15667C1641759200F1C1DF /* MathJamTests.m in Sources */,
+				FB1566891641787300F1C1DF /* RZMissingNumberEquation.m in Sources */,
+				FB15668C1641788D00F1C1DF /* MathFactTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +468,7 @@
 				FB1566811641759200F1C1DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB1566821641759200F1C1DF /* Build configuration list for PBXNativeTarget "MathJamTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +477,7 @@
 				FB1566841641759200F1C1DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
