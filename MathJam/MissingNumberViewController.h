@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "RZMissingNumberEquation.h"
+#import "RZCoreDataManager.h"
 
 @interface MissingNumberViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *factOneLabel;
@@ -18,7 +19,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *answerTwoButton;
 @property (weak, nonatomic) IBOutlet UIButton *answerThreeButton;
 @property (weak, nonatomic) IBOutlet UIButton *answerFourButton;
+
+@property (strong, nonatomic) RZCoreDataManager *coreDataManager;
+
 @property (strong, nonatomic) RZMissingNumberEquation *fact;
+
+@property (strong, nonatomic) PracticeSession *practiceSession;
 
 @property (weak, nonatomic) UILabel *missingNumberLabel;
 

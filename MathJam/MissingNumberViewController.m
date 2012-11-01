@@ -7,13 +7,14 @@
 //
 
 #import "MissingNumberViewController.h"
-
+#import "RZCoreDataManager.h"
 
 @interface MissingNumberViewController ()
 
 @end
 
 @implementation MissingNumberViewController
+int wrongAnswerCount = 0;
 
 - (UILabel *)missingNumberLabel{
     switch (self.fact.missingNumberPosition){
@@ -30,14 +31,17 @@
 }
 
 - (void)setUpMissingNumberEquation{
-    self.fact = [RZMissingNumberEquation new];
-    self.fact.mathOperation = RZMathOperationMultiply;
     
-    self.fact.factorOneUpperBound = [NSNumber numberWithInt:12];
-    self.fact.factorOneLowerBound = [NSNumber numberWithInt:1];
-    self.fact.factorTwoUpperBound = [NSNumber numberWithInt:12];
-    self.fact.factorTwoLowerBound = [NSNumber numberWithInt:1];
-    [self.fact generateFactors];
+    //TODO: refactor this logic into a model class and out of the view controller
+    //. perhaps an equation factory
+    self.fact = [RZMissingNumberEquation new];
+    
+    // pass core data stuff
+    self.fact.practiceSession = self.practiceSession;
+    self.fact.coreDataManager = self.coreDataManager;
+
+    
+    [self.fact generateNewFactors];
     
     self.factOneLabel.text = self.fact.factorOneText;
     self.factTwoLabel.text = self.fact.factorTwoText;
@@ -53,13 +57,35 @@
 
 }
 
+
+- (void)cleanViewControllerStack
+{
+    // Do any additional setup after loading the view, typically from a nib.
+    
+    NSMutableArray *viewControllers = [NSMutableArray array];
+    for (UIViewController *vc in self.navigationController.viewControllers) {
+        if (![vc isKindOfClass:self.class]) {
+            [viewControllers addObject:vc];
+        }
+    }
+    [viewControllers addObject:self];
+    self.navigationController.viewControllers = viewControllers;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [self cleanViewControllerStack];
+
+    // initialize core data instances if they are not passed in
+    if (self.coreDataManager == nil) self.coreDataManager = [RZCoreDataManager sharedInstance];
+    if (self.practiceSession == nil) self.practiceSession = [self.coreDataManager insertNewPracticeSession];
+    
+    
     [self setUpMissingNumberEquation];
     
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -75,7 +101,26 @@
         [self startCorrectAnswerAnimation];
         
     }else{
+        ++wrongAnswerCount;
         [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Make sure your segue name in storyboard is the same as this line
+    if ([[segue identifier] isEqualToString:@"nextEquationSeque"])
+    {
+        // Get reference to the destination view controller
+        MissingNumberViewController *vc = [segue destinationViewController];
+        
+        // Pass practice session to the next view controller
+        vc.practiceSession = self.practiceSession;
+    }else if([[segue identifier] isEqualToString:@"showSessionConfigSeque"]){
+        UIViewController *vc = [segue destinationViewController];
+        if([vc respondsToSelector:@selector(setPracticeSession:)]){
+            [vc performSelector:@selector(setPracticeSession:) withObject:self.practiceSession];
+        }
     }
 }
 

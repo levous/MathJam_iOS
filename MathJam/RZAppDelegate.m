@@ -7,12 +7,15 @@
 //
 
 #import "RZAppDelegate.h"
+#import "RZCoreDataManager.h"
 
 @implementation RZAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    // initialize CoreData stack
+    [RZCoreDataManager sharedInstance];
     return YES;
 }
 							

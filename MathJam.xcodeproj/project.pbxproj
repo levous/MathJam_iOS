@@ -26,6 +26,25 @@
 		FB1566881641787300F1C1DF /* RZMissingNumberEquation.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1566871641787300F1C1DF /* RZMissingNumberEquation.m */; };
 		FB1566891641787300F1C1DF /* RZMissingNumberEquation.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1566871641787300F1C1DF /* RZMissingNumberEquation.m */; };
 		FB15668C1641788D00F1C1DF /* MathFactTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB15668B1641788D00F1C1DF /* MathFactTests.m */; };
+		FB20DD001642E479002E2F33 /* MathJam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB20DCFE1642E479002E2F33 /* MathJam.xcdatamodeld */; };
+		FB20DD011642E479002E2F33 /* MathJam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB20DCFE1642E479002E2F33 /* MathJam.xcdatamodeld */; };
+		FB20DD081642E75B002E2F33 /* MathEquation.m in Sources */ = {isa = PBXBuildFile; fileRef = FB20DD071642E75B002E2F33 /* MathEquation.m */; };
+		FB20DD091642E75B002E2F33 /* MathEquation.m in Sources */ = {isa = PBXBuildFile; fileRef = FB20DD071642E75B002E2F33 /* MathEquation.m */; };
+		FB20DD1E1642E9B5002E2F33 /* RZCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB20DD1D1642E9B5002E2F33 /* RZCoreDataManager.m */; };
+		FB20DD1F1642E9B5002E2F33 /* RZCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB20DD1D1642E9B5002E2F33 /* RZCoreDataManager.m */; };
+		FB20DD211642E9E2002E2F33 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB20DD201642E9E2002E2F33 /* CoreData.framework */; };
+		FB20DD2816430CA8002E2F33 /* operations-44px.png in Resources */ = {isa = PBXBuildFile; fileRef = FB20DD2616430CA8002E2F33 /* operations-44px.png */; };
+		FB20DD2916430CA8002E2F33 /* operations-44px.png in Resources */ = {isa = PBXBuildFile; fileRef = FB20DD2616430CA8002E2F33 /* operations-44px.png */; };
+		FB20DD2A16430CA8002E2F33 /* operations-44px@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB20DD2716430CA8002E2F33 /* operations-44px@2x.png */; };
+		FB20DD2B16430CA8002E2F33 /* operations-44px@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB20DD2716430CA8002E2F33 /* operations-44px@2x.png */; };
+		FB20DD2D16430EDC002E2F33 /* whitepaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB20DD2C16430EDC002E2F33 /* whitepaper.jpg */; };
+		FB20DD2E16430EDC002E2F33 /* whitepaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB20DD2C16430EDC002E2F33 /* whitepaper.jpg */; };
+		FB20DD3116431059002E2F33 /* SessionConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB20DD3016431059002E2F33 /* SessionConfigViewController.m */; };
+		FB20DD3216431059002E2F33 /* SessionConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB20DD3016431059002E2F33 /* SessionConfigViewController.m */; };
+		FB20DD3416431397002E2F33 /* Cardboard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB20DD3316431397002E2F33 /* Cardboard.jpg */; };
+		FB20DD3516431397002E2F33 /* Cardboard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB20DD3316431397002E2F33 /* Cardboard.jpg */; };
+		FB20DD4016431FE2002E2F33 /* PracticeSession.m in Sources */ = {isa = PBXBuildFile; fileRef = FB20DD3F16431FE2002E2F33 /* PracticeSession.m */; };
+		FB20DD4116431FE2002E2F33 /* PracticeSession.m in Sources */ = {isa = PBXBuildFile; fileRef = FB20DD3F16431FE2002E2F33 /* PracticeSession.m */; };
 		FB278F951641AF41001BB6FA /* RZCustomSeque.m in Sources */ = {isa = PBXBuildFile; fileRef = FB278F941641AF41001BB6FA /* RZCustomSeque.m */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +85,21 @@
 		FB1566871641787300F1C1DF /* RZMissingNumberEquation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZMissingNumberEquation.m; sourceTree = "<group>"; };
 		FB15668A1641788D00F1C1DF /* MathFactTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathFactTests.h; sourceTree = "<group>"; };
 		FB15668B1641788D00F1C1DF /* MathFactTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathFactTests.m; sourceTree = "<group>"; };
+		FB20DCFF1642E479002E2F33 /* MathJam.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MathJam.xcdatamodel; sourceTree = "<group>"; };
+		FB20DD061642E75B002E2F33 /* MathEquation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathEquation.h; sourceTree = "<group>"; };
+		FB20DD071642E75B002E2F33 /* MathEquation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathEquation.m; sourceTree = "<group>"; };
+		FB20DD1C1642E9B5002E2F33 /* RZCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZCoreDataManager.h; sourceTree = "<group>"; };
+		FB20DD1D1642E9B5002E2F33 /* RZCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZCoreDataManager.m; sourceTree = "<group>"; };
+		FB20DD201642E9E2002E2F33 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FB20DD221642F2EA002E2F33 /* RZEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZEnums.h; sourceTree = "<group>"; };
+		FB20DD2616430CA8002E2F33 /* operations-44px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "operations-44px.png"; sourceTree = "<group>"; };
+		FB20DD2716430CA8002E2F33 /* operations-44px@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "operations-44px@2x.png"; sourceTree = "<group>"; };
+		FB20DD2C16430EDC002E2F33 /* whitepaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = whitepaper.jpg; sourceTree = "<group>"; };
+		FB20DD2F16431059002E2F33 /* SessionConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionConfigViewController.h; sourceTree = "<group>"; };
+		FB20DD3016431059002E2F33 /* SessionConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionConfigViewController.m; sourceTree = "<group>"; };
+		FB20DD3316431397002E2F33 /* Cardboard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cardboard.jpg; sourceTree = "<group>"; };
+		FB20DD3E16431FE2002E2F33 /* PracticeSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeSession.h; sourceTree = "<group>"; };
+		FB20DD3F16431FE2002E2F33 /* PracticeSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeSession.m; sourceTree = "<group>"; };
 		FB278F931641AF41001BB6FA /* RZCustomSeque.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZCustomSeque.h; sourceTree = "<group>"; };
 		FB278F941641AF41001BB6FA /* RZCustomSeque.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZCustomSeque.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB20DD211642E9E2002E2F33 /* CoreData.framework in Frameworks */,
 				FB15664B1641759200F1C1DF /* UIKit.framework in Frameworks */,
 				FB15664D1641759200F1C1DF /* Foundation.framework in Frameworks */,
 				FB15664F1641759200F1C1DF /* CoreGraphics.framework in Frameworks */,
@@ -97,6 +132,7 @@
 		FB15663B1641759200F1C1DF = {
 			isa = PBXGroup;
 			children = (
+				FB20DD201642E9E2002E2F33 /* CoreData.framework */,
 				FB1566501641759200F1C1DF /* MathJam */,
 				FB1566741641759200F1C1DF /* MathJamTests */,
 				FB1566491641759200F1C1DF /* Frameworks */,
@@ -129,14 +165,12 @@
 			children = (
 				FB1566591641759200F1C1DF /* RZAppDelegate.h */,
 				FB15665A1641759200F1C1DF /* RZAppDelegate.m */,
+				FB20DD221642F2EA002E2F33 /* RZEnums.h */,
 				FB1566621641759200F1C1DF /* MainStoryboard.storyboard */,
-				FB156685164176E200F1C1DF /* MissingNumberViewController.h */,
-				FB1566661641759200F1C1DF /* MissingNumberViewController.m */,
+				FB20DCFA1642E0F0002E2F33 /* Model */,
+				FB20DCFD1642E166002E2F33 /* Seques */,
+				FB20DCFC1642E13B002E2F33 /* View Controllers */,
 				FB1566511641759200F1C1DF /* Supporting Files */,
-				FB1566861641787300F1C1DF /* RZMissingNumberEquation.h */,
-				FB1566871641787300F1C1DF /* RZMissingNumberEquation.m */,
-				FB278F931641AF41001BB6FA /* RZCustomSeque.h */,
-				FB278F941641AF41001BB6FA /* RZCustomSeque.m */,
 			);
 			path = MathJam;
 			sourceTree = "<group>";
@@ -144,6 +178,10 @@
 		FB1566511641759200F1C1DF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FB20DD3316431397002E2F33 /* Cardboard.jpg */,
+				FB20DD2C16430EDC002E2F33 /* whitepaper.jpg */,
+				FB20DD2616430CA8002E2F33 /* operations-44px.png */,
+				FB20DD2716430CA8002E2F33 /* operations-44px@2x.png */,
 				FB1566521641759200F1C1DF /* MathJam-Info.plist */,
 				FB1566531641759200F1C1DF /* InfoPlist.strings */,
 				FB1566561641759200F1C1DF /* main.m */,
@@ -174,6 +212,50 @@
 				FB1566771641759200F1C1DF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FB20DCFA1642E0F0002E2F33 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FB20DD0A1642E780002E2F33 /* CoreData */,
+				FB1566861641787300F1C1DF /* RZMissingNumberEquation.h */,
+				FB1566871641787300F1C1DF /* RZMissingNumberEquation.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FB20DCFC1642E13B002E2F33 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB156685164176E200F1C1DF /* MissingNumberViewController.h */,
+				FB1566661641759200F1C1DF /* MissingNumberViewController.m */,
+				FB20DD2F16431059002E2F33 /* SessionConfigViewController.h */,
+				FB20DD3016431059002E2F33 /* SessionConfigViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FB20DCFD1642E166002E2F33 /* Seques */ = {
+			isa = PBXGroup;
+			children = (
+				FB278F931641AF41001BB6FA /* RZCustomSeque.h */,
+				FB278F941641AF41001BB6FA /* RZCustomSeque.m */,
+			);
+			name = Seques;
+			sourceTree = "<group>";
+		};
+		FB20DD0A1642E780002E2F33 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				FB20DCFE1642E479002E2F33 /* MathJam.xcdatamodeld */,
+				FB20DD061642E75B002E2F33 /* MathEquation.h */,
+				FB20DD071642E75B002E2F33 /* MathEquation.m */,
+				FB20DD3E16431FE2002E2F33 /* PracticeSession.h */,
+				FB20DD3F16431FE2002E2F33 /* PracticeSession.m */,
+				FB20DD1C1642E9B5002E2F33 /* RZCoreDataManager.h */,
+				FB20DD1D1642E9B5002E2F33 /* RZCoreDataManager.m */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +335,10 @@
 				FB15665F1641759200F1C1DF /* Default@2x.png in Resources */,
 				FB1566611641759200F1C1DF /* Default-568h@2x.png in Resources */,
 				FB1566641641759200F1C1DF /* MainStoryboard.storyboard in Resources */,
+				FB20DD2816430CA8002E2F33 /* operations-44px.png in Resources */,
+				FB20DD2A16430CA8002E2F33 /* operations-44px@2x.png in Resources */,
+				FB20DD2D16430EDC002E2F33 /* whitepaper.jpg in Resources */,
+				FB20DD3416431397002E2F33 /* Cardboard.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +347,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB1566791641759200F1C1DF /* InfoPlist.strings in Resources */,
+				FB20DD2916430CA8002E2F33 /* operations-44px.png in Resources */,
+				FB20DD2B16430CA8002E2F33 /* operations-44px@2x.png in Resources */,
+				FB20DD2E16430EDC002E2F33 /* whitepaper.jpg in Resources */,
+				FB20DD3516431397002E2F33 /* Cardboard.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +382,11 @@
 				FB1566671641759200F1C1DF /* MissingNumberViewController.m in Sources */,
 				FB1566881641787300F1C1DF /* RZMissingNumberEquation.m in Sources */,
 				FB278F951641AF41001BB6FA /* RZCustomSeque.m in Sources */,
+				FB20DD001642E479002E2F33 /* MathJam.xcdatamodeld in Sources */,
+				FB20DD081642E75B002E2F33 /* MathEquation.m in Sources */,
+				FB20DD1E1642E9B5002E2F33 /* RZCoreDataManager.m in Sources */,
+				FB20DD3116431059002E2F33 /* SessionConfigViewController.m in Sources */,
+				FB20DD4016431FE2002E2F33 /* PracticeSession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +397,11 @@
 				FB15667C1641759200F1C1DF /* MathJamTests.m in Sources */,
 				FB1566891641787300F1C1DF /* RZMissingNumberEquation.m in Sources */,
 				FB15668C1641788D00F1C1DF /* MathFactTests.m in Sources */,
+				FB20DD011642E479002E2F33 /* MathJam.xcdatamodeld in Sources */,
+				FB20DD091642E75B002E2F33 /* MathEquation.m in Sources */,
+				FB20DD1F1642E9B5002E2F33 /* RZCoreDataManager.m in Sources */,
+				FB20DD3216431059002E2F33 /* SessionConfigViewController.m in Sources */,
+				FB20DD4116431FE2002E2F33 /* PracticeSession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +580,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FB20DCFE1642E479002E2F33 /* MathJam.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FB20DCFF1642E479002E2F33 /* MathJam.xcdatamodel */,
+			);
+			currentVersion = FB20DCFF1642E479002E2F33 /* MathJam.xcdatamodel */;
+			path = MathJam.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FB15663D1641759200F1C1DF /* Project object */;
 }
