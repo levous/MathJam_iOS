@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0862D68F7E34497192BCB56E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16231168CCCE4C70916083E8 /* libPods.a */; };
 		FB15664B1641759200F1C1DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB15664A1641759200F1C1DF /* UIKit.framework */; };
 		FB15664D1641759200F1C1DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB15664C1641759200F1C1DF /* Foundation.framework */; };
 		FB15664F1641759200F1C1DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB15664E1641759200F1C1DF /* CoreGraphics.framework */; };
@@ -63,6 +64,9 @@
 		FB611EE516437D22009B8612 /* clock-icon-trans@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB611EE216437D22009B8612 /* clock-icon-trans@2x.png */; };
 		FB611EE616437D22009B8612 /* clock-icon-trans@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB611EE216437D22009B8612 /* clock-icon-trans@2x.png */; };
 		FB611EE71643F11D009B8612 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB20DD201642E9E2002E2F33 /* CoreData.framework */; };
+		FB76374816444FC100C26C05 /* MissingNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1566661641759200F1C1DF /* MissingNumberViewController.m */; };
+		FB76374916444FC100C26C05 /* RZCustomSeque.m in Sources */ = {isa = PBXBuildFile; fileRef = FB278F941641AF41001BB6FA /* RZCustomSeque.m */; };
+		FB76374A164450C400C26C05 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB15664E1641759200F1C1DF /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,10 +80,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16231168CCCE4C70916083E8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADCF32FC04804310AC89E3E1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		FB1566461641759200F1C1DF /* MathJam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathJam.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB15664A1641759200F1C1DF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		FB15664C1641759200F1C1DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		FB15664E1641759200F1C1DF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FB15664A1641759200F1C1DF /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FB15664C1641759200F1C1DF /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB15664E1641759200F1C1DF /* CoreGraphics.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		FB1566521641759200F1C1DF /* MathJam-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MathJam-Info.plist"; sourceTree = "<group>"; };
 		FB1566541641759200F1C1DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FB1566561641759200F1C1DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -107,7 +113,7 @@
 		FB20DD071642E75B002E2F33 /* MathEquation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathEquation.m; sourceTree = "<group>"; };
 		FB20DD1C1642E9B5002E2F33 /* RZCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZCoreDataManager.h; sourceTree = "<group>"; };
 		FB20DD1D1642E9B5002E2F33 /* RZCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZCoreDataManager.m; sourceTree = "<group>"; };
-		FB20DD201642E9E2002E2F33 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FB20DD201642E9E2002E2F33 /* CoreData.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FB20DD221642F2EA002E2F33 /* RZEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZEnums.h; sourceTree = "<group>"; };
 		FB20DD2616430CA8002E2F33 /* operations-44px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "operations-44px.png"; sourceTree = "<group>"; };
 		FB20DD2716430CA8002E2F33 /* operations-44px@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "operations-44px@2x.png"; sourceTree = "<group>"; };
@@ -140,6 +146,7 @@
 				FB15664B1641759200F1C1DF /* UIKit.framework in Frameworks */,
 				FB15664D1641759200F1C1DF /* Foundation.framework in Frameworks */,
 				FB15664F1641759200F1C1DF /* CoreGraphics.framework in Frameworks */,
+				0862D68F7E34497192BCB56E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +158,7 @@
 				FB15666F1641759200F1C1DF /* SenTestingKit.framework in Frameworks */,
 				FB1566701641759200F1C1DF /* UIKit.framework in Frameworks */,
 				FB1566711641759200F1C1DF /* Foundation.framework in Frameworks */,
+				FB76374A164450C400C26C05 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +172,7 @@
 				FB1566741641759200F1C1DF /* MathJamTests */,
 				FB1566491641759200F1C1DF /* Frameworks */,
 				FB1566471641759200F1C1DF /* Products */,
+				ADCF32FC04804310AC89E3E1 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,6 +193,7 @@
 				FB15664C1641759200F1C1DF /* Foundation.framework */,
 				FB15664E1641759200F1C1DF /* CoreGraphics.framework */,
 				FB15666E1641759200F1C1DF /* SenTestingKit.framework */,
+				16231168CCCE4C70916083E8 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -230,11 +240,10 @@
 		FB1566741641759200F1C1DF /* MathJamTests */ = {
 			isa = PBXGroup;
 			children = (
+				FB76374616444F4700C26C05 /* Model */,
 				FB15667A1641759200F1C1DF /* MathJamTests.h */,
 				FB15667B1641759200F1C1DF /* MathJamTests.m */,
 				FB1566751641759200F1C1DF /* Supporting Files */,
-				FB15668A1641788D00F1C1DF /* MathFactTests.h */,
-				FB15668B1641788D00F1C1DF /* MathFactTests.m */,
 			);
 			path = MathJamTests;
 			sourceTree = "<group>";
@@ -312,6 +321,15 @@
 			name = Keyboard;
 			sourceTree = "<group>";
 		};
+		FB76374616444F4700C26C05 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FB15668A1641788D00F1C1DF /* MathFactTests.h */,
+				FB15668B1641788D00F1C1DF /* MathFactTests.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -322,6 +340,7 @@
 				FB1566421641759200F1C1DF /* Sources */,
 				FB1566431641759200F1C1DF /* Frameworks */,
 				FB1566441641759200F1C1DF /* Resources */,
+				5A831BA8D58E4861A320DB7A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -423,6 +442,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5A831BA8D58E4861A320DB7A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
 		FB15666B1641759200F1C1DF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -462,6 +495,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB76374816444FC100C26C05 /* MissingNumberViewController.m in Sources */,
+				FB76374916444FC100C26C05 /* RZCustomSeque.m in Sources */,
 				FB15667C1641759200F1C1DF /* MathJamTests.m in Sources */,
 				FB1566891641787300F1C1DF /* RZMissingNumberEquation.m in Sources */,
 				FB15668C1641788D00F1C1DF /* MathFactTests.m in Sources */,
@@ -565,6 +600,7 @@
 		};
 		FB1566801641759200F1C1DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADCF32FC04804310AC89E3E1 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MathJam/MathJam-Prefix.pch";
@@ -576,6 +612,7 @@
 		};
 		FB1566811641759200F1C1DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADCF32FC04804310AC89E3E1 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MathJam/MathJam-Prefix.pch";

@@ -79,6 +79,17 @@
     return self;
 }
 
+- (RZMathOperation)performRandomMissingNumberPositionSelection{
+    
+    // randomize 3 choices...
+    int r = (arc4random() % 3);
+    
+    RZMissingNumberPosition pos = (RZMissingNumberPosition)r;
+    
+    return pos;
+}
+
+
 - (RZMathOperation)performRandomOperationSelection{
     // prevent infinite loop
     if(!(self.practiceSession.practiceAddition.boolValue ||
@@ -124,9 +135,14 @@
 
 - (NSNumber *)generateRandomFactorBetweenLowerBound:(NSNumber *)lowerBound andUpperBound:(NSNumber *)upperBound{
    
-    int rangeValue = upperBound.integerValue - lowerBound.integerValue + 1;
+    // add 1 to the difference to include both terms
+    int rangeValue = 1 + upperBound.integerValue - lowerBound.integerValue;
+    // get a random number within the difference range
     int r = arc4random() % rangeValue;
-    return [NSNumber numberWithInt:r + lowerBound.integerValue];
+    // its one-based so add lower bound to include the lower bound in the result
+    int result = r + lowerBound.integerValue;
+    NSLog(@"RANDOM>>> l:%i,u:%i,r:%i", lowerBound.integerValue, upperBound.integerValue, result);
+    return [NSNumber numberWithInt:result];
 }
 
 - (void)configurePerformanceDataEntity{
@@ -136,6 +152,8 @@
 
 - (void)generateNewFactors{
     self.mathOperation = [self performRandomOperationSelection];
+    
+    self.missingNumberPosition = [self performRandomMissingNumberPositionSelection];
     
     // generically, call the factors the small number and the answer the large number
     NSNumber *theFactorOne = [self generateRandomFactorBetweenLowerBound:self.practiceSession.factorOneLowerBound andUpperBound:self.practiceSession.factorOneUpperBound];
@@ -179,8 +197,8 @@
             //fall through
         case RZMathOperationSubtract:
             self.factorOne = theAnswer;
-            self.factorTwo = theFactorOne;
-            self.answer = theFactorTwo;
+            self.factorTwo = theFactorTwo;
+            self.answer = theFactorOne;
             break;
 
         case RZMathOperationAdd:

@@ -10,39 +10,152 @@
 #import "RZMissingNumberEquation.h"
 #import "RZCoreDataManager.h"   
 
+
 @implementation MathFactTests
-- (void)testMathFactInitialization
+
+
+RZCoreDataManager *cdm = nil;
+PracticeSession *ps = nil;
+
+
+- (void)setUp
 {
-    RZCoreDataManager *cdm = [RZCoreDataManager sharedInstance];
-    PracticeSession *ps = [cdm insertNewPracticeSession];
+    [super setUp];
     
+    cdm = [RZCoreDataManager sharedInstance];
+    ps = [cdm insertNewPracticeSession];
+}
+
+- (void)tearDown
+{
+    // Tear-down code here.
+    
+    [super tearDown];
+}
+
+- (void)testRandomMissingNumberPosition
+{
+    bool hadFactOne, hadFactTwo, hadAnswer;
+    RZMissingNumberEquation *fact = RZMissingNumberEquation.new;
+    fact.practiceSession = ps;
+
+    int i = 0;
+    for (i= 0; i<20; ++i) {
+        [fact generateNewFactors];
+        switch (fact.missingNumberPosition) {
+            case RZMissingNumberPositionFactorOne:
+                hadFactOne = YES;
+                break;
+            case RZMissingNumberPositionFactorTwo:
+                hadFactTwo = YES;
+                break;
+            case RZMissingNumberPositionAnswer:
+                hadAnswer = YES;
+                break;
+        }
+    }
+    
+    STAssertTrue(hadFactOne, @"Should have seen at least once");
+    STAssertTrue(hadFactTwo, @"Should have seen at least once");
+    STAssertTrue(hadAnswer, @"Should have seen at least once");
+}
+
+- (void)testRandomMathOperation
+{
+    bool hadMult, hadDiv, hadSub, hadAdd;
+    RZMissingNumberEquation *fact = RZMissingNumberEquation.new;
+    fact.practiceSession = ps;
+    
+    int i = 0;
+    for (i= 0; i<20; ++i) {
+        [fact generateNewFactors];
+        switch (fact.mathOperation) {
+            case RZMathOperationAdd:
+                hadAdd = YES;
+                break;
+            case RZMathOperationSubtract:
+                hadSub = YES;
+                break;
+            case RZMathOperationMultiply:
+                hadMult = YES;
+                break;
+            case RZMathOperationDivide:
+                hadDiv = YES;
+                break;
+        }
+    }
+    
+    STAssertTrue(hadAdd, @"Should have seen at least once");
+    STAssertTrue(hadSub, @"Should have seen at least once");
+    STAssertTrue(hadMult, @"Should have seen at least once");
+    STAssertTrue(hadDiv, @"Should have seen at least once");
+}
+
+- (bool)validateNumericRange:(RZMissingNumberEquation *)fact message:(NSString **)message{
+    NSNumber *value1, *value2;
+    if (fact.mathOperation == RZMathOperationDivide || fact.mathOperation == RZMathOperationSubtract) {
+        // the ranges apply to the smaller of the number family but for subtraction and division, the large number comes first and the answer is oe of the smaller pair.  Terminology is quaestionable, at best...
+        value1 = fact.answer;
+
+    }else{
+        value1 = fact.factorOne;
+    }
+    
+    value2 = fact.factorTwo;
+    
+    bool valid = YES;
+    NSString *messageString = @"";
+
+    if (NSOrderedAscending != [value1 compare:[NSNumber numberWithInt:13]]){
+        valid = NO;
+        messageString = [NSString stringWithFormat:@"factor 1 should have been 12 or less but was %@\n", value1];
+    }
+                               
+    if (NSOrderedDescending != [value1 compare:[NSNumber numberWithInt:1]]){
+        valid = NO;
+        messageString = [messageString stringByAppendingFormat:@"factor 1 should have been 2 or more but was %@", value1];
+    }
+       
+    if (NSOrderedAscending != [value2 compare:[NSNumber numberWithInt:11]]){
+        valid = NO;
+        messageString = [messageString stringByAppendingFormat:@"factor 2 should have been 10 or less but was %@", value2];
+    }
+                         
+    if (NSOrderedDescending != [value2 compare:[NSNumber numberWithInt:4]]){
+        valid = NO;
+        messageString = [messageString stringByAppendingFormat:@"factor 2 should have been 5 or more but was %@", value2];
+    }
+   
+    *message = messageString;
+    
+    return valid;
+    
+    
+}
+
+- (void)testMathFactNumericRange
+{    
     RZMissingNumberEquation *fact = RZMissingNumberEquation.new;
     fact.practiceSession = ps;
     fact.practiceSession.factorOneUpperBound = [NSNumber numberWithInt:12];
     fact.practiceSession.factorTwoUpperBound = [NSNumber numberWithInt:10];
     fact.practiceSession.factorOneLowerBound = [NSNumber numberWithInt:2];
     fact.practiceSession.factorTwoLowerBound = [NSNumber numberWithInt:5];
-    [fact generateNewFactors];
-    int factorOneA = fact.factorOne.integerValue;
-    STAssertEquals(NSOrderedAscending, [fact.factorOne compare:[NSNumber numberWithInt:13]], @"factor should have been 12 or less");
-    STAssertEquals(NSOrderedDescending, [fact.factorOne compare:[NSNumber numberWithInt:1]], @"factor should have been 2 or more");
-    STAssertEquals(NSOrderedAscending, [fact.factorTwo compare:[NSNumber numberWithInt:11]], @"factor should have been 10 or less");
-    STAssertEquals(NSOrderedDescending, [fact.factorTwo compare:[NSNumber numberWithInt:4]], @"factor should have been 5 or more");
-    [fact generateNewFactors];
-    int factorOneB = fact.factorOne.integerValue;
-    STAssertEquals(NSOrderedAscending, [fact.factorOne compare:[NSNumber numberWithInt:13]], @"factor should have been 12 or less");
-    STAssertEquals(NSOrderedDescending, [fact.factorOne compare:[NSNumber numberWithInt:1]], @"factor should have been 2 or more");
-    STAssertEquals(NSOrderedAscending, [fact.factorTwo compare:[NSNumber numberWithInt:11]], @"factor should have been 10 or less");
-    STAssertEquals(NSOrderedDescending, [fact.factorTwo compare:[NSNumber numberWithInt:4]], @"factor should have been 5 or more");
-    [fact generateNewFactors];
-    int factorOneC = fact.factorOne.integerValue;
-    STAssertEquals(NSOrderedAscending, [fact.factorOne compare:[NSNumber numberWithInt:13]], @"factor should have been 12 or less");
-    STAssertEquals(NSOrderedDescending, [fact.factorOne compare:[NSNumber numberWithInt:1]], @"factor should have been 2 or more");
-    STAssertEquals(NSOrderedAscending, [fact.factorTwo compare:[NSNumber numberWithInt:11]], @"factor should have been 10 or less");
-    STAssertEquals(NSOrderedDescending, [fact.factorTwo compare:[NSNumber numberWithInt:4]], @"factor should have been 5 or more");
+   
+    NSString *message;
     
-    STAssertFalse((factorOneA == factorOneB && factorOneB == factorOneC ), @"generating renadom factors should not produce the same result three times in a row.  Ok.  Its possibl.  Investigate and harden the test or the code :)");
+    [fact generateNewFactors];
+    STAssertTrue([self validateNumericRange:fact message:&message], message);
     
-
+    // gen again
+    [fact generateNewFactors];
+    STAssertTrue([self validateNumericRange:fact message:&message], message);
+    
+    // gen again
+    [fact generateNewFactors];
+    STAssertTrue([self validateNumericRange:fact message:&message], message);
+    
+    
 }
+
 @end
