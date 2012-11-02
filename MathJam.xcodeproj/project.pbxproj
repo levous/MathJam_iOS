@@ -46,6 +46,23 @@
 		FB20DD4016431FE2002E2F33 /* PracticeSession.m in Sources */ = {isa = PBXBuildFile; fileRef = FB20DD3F16431FE2002E2F33 /* PracticeSession.m */; };
 		FB20DD4116431FE2002E2F33 /* PracticeSession.m in Sources */ = {isa = PBXBuildFile; fileRef = FB20DD3F16431FE2002E2F33 /* PracticeSession.m */; };
 		FB278F951641AF41001BB6FA /* RZCustomSeque.m in Sources */ = {isa = PBXBuildFile; fileRef = FB278F941641AF41001BB6FA /* RZCustomSeque.m */; };
+		FB611ECF164369DB009B8612 /* RZNumericKeyboardHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FB611ECE164369DB009B8612 /* RZNumericKeyboardHelper.m */; };
+		FB611ED0164369DB009B8612 /* RZNumericKeyboardHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FB611ECE164369DB009B8612 /* RZNumericKeyboardHelper.m */; };
+		FB611ED516436AE3009B8612 /* DoneDown3.png in Resources */ = {isa = PBXBuildFile; fileRef = FB611ED116436AE3009B8612 /* DoneDown3.png */; };
+		FB611ED616436AE3009B8612 /* DoneDown3.png in Resources */ = {isa = PBXBuildFile; fileRef = FB611ED116436AE3009B8612 /* DoneDown3.png */; };
+		FB611ED716436AE3009B8612 /* DoneUp3.png in Resources */ = {isa = PBXBuildFile; fileRef = FB611ED216436AE3009B8612 /* DoneUp3.png */; };
+		FB611ED816436AE3009B8612 /* DoneUp3.png in Resources */ = {isa = PBXBuildFile; fileRef = FB611ED216436AE3009B8612 /* DoneUp3.png */; };
+		FB611ED916436AE3009B8612 /* DoneUp.png in Resources */ = {isa = PBXBuildFile; fileRef = FB611ED316436AE3009B8612 /* DoneUp.png */; };
+		FB611EDA16436AE3009B8612 /* DoneUp.png in Resources */ = {isa = PBXBuildFile; fileRef = FB611ED316436AE3009B8612 /* DoneUp.png */; };
+		FB611EDB16436AE3009B8612 /* DoneDown.png in Resources */ = {isa = PBXBuildFile; fileRef = FB611ED416436AE3009B8612 /* DoneDown.png */; };
+		FB611EDC16436AE3009B8612 /* DoneDown.png in Resources */ = {isa = PBXBuildFile; fileRef = FB611ED416436AE3009B8612 /* DoneDown.png */; };
+		FB611EDF16437A31009B8612 /* TimedSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB611EDE16437A31009B8612 /* TimedSessionViewController.m */; };
+		FB611EE016437A31009B8612 /* TimedSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB611EDE16437A31009B8612 /* TimedSessionViewController.m */; };
+		FB611EE316437D22009B8612 /* clock-icon-trans.png in Resources */ = {isa = PBXBuildFile; fileRef = FB611EE116437D22009B8612 /* clock-icon-trans.png */; };
+		FB611EE416437D22009B8612 /* clock-icon-trans.png in Resources */ = {isa = PBXBuildFile; fileRef = FB611EE116437D22009B8612 /* clock-icon-trans.png */; };
+		FB611EE516437D22009B8612 /* clock-icon-trans@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB611EE216437D22009B8612 /* clock-icon-trans@2x.png */; };
+		FB611EE616437D22009B8612 /* clock-icon-trans@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB611EE216437D22009B8612 /* clock-icon-trans@2x.png */; };
+		FB611EE71643F11D009B8612 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB20DD201642E9E2002E2F33 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +119,16 @@
 		FB20DD3F16431FE2002E2F33 /* PracticeSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeSession.m; sourceTree = "<group>"; };
 		FB278F931641AF41001BB6FA /* RZCustomSeque.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZCustomSeque.h; sourceTree = "<group>"; };
 		FB278F941641AF41001BB6FA /* RZCustomSeque.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZCustomSeque.m; sourceTree = "<group>"; };
+		FB611ECA16436821009B8612 /* RZNumericKeyboardHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZNumericKeyboardHelper.h; sourceTree = "<group>"; };
+		FB611ECE164369DB009B8612 /* RZNumericKeyboardHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZNumericKeyboardHelper.m; sourceTree = "<group>"; };
+		FB611ED116436AE3009B8612 /* DoneDown3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneDown3.png; sourceTree = "<group>"; };
+		FB611ED216436AE3009B8612 /* DoneUp3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneUp3.png; sourceTree = "<group>"; };
+		FB611ED316436AE3009B8612 /* DoneUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneUp.png; sourceTree = "<group>"; };
+		FB611ED416436AE3009B8612 /* DoneDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneDown.png; sourceTree = "<group>"; };
+		FB611EDD16437A31009B8612 /* TimedSessionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimedSessionViewController.h; sourceTree = "<group>"; };
+		FB611EDE16437A31009B8612 /* TimedSessionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimedSessionViewController.m; sourceTree = "<group>"; };
+		FB611EE116437D22009B8612 /* clock-icon-trans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-icon-trans.png"; sourceTree = "<group>"; };
+		FB611EE216437D22009B8612 /* clock-icon-trans@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-icon-trans@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB611EE71643F11D009B8612 /* CoreData.framework in Frameworks */,
 				FB15666F1641759200F1C1DF /* SenTestingKit.framework in Frameworks */,
 				FB1566701641759200F1C1DF /* UIKit.framework in Frameworks */,
 				FB1566711641759200F1C1DF /* Foundation.framework in Frameworks */,
@@ -132,7 +160,6 @@
 		FB15663B1641759200F1C1DF = {
 			isa = PBXGroup;
 			children = (
-				FB20DD201642E9E2002E2F33 /* CoreData.framework */,
 				FB1566501641759200F1C1DF /* MathJam */,
 				FB1566741641759200F1C1DF /* MathJamTests */,
 				FB1566491641759200F1C1DF /* Frameworks */,
@@ -152,6 +179,7 @@
 		FB1566491641759200F1C1DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FB20DD201642E9E2002E2F33 /* CoreData.framework */,
 				FB15664A1641759200F1C1DF /* UIKit.framework */,
 				FB15664C1641759200F1C1DF /* Foundation.framework */,
 				FB15664E1641759200F1C1DF /* CoreGraphics.framework */,
@@ -163,13 +191,13 @@
 		FB1566501641759200F1C1DF /* MathJam */ = {
 			isa = PBXGroup;
 			children = (
+				FB611EC8164367E5009B8612 /* UI */,
 				FB1566591641759200F1C1DF /* RZAppDelegate.h */,
 				FB15665A1641759200F1C1DF /* RZAppDelegate.m */,
 				FB20DD221642F2EA002E2F33 /* RZEnums.h */,
 				FB1566621641759200F1C1DF /* MainStoryboard.storyboard */,
 				FB20DCFA1642E0F0002E2F33 /* Model */,
 				FB20DCFD1642E166002E2F33 /* Seques */,
-				FB20DCFC1642E13B002E2F33 /* View Controllers */,
 				FB1566511641759200F1C1DF /* Supporting Files */,
 			);
 			path = MathJam;
@@ -178,6 +206,12 @@
 		FB1566511641759200F1C1DF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FB611EE116437D22009B8612 /* clock-icon-trans.png */,
+				FB611EE216437D22009B8612 /* clock-icon-trans@2x.png */,
+				FB611ED116436AE3009B8612 /* DoneDown3.png */,
+				FB611ED216436AE3009B8612 /* DoneUp3.png */,
+				FB611ED316436AE3009B8612 /* DoneUp.png */,
+				FB611ED416436AE3009B8612 /* DoneDown.png */,
 				FB20DD3316431397002E2F33 /* Cardboard.jpg */,
 				FB20DD2C16430EDC002E2F33 /* whitepaper.jpg */,
 				FB20DD2616430CA8002E2F33 /* operations-44px.png */,
@@ -231,6 +265,8 @@
 				FB1566661641759200F1C1DF /* MissingNumberViewController.m */,
 				FB20DD2F16431059002E2F33 /* SessionConfigViewController.h */,
 				FB20DD3016431059002E2F33 /* SessionConfigViewController.m */,
+				FB611EDD16437A31009B8612 /* TimedSessionViewController.h */,
+				FB611EDE16437A31009B8612 /* TimedSessionViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -256,6 +292,24 @@
 				FB20DD1D1642E9B5002E2F33 /* RZCoreDataManager.m */,
 			);
 			name = CoreData;
+			sourceTree = "<group>";
+		};
+		FB611EC8164367E5009B8612 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FB611EC9164367F4009B8612 /* Keyboard */,
+				FB20DCFC1642E13B002E2F33 /* View Controllers */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		FB611EC9164367F4009B8612 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				FB611ECA16436821009B8612 /* RZNumericKeyboardHelper.h */,
+				FB611ECE164369DB009B8612 /* RZNumericKeyboardHelper.m */,
+			);
+			name = Keyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +393,12 @@
 				FB20DD2A16430CA8002E2F33 /* operations-44px@2x.png in Resources */,
 				FB20DD2D16430EDC002E2F33 /* whitepaper.jpg in Resources */,
 				FB20DD3416431397002E2F33 /* Cardboard.jpg in Resources */,
+				FB611ED516436AE3009B8612 /* DoneDown3.png in Resources */,
+				FB611ED716436AE3009B8612 /* DoneUp3.png in Resources */,
+				FB611ED916436AE3009B8612 /* DoneUp.png in Resources */,
+				FB611EDB16436AE3009B8612 /* DoneDown.png in Resources */,
+				FB611EE316437D22009B8612 /* clock-icon-trans.png in Resources */,
+				FB611EE516437D22009B8612 /* clock-icon-trans@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +411,12 @@
 				FB20DD2B16430CA8002E2F33 /* operations-44px@2x.png in Resources */,
 				FB20DD2E16430EDC002E2F33 /* whitepaper.jpg in Resources */,
 				FB20DD3516431397002E2F33 /* Cardboard.jpg in Resources */,
+				FB611ED616436AE3009B8612 /* DoneDown3.png in Resources */,
+				FB611ED816436AE3009B8612 /* DoneUp3.png in Resources */,
+				FB611EDA16436AE3009B8612 /* DoneUp.png in Resources */,
+				FB611EDC16436AE3009B8612 /* DoneDown.png in Resources */,
+				FB611EE416437D22009B8612 /* clock-icon-trans.png in Resources */,
+				FB611EE616437D22009B8612 /* clock-icon-trans@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +453,8 @@
 				FB20DD1E1642E9B5002E2F33 /* RZCoreDataManager.m in Sources */,
 				FB20DD3116431059002E2F33 /* SessionConfigViewController.m in Sources */,
 				FB20DD4016431FE2002E2F33 /* PracticeSession.m in Sources */,
+				FB611ECF164369DB009B8612 /* RZNumericKeyboardHelper.m in Sources */,
+				FB611EDF16437A31009B8612 /* TimedSessionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +470,8 @@
 				FB20DD1F1642E9B5002E2F33 /* RZCoreDataManager.m in Sources */,
 				FB20DD3216431059002E2F33 /* SessionConfigViewController.m in Sources */,
 				FB20DD4116431FE2002E2F33 /* PracticeSession.m in Sources */,
+				FB611ED0164369DB009B8612 /* RZNumericKeyboardHelper.m in Sources */,
+				FB611EE016437A31009B8612 /* TimedSessionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

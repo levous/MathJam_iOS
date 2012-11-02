@@ -9,11 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "PracticeSession.h"
 
+@protocol SessionConfigDelegate <NSObject>
+
+- (void)didConfigureSession:(id)sender;
+
+@end
+
 @interface SessionConfigViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UISwitch *plusSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *minusSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *timesSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *divideSwitch;
+
 
 @property (weak, nonatomic) IBOutlet UITextField *factorOneLowerBound;
 @property (weak, nonatomic) IBOutlet UITextField *factorTwoLowerBound;
@@ -22,8 +29,7 @@
 
 
 @property (strong, nonatomic) PracticeSession *practiceSession;
-
-
+@property (weak, nonatomic) id<SessionConfigDelegate> delegate;
 
 
 @end

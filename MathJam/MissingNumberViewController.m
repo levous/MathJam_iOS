@@ -106,6 +106,11 @@ int wrongAnswerCount = 0;
     }
 }
 
+- (void)didConfigureSession:(id)sender{
+    // reset start time to disinclude config setting time
+    self.practiceSession.startTime = [NSDate date];
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Make sure your segue name in storyboard is the same as this line
@@ -117,9 +122,15 @@ int wrongAnswerCount = 0;
         // Pass practice session to the next view controller
         vc.practiceSession = self.practiceSession;
     }else if([[segue identifier] isEqualToString:@"showSessionConfigSeque"]){
+        // close current session, start a new one
+        self.practiceSession = [self.coreDataManager insertCopyOfPracticeSession:self.practiceSession];
+        
         UIViewController *vc = [segue destinationViewController];
         if([vc respondsToSelector:@selector(setPracticeSession:)]){
             [vc performSelector:@selector(setPracticeSession:) withObject:self.practiceSession];
+        }
+        if([vc respondsToSelector:@selector(setDelegate:)]){
+            [vc performSelector:@selector(setDelegate:) withObject:self];
         }
     }
 }

@@ -198,6 +198,20 @@ static RZCoreDataManager *_sharedInstance = nil;
     return session;
 }
 
+
+- (PracticeSession *)insertCopyOfPracticeSession:(PracticeSession *)practiceSession{
+    PracticeSession *newSession = [self insertNewPracticeSession];
+    newSession.factorOneLowerBound = practiceSession.factorOneLowerBound;
+    newSession.factorTwoLowerBound = practiceSession.factorTwoLowerBound;
+    newSession.factorOneUpperBound = practiceSession.factorOneUpperBound;
+    newSession.factorTwoUpperBound = practiceSession.factorTwoUpperBound;
+    newSession.practiceAddition = practiceSession.practiceAddition;
+    newSession.practiceSubtraction = practiceSession.practiceSubtraction;
+    newSession.practiceMultiplication = practiceSession.practiceMultiplication;
+    newSession.practiceDivision = practiceSession.practiceDivision;
+    return newSession;
+}
+
 - (MathEquation *)insertNewMathEquationInSession:(PracticeSession *)session withFactorOne:(NSNumber *)factorOne factorTwo:(NSNumber *)factorTwo operation:(RZMathOperation)operation{
     MathEquation *equation = [self insertObjectWithEntityNamed:@"MathEquation" properties:nil];
     equation.createdAt = [NSDate date];

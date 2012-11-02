@@ -124,8 +124,9 @@
 
 - (NSNumber *)generateRandomFactorBetweenLowerBound:(NSNumber *)lowerBound andUpperBound:(NSNumber *)upperBound{
    
-    int r = arc4random() % [upperBound integerValue];
-    return [NSNumber numberWithInt:r];
+    int rangeValue = upperBound.integerValue - lowerBound.integerValue + 1;
+    int r = arc4random() % rangeValue;
+    return [NSNumber numberWithInt:r + lowerBound.integerValue];
 }
 
 - (void)configurePerformanceDataEntity{

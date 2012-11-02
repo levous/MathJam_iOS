@@ -62,7 +62,12 @@
 // insert and return a new practice session
 - (PracticeSession *)insertNewPracticeSession;
 
+// insert a new practice session and copy the details from the provided parameter
+- (PracticeSession *)insertCopyOfPracticeSession:(PracticeSession *)practiceSession;
+
 // insert and return a new math equation for a session
 - (MathEquation *)insertNewMathEquationInSession:(PracticeSession *)session withFactorOne:(NSNumber *)factorOne factorTwo:(NSNumber *)factorTwo operation:(RZMathOperation)operation;
+
+
 
 @end
