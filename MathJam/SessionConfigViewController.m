@@ -53,6 +53,8 @@ RZNumericKeyboardHelper *keyboardHelper;
     
 }
 
+// method posts notification with notification center.  For some strange reason, the SessionConfigViewController couldn't see the Flurry.h header.
+// Rather then waste time trying to diagnose xcode nonesense, used NC.  Cleaner architecture anyway
 - (void)logAnalytics:(PracticeSession *)session{
     RZAnalyticsData *data = [RZAnalyticsData new];
     data.eventName = @"PracticeSessionConfig";

@@ -23,7 +23,13 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(logAnalyticsEvent:) name:kRZ_LOG_ANALYTICS_EVENT_NOTIFICATION_NAME
                                                object:nil];
+    
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil];
+    UINavigationController *navController = (UINavigationController*)[mainStoryboard instantiateViewControllerWithIdentifier: @"mainNavigationController"];
 
+    // log each view navigation push as a page view
+    [Flurry logAllPageViews:navController];
+    
     // initialize CoreData stack
     [RZCoreDataManager sharedInstance];
       
@@ -31,6 +37,8 @@
     return YES;
 }
 
+// Receives notification from NotificationCenter and then logs the event with flurry.
+// Flurry.h header file was not visible to the SessionConfigViewController, forcing this design.  Its a cleaner separation, anyway, so no harm.
 - (void)logAnalyticsEvent:(NSNotification *)notification{
     
     @try {
@@ -39,8 +47,6 @@
             RZAnalyticsData *data = (RZAnalyticsData *)[userInfo objectForKey:kRZ_LOG_ANALYTICS_NOTIFICATION_DATA_KEY];
             [Flurry logEvent:data.eventName withParameters:data.eventParameters];
         }
-        
-        
     }
     @catch (NSException *exception) {
         NSLog(@"Flurry bombed but we try/catched it.");
