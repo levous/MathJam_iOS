@@ -1,5 +1,5 @@
 //
-//  RZEnums.h
+//  Enums.h
 //  MathJam
 //
 //  Created by Rusty Zarse on 11/1/12.

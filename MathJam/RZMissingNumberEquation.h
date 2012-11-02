@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "RZCoreDataManager.h"
-#import "RZEnums.h"
+#import "Enums.h"
 
 // enum RZMissingNumberPosition ------------------------------------------------
 typedef NS_ENUM(NSInteger, RZMissingNumberPosition) {RZMissingNumberPositionFactorOne, RZMissingNumberPositionFactorTwo, RZMissingNumberPositionAnswer};

@@ -1,11 +1,11 @@
 
 PODS:
-- JSONKit (1.5pre)
+- FlurrySDK (4.0.5)
 
 DEPENDENCIES:
-- JSONKit (~> 1.4)
+- FlurrySDK
 
 SPEC CHECKSUMS:
-  JSONKit: a01a22c75f27eae76b4badd55a91c20fe6e86477
+  FlurrySDK: 75dec170404f5cb8344d2097b7e8df23a6ca9325
 
 COCOAPODS: 0.15.2

@@ -8,17 +8,49 @@
 
 #import "RZAppDelegate.h"
 #import "RZCoreDataManager.h"
+#import "Flurry.h"
+#import "RZAnalyticsData.h"
 
 @implementation RZAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    // flurry analytics
+    [Flurry startSession:@"KB73G65WFT7RBV828GZN"];
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+    // register for posted log analytics events
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(logAnalyticsEvent:) name:kRZ_LOG_ANALYTICS_EVENT_NOTIFICATION_NAME
+                                               object:nil];
+
     // initialize CoreData stack
     [RZCoreDataManager sharedInstance];
+      
+    // return to system
     return YES;
 }
-							
+
+- (void)logAnalyticsEvent:(NSNotification *)notification{
+    
+    @try {
+        NSDictionary *userInfo = [notification userInfo];
+        if (userInfo != nil) {
+            RZAnalyticsData *data = (RZAnalyticsData *)[userInfo objectForKey:kRZ_LOG_ANALYTICS_NOTIFICATION_DATA_KEY];
+            [Flurry logEvent:data.eventName withParameters:data.eventParameters];
+        }
+        
+        
+    }
+    @catch (NSException *exception) {
+        NSLog(@"Flurry bombed but we try/catched it.");
+    }
+    @finally {
+        // nothing to do...
+    }
+
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -44,6 +76,10 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+void uncaughtExceptionHandler(NSException *exception) {
+    [Flurry logError:@"Uncaught" message:@"Crash!" exception:exception];
 }
 
 @end

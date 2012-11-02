@@ -8,7 +8,7 @@
 
 #import "PracticeSession.h"
 #import "MathEquation.h"
-#import "RZEnums.h"
+#import "Enums.h"
 
 // A wrapper for Core Data access that assumes a single persistent store and single object model
 // that may be accessed by managed object contexts on multple threads.

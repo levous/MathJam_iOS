@@ -1,2 +1,2 @@
 platform :ios
-pod 'JSONKit',       '~> 1.4'
+pod 'FlurrySDK'

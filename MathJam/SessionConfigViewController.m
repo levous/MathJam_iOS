@@ -8,6 +8,8 @@
 
 #import "SessionConfigViewController.h"
 #import "RZNumericKeyboardHelper.h"
+#import "PracticeSession+Analytics.h"
+#import "RZAnalyticsData.h"
 
 @interface SessionConfigViewController ()
 
@@ -51,6 +53,15 @@ RZNumericKeyboardHelper *keyboardHelper;
     
 }
 
+- (void)logAnalytics:(PracticeSession *)session{
+    RZAnalyticsData *data = [RZAnalyticsData new];
+    data.eventName = @"PracticeSessionConfig";
+    data.eventParameters = [session dictionaryForAnalytics];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kRZ_LOG_ANALYTICS_EVENT_NOTIFICATION_NAME object:nil userInfo:[NSDictionary dictionaryWithObject:data forKey:kRZ_LOG_ANALYTICS_NOTIFICATION_DATA_KEY]];
+    
+}
+
+
 - (void)viewDidDisappear:(BOOL)animated{
     
     [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -65,6 +76,8 @@ RZNumericKeyboardHelper *keyboardHelper;
     self.practiceSession.practiceSubtraction = [NSNumber numberWithBool:self.minusSwitch.on];
     self.practiceSession.practiceMultiplication = [NSNumber numberWithBool:self.timesSwitch.on];
     self.practiceSession.practiceDivision = [NSNumber numberWithBool:self.divideSwitch.on];
+    
+    [self logAnalytics:self.practiceSession];
     
     if (self.delegate != nil) {
         [self.delegate didConfigureSession:self];
