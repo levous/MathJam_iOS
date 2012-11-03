@@ -15,7 +15,7 @@
 
 @end
 
-@interface SessionConfigViewController : UIViewController
+@interface SessionConfigViewController : UIViewController<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UISwitch *plusSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *minusSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *timesSwitch;

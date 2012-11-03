@@ -36,9 +36,7 @@ RZNumericKeyboardHelper *keyboardHelper;
     if (keyboardHelper == nil) {
         keyboardHelper = [RZNumericKeyboardHelper new];
     }
-    [keyboardHelper attachDelagateToTextFields:[NSArray arrayWithObjects:self.factorOneLowerBound, self.factorTwoLowerBound, self.factorOneUpperBound, self.factorTwoUpperBound, nil]];
-    
-    
+    [keyboardHelper attachDelegateToTextFields:[NSArray arrayWithObjects:self.factorOneLowerBound, self.factorTwoLowerBound, self.factorOneUpperBound, self.factorTwoUpperBound, nil] withProxiedDelegate:self];
         
     self.factorOneLowerBound.text = self.practiceSession.factorOneLowerBound.stringValue;
     self.factorOneUpperBound.text = self.practiceSession.factorOneUpperBound.stringValue;
@@ -53,6 +51,20 @@ RZNumericKeyboardHelper *keyboardHelper;
     
 }
 
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
+    if (self.factorOneLowerBound.text.integerValue > self.factorOneUpperBound.text.integerValue || self.factorTwoLowerBound.text.integerValue > self.factorTwoUpperBound.text.integerValue) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oooops..." message:@"[Something] to [something else] usually means the first thing is smaller.  Can you make the first number smaller or equal to the second?  please..." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+        return NO;
+    }
+    return YES;
+}
+
+
+#pragma mark - Analytics
+
 // method posts notification with notification center.  For some strange reason, the SessionConfigViewController couldn't see the Flurry.h header.
 // Rather then waste time trying to diagnose xcode nonesense, used NC.  Cleaner architecture anyway
 - (void)logAnalytics:(PracticeSession *)session{
@@ -63,6 +75,8 @@ RZNumericKeyboardHelper *keyboardHelper;
     
 }
 
+
+#pragma mark - Completion
 
 - (void)viewDidDisappear:(BOOL)animated{
     

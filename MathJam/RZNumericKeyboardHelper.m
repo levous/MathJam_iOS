@@ -11,8 +11,13 @@
 
 @implementation RZNumericKeyboardHelper
 UITextField *editingTextField;
+id<UITextFieldDelegate> proxiedDelegate;
 
-- (void)attachDelagateToTextFields:(NSArray *)textFields{
+- (void)attachDelegateToTextFields:(NSArray *)textFields withProxiedDelegate:(id<UITextFieldDelegate>)aProxiedDelegate{
+    
+    // allows each delegate method to call through after managing the keyboard nonsense
+    proxiedDelegate = aProxiedDelegate;
+    
     // add observer for the respective notifications (depending on the os version)
 	if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 3.2) {
 		[[NSNotificationCenter defaultCenter] addObserver:self
@@ -29,6 +34,7 @@ UITextField *editingTextField;
     for (UITextField *textField in textFields){
         textField.delegate = self;
     }
+    
 }
 
 - (void)detachListener{
@@ -39,6 +45,50 @@ UITextField *editingTextField;
 
 - (void) textFieldDidBeginEditing:(UITextField *)textField {
     editingTextField = textField;
+    if (proxiedDelegate && [proxiedDelegate respondsToSelector:@selector(textFieldDidBeginEditing:)]) {
+        [proxiedDelegate textFieldDidBeginEditing:textField];
+    }
+}
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    if (proxiedDelegate && [proxiedDelegate respondsToSelector:@selector(textFieldShouldBeginEditing:)]) {
+        return [proxiedDelegate textFieldShouldBeginEditing:textField];
+    }
+    return YES;
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
+    if (proxiedDelegate && [proxiedDelegate respondsToSelector:@selector(textFieldShouldEndEditing:)]) {
+        return [proxiedDelegate textFieldShouldEndEditing:textField];
+    }
+    return YES;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    if (proxiedDelegate && [proxiedDelegate respondsToSelector:@selector(textFieldDidEndEditing:)]) {
+        [proxiedDelegate textFieldDidEndEditing:textField];
+    }
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    if (proxiedDelegate && [proxiedDelegate respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)]) {
+        return [proxiedDelegate textField:textField shouldChangeCharactersInRange:range replacementString:string];
+    }
+    return YES;
+}
+
+- (BOOL)textFieldShouldClear:(UITextField *)textField{
+    if (proxiedDelegate && [proxiedDelegate respondsToSelector:@selector(textFieldShouldClear:)]) {
+        return [proxiedDelegate textFieldShouldClear:textField];
+    }
+    return YES;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    if (proxiedDelegate && [proxiedDelegate respondsToSelector:@selector(textFieldShouldReturn:)]) {
+        return [proxiedDelegate textFieldShouldReturn:textField];
+    }
+    return YES;
 }
 
 #pragma mark - Keyboard Management

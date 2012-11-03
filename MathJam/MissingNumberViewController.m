@@ -109,6 +109,7 @@ int wrongAnswerCount = 0;
 - (void)didConfigureSession:(id)sender{
     // reset start time to disinclude config setting time
     self.practiceSession.startTime = [NSDate date];
+    [self nextEquation];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -157,7 +158,7 @@ int wrongAnswerCount = 0;
 
 - (void)completeCorrectAnswerAnimation {
     self.missingNumberLabel.text = self.fact.expectedMissingNumberValue.stringValue;
-    [UIView animateWithDuration:0.25
+    [UIView animateWithDuration:0.2
                           delay:0.0
                         options:(UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionCurveLinear)
                      animations:^ {
@@ -166,7 +167,7 @@ int wrongAnswerCount = 0;
                      completion:NULL
      ];
     
-    [self performSelector:@selector(nextEquation) withObject:nil afterDelay:0.3];
+    [self performSelector:@selector(nextEquation) withObject:nil afterDelay:0.2];
 
     
     
