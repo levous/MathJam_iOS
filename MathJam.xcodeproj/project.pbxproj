@@ -67,6 +67,12 @@
 		FB76374816444FC100C26C05 /* MissingNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1566661641759200F1C1DF /* MissingNumberViewController.m */; };
 		FB76374916444FC100C26C05 /* RZCustomSeque.m in Sources */ = {isa = PBXBuildFile; fileRef = FB278F941641AF41001BB6FA /* RZCustomSeque.m */; };
 		FB76374A164450C400C26C05 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB15664E1641759200F1C1DF /* CoreGraphics.framework */; };
+		FBC778F91644CC1B0046B1FC /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC778F51644CC1B0046B1FC /* Icon-Small@2x.png */; };
+		FBC778FA1644CC1B0046B1FC /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC778F51644CC1B0046B1FC /* Icon-Small@2x.png */; };
+		FBC778FB1644CC1B0046B1FC /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC778F61644CC1B0046B1FC /* Icon-Small.png */; };
+		FBC778FC1644CC1B0046B1FC /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC778F61644CC1B0046B1FC /* Icon-Small.png */; };
+		FBC779031644CC420046B1FC /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC779021644CC420046B1FC /* Icon.png */; };
+		FBC779051644CC480046B1FC /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC779041644CC480046B1FC /* Icon@2x.png */; };
 		FBD808E31644788100A1CD02 /* PracticeSession+Analytics.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD808E21644788100A1CD02 /* PracticeSession+Analytics.m */; };
 		FBD808E41644788100A1CD02 /* PracticeSession+Analytics.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD808E21644788100A1CD02 /* PracticeSession+Analytics.m */; };
 		FBD808E816447E5200A1CD02 /* RZAnalyticsData.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD808E716447E5200A1CD02 /* RZAnalyticsData.m */; };
@@ -139,6 +145,10 @@
 		FB611EDE16437A31009B8612 /* TimedSessionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimedSessionViewController.m; sourceTree = "<group>"; };
 		FB611EE116437D22009B8612 /* clock-icon-trans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-icon-trans.png"; sourceTree = "<group>"; };
 		FB611EE216437D22009B8612 /* clock-icon-trans@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-icon-trans@2x.png"; sourceTree = "<group>"; };
+		FBC778F51644CC1B0046B1FC /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		FBC778F61644CC1B0046B1FC /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		FBC779021644CC420046B1FC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
+		FBC779041644CC480046B1FC /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 		FBD808E11644788100A1CD02 /* PracticeSession+Analytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PracticeSession+Analytics.h"; sourceTree = "<group>"; };
 		FBD808E21644788100A1CD02 /* PracticeSession+Analytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PracticeSession+Analytics.m"; sourceTree = "<group>"; };
 		FBD808E516447D1600A1CD02 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -226,6 +236,10 @@
 		FB1566511641759200F1C1DF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FBC779021644CC420046B1FC /* Icon.png */,
+				FBC779041644CC480046B1FC /* Icon@2x.png */,
+				FBC778F51644CC1B0046B1FC /* Icon-Small@2x.png */,
+				FBC778F61644CC1B0046B1FC /* Icon-Small.png */,
 				FB611EE116437D22009B8612 /* clock-icon-trans.png */,
 				FB611EE216437D22009B8612 /* clock-icon-trans@2x.png */,
 				FB611ED116436AE3009B8612 /* DoneDown3.png */,
@@ -440,6 +454,10 @@
 				FB611EDB16436AE3009B8612 /* DoneDown.png in Resources */,
 				FB611EE316437D22009B8612 /* clock-icon-trans.png in Resources */,
 				FB611EE516437D22009B8612 /* clock-icon-trans@2x.png in Resources */,
+				FBC778F91644CC1B0046B1FC /* Icon-Small@2x.png in Resources */,
+				FBC778FB1644CC1B0046B1FC /* Icon-Small.png in Resources */,
+				FBC779031644CC420046B1FC /* Icon.png in Resources */,
+				FBC779051644CC480046B1FC /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +476,8 @@
 				FB611EDC16436AE3009B8612 /* DoneDown.png in Resources */,
 				FB611EE416437D22009B8612 /* clock-icon-trans.png in Resources */,
 				FB611EE616437D22009B8612 /* clock-icon-trans@2x.png in Resources */,
+				FBC778FA1644CC1B0046B1FC /* Icon-Small@2x.png in Resources */,
+				FBC778FC1644CC1B0046B1FC /* Icon-Small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
