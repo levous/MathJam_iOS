@@ -130,7 +130,7 @@
                                     <segue destination="nIx-Qv-0jC" kind="modal" identifier="showSessionConfigSeque" modalTransitionStyle="partialCurl" id="2Ea-ge-bMg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Yti-SC-vtA">
+                            <button hidden="YES" opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Yti-SC-vtA">
                                 <rect key="frame" x="70" y="17" width="44" height="44"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" image="clock-icon-trans.png">

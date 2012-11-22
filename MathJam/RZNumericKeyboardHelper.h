@@ -10,6 +10,6 @@
 
 @interface RZNumericKeyboardHelper : NSObject<UITextFieldDelegate>
 
-- (void)attachDelagateToTextFields:(NSArray *)textFields;
+- (void)attachDelegateToTextFields:(NSArray *)textFields withProxiedDelegate:(id<UITextFieldDelegate>)aProxiedDelegate;
 - (void)detachListener;
 @end

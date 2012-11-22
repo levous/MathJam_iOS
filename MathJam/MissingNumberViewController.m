@@ -142,7 +142,7 @@ int wrongAnswerCount = 0;
 
 - (void)completeCorrectAnswerAnimation {
     self.missingNumberLabel.text = self.fact.expectedMissingNumberValue.stringValue;
-    [UIView animateWithDuration:0.25
+    [UIView animateWithDuration:0.2
                           delay:0.0
                         options:(UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionCurveLinear)
                      animations:^ {
@@ -151,7 +151,7 @@ int wrongAnswerCount = 0;
                      completion:NULL
      ];
     
-    [self performSelector:@selector(nextEquation) withObject:nil afterDelay:0.3];
+    [self performSelector:@selector(nextEquation) withObject:nil afterDelay:0.2];
 
     
     
