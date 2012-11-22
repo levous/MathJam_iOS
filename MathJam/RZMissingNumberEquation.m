@@ -219,26 +219,46 @@
 
 #pragma mark - Behavior Methods
 
+- (int)generateAnAnswerChoice{
+    int upperThreshold = MAX(self.factorOne.integerValue, self.factorTwo.integerValue);
+    upperThreshold = MAX(self.answer.integerValue, upperThreshold);
+    upperThreshold++;
+    
+    
+    // cheap work arounds need improvement.  
+    if (self.mathOperation == RZMathOperationDivide || self.mathOperation == RZMathOperationSubtract )
+    {
+        // correct sometimes so as not to skew the other direction
+        if (arc4random() % 3 == 0) {
+            switch (self.missingNumberPosition){
+                case RZMissingNumberPositionFactorOne:
+                    upperThreshold = upperThreshold * 3;
+                    break;
+                default:
+                    upperThreshold = MAX(self.factorOne.integerValue, self.factorTwo.integerValue);
+                    break;
+            }
+        }
+    }
+
+    int r = arc4random() % upperThreshold;
+    // avoid having the correct answer twice...  prolly want to be more clever and prevent any number twice....
+    if (r == self.expectedMissingNumberValue.integerValue) r = arc4random() % upperThreshold;
+    return r;
+}
 
 - (NSArray *)getAnswerChoices:(int)choiceCount{
     //TODO: add logic for division so that the answer isn't always the largest number
     NSMutableArray *choices = [NSMutableArray new];
     int idx;
     int correctAnswerIdx = arc4random() % choiceCount;
-    int upperThreshold = self.factorOne.integerValue;
-    if (upperThreshold < self.factorTwo.integerValue) upperThreshold = self.factorTwo.integerValue;
-    if (upperThreshold < self.answer.integerValue) upperThreshold = self.answer.integerValue;
-    upperThreshold++;
+    
     
     for(idx = 0; idx < choiceCount; ++idx){
         if(correctAnswerIdx == idx){
             [choices addObject:self.expectedMissingNumberValue];
         }else{
-            int r = arc4random() % upperThreshold;
-            // avoid having the correct answer twice...  prolly want to be more clever and prevent any number twice....
-            if (r == self.expectedMissingNumberValue.integerValue) r = arc4random() % upperThreshold;
-
-            [choices addObject:[NSNumber numberWithInt:r]];
+            [choices addObject:[NSNumber numberWithInt:[self generateAnAnswerChoice]]];
         }
     }
     return [NSArray arrayWithArray:choices];

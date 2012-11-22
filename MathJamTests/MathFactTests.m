@@ -33,6 +33,21 @@ PracticeSession *ps = nil;
     [super tearDown];
 }
 
+- (RZMissingNumberEquation *)setUpDivisionEquation{
+    RZMissingNumberEquation *fact = RZMissingNumberEquation.new;
+    fact.practiceSession = ps;
+    fact.practiceSession.factorOneUpperBound = [NSNumber numberWithInt:12];
+    fact.practiceSession.factorTwoUpperBound = [NSNumber numberWithInt:10];
+    fact.practiceSession.factorOneLowerBound = [NSNumber numberWithInt:2];
+    fact.practiceSession.factorTwoLowerBound = [NSNumber numberWithInt:5];
+    fact.practiceSession.practiceAddition = [NSNumber numberWithBool:NO];
+    fact.practiceSession.practiceSubtraction = [NSNumber numberWithBool:NO];
+    fact.practiceSession.practiceMultiplication = [NSNumber numberWithBool:NO];
+    
+    fact.practiceSession.practiceDivision = [NSNumber numberWithBool:YES];
+    return fact;
+}
+
 - (void)testRandomMissingNumberPosition
 {
     bool hadFactOne, hadFactTwo, hadAnswer;
@@ -154,6 +169,134 @@ PracticeSession *ps = nil;
     // gen again
     [fact generateNewFactors];
     STAssertTrue([self validateNumericRange:fact message:&message], message);
+    
+    
+}
+
+- (void)testDividendIsNotAlwaysGreatestValueAnswerChoice
+{
+    RZMissingNumberEquation *fact = [self setUpDivisionEquation];
+    
+    BOOL dividendAlwaysGreatest = YES;
+    for(int i = 0; i < 100 ; ++i){
+        [fact generateNewFactors];
+        if (fact.missingNumberPosition == RZMissingNumberPositionFactorOne) {
+            for (NSNumber *choice in [fact getAnswerChoices:4]) {
+                if ([choice compare:[fact expectedMissingNumberValue]] == NSOrderedDescending) {
+                    dividendAlwaysGreatest = NO;
+                    break;
+                }
+            }
+            
+        }
+    }
+    
+    STAssertFalse(dividendAlwaysGreatest, @"In 100 tries, the dividend was always the greatest value choice, making that too freakin easy");
+    
+    
+    
+}
+
+- (void)testQuotientIsNotAlwaysSmallestValueAnswerChoice
+{
+    RZMissingNumberEquation *fact = [self setUpDivisionEquation];
+    
+    BOOL quotientAlwaysSmallest = YES;
+    for(int i = 0; i < 100 ; ++i){
+        [fact generateNewFactors];
+        if (fact.missingNumberPosition == RZMissingNumberPositionAnswer) {
+            for (NSNumber *choice in [fact getAnswerChoices:4]) {
+                if ([choice compare:[fact expectedMissingNumberValue]] == NSOrderedAscending) {
+                    quotientAlwaysSmallest = NO;
+                    break;
+                }
+            }
+        }
+    }
+    
+    int divisorAlwaysSmallest = YES;
+    for(int i = 0; i < 100 ; ++i){
+        [fact generateNewFactors];
+        if (fact.missingNumberPosition == RZMissingNumberPositionFactorTwo) {
+            for (NSNumber *choice in [fact getAnswerChoices:4]) {
+                if ([choice compare:[fact expectedMissingNumberValue]] == NSOrderedAscending) {
+                    divisorAlwaysSmallest = NO;
+                    break;
+                }
+            }
+        }
+    }
+    
+    STAssertFalse(divisorAlwaysSmallest, @"In 100 tries, the divisor was always the smallest value choice, making that too freakin easy");
+    STAssertFalse(divisorAlwaysSmallest, @"In 100 tries, the quotient was always the smallest value choice, making that too freakin easy");
+    
+    
+    
+}
+
+- (void)testMinuendIsNotAlwaysGreatestValueAnswerChoice
+{
+    RZMissingNumberEquation *fact = [self setUpDivisionEquation];
+    fact.practiceSession.practiceDivision = [NSNumber numberWithBool:NO];
+    fact.practiceSession.practiceSubtraction = [NSNumber numberWithBool:YES];
+    
+
+    BOOL minuendAlwaysGreatest = YES;
+    for(int i = 0; i < 100 ; ++i){
+        [fact generateNewFactors];
+        if (fact.missingNumberPosition == RZMissingNumberPositionFactorOne) {
+            for (NSNumber *choice in [fact getAnswerChoices:4]) {
+                if ([choice compare:[fact expectedMissingNumberValue]] == NSOrderedDescending) {
+                    minuendAlwaysGreatest = NO;
+                    break;
+                }
+            }
+            
+        }
+    }
+    
+    STAssertFalse(minuendAlwaysGreatest, @"In 100 tries, the minuend was always the greatest value choice, making that too freakin easy");
+    
+    
+    
+}
+
+
+- (void)testDifferenceIsNotAlwaysSmallestValueAnswerChoice
+{
+    RZMissingNumberEquation *fact = [self setUpDivisionEquation];
+    fact.practiceSession.practiceDivision = [NSNumber numberWithBool:NO];
+    fact.practiceSession.practiceSubtraction = [NSNumber numberWithBool:YES];
+    
+    BOOL differenceAlwaysSmallest = YES;
+    for(int i = 0; i < 100 ; ++i){
+        [fact generateNewFactors];
+        if (fact.missingNumberPosition == RZMissingNumberPositionAnswer) {
+            for (NSNumber *choice in [fact getAnswerChoices:4]) {
+                if ([choice compare:[fact expectedMissingNumberValue]] == NSOrderedAscending) {
+                    differenceAlwaysSmallest = NO;
+                    break;
+                }
+            }
+        }
+    }
+    
+    int subtrahendAlwaysSmallest = YES;
+    for(int i = 0; i < 100 ; ++i){
+        [fact generateNewFactors];
+        if (fact.missingNumberPosition == RZMissingNumberPositionFactorTwo) {
+            for (NSNumber *choice in [fact getAnswerChoices:4]) {
+                if ([choice compare:[fact expectedMissingNumberValue]] == NSOrderedAscending) {
+                    subtrahendAlwaysSmallest = NO;
+                    break;
+                }
+            }
+        }
+    }
+    
+    STAssertFalse(differenceAlwaysSmallest, @"In 100 tries, the difference was always the smallest value choice, making that too freakin easy");
+    STAssertFalse(subtrahendAlwaysSmallest, @"In 100 tries, the subtrahend was always the smallest value choice, making that too freakin easy");
+    
     
     
 }

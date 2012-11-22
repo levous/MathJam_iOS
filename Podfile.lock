@@ -1,11 +1,14 @@
 
 PODS:
+- FRD3DBarChart (1.0.0)
 - FlurrySDK (4.0.5)
 
 DEPENDENCIES:
+- FRD3DBarChart
 - FlurrySDK
 
 SPEC CHECKSUMS:
+  FRD3DBarChart: 81f10a7f693bbef97020557c7baec04d05b40db8
   FlurrySDK: 75dec170404f5cb8344d2097b7e8df23a6ca9325
 
 COCOAPODS: 0.15.2

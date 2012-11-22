@@ -17,11 +17,11 @@ static RZCoreDataManager *_sharedInstance = nil;
 @synthesize persistentStoreCoordinator;
 @synthesize managedObjectModel;
 
+NSString *_databaseRelPath = @"Library/MathJam.sqlite";
+
 + (RZCoreDataManager *)sharedInstance {
 	if(_sharedInstance == nil) {
-		NSString *databasePath = [NSHomeDirectory() stringByAppendingPathComponent:@"Library/MathJam.sqlite"];
-		NSLog(@"Warning: Blowing away existing database!");
-		[[NSFileManager defaultManager] removeItemAtPath:databasePath error:NULL];
+		NSString *databasePath = [NSHomeDirectory() stringByAppendingPathComponent:_databaseRelPath];
 		_sharedInstance = [[RZCoreDataManager alloc] initWithURL:[NSURL fileURLWithPath:databasePath]];
 	}
 	
@@ -111,6 +111,16 @@ static RZCoreDataManager *_sharedInstance = nil;
 
 - (NSManagedObjectContext *)managedObjectContextForCurrentThread {
 	return [self managedObjectContextForThread:[NSThread currentThread]];
+}
+
+- (void)clearAllData{
+    NSLog(@"Warning: Blowing away existing database!");
+    for(NSPersistentStore *store in self.persistentStoreCoordinator.persistentStores){
+        [self.persistentStoreCoordinator removePersistentStore:store error:nil];
+    }
+    NSString *databasePath = [NSHomeDirectory() stringByAppendingPathComponent:_databaseRelPath];
+    [[NSFileManager defaultManager] removeItemAtPath:databasePath error:NULL];
+    [self initializeCoreDataStack:[NSURL fileURLWithPath:databasePath]];
 }
 
 - (NSManagedObject *)entityWithID:(NSManagedObjectID *)objectID {
@@ -212,6 +222,14 @@ static RZCoreDataManager *_sharedInstance = nil;
     return newSession;
 }
 
+- (NSArray *)getAllPracticeSessions{
+    NSArray *sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"startTime" ascending:YES]];
+    NSArray *result = [self entitiesForName:@"PracticeSession"
+                          matchingPredicate:nil
+                        sortedByDescriptors:sortDescriptors];
+    return result;
+}
+
 - (MathEquation *)insertNewMathEquationInSession:(PracticeSession *)session withFactorOne:(NSNumber *)factorOne factorTwo:(NSNumber *)factorTwo operation:(RZMathOperation)operation{
     MathEquation *equation = [self insertObjectWithEntityNamed:@"MathEquation" properties:nil];
     equation.createdAt = [NSDate date];
@@ -221,6 +239,8 @@ static RZCoreDataManager *_sharedInstance = nil;
     equation.operation = [NSNumber numberWithInt:operation];
     return equation;
 }
+
+
 
 // NSManagedObjectContextObjectsDidChangeNotification
 -(void)managedObjectContextDidSave:(NSNotification *)notification {
