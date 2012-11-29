@@ -301,4 +301,32 @@ PracticeSession *ps = nil;
     
 }
 
+- (void)testProductIsNotAlwaysGreatestValueAnswerChoice
+{
+    RZMissingNumberEquation *fact = [self setUpDivisionEquation];
+    fact.practiceSession.practiceDivision = [NSNumber numberWithBool:NO];
+    fact.practiceSession.practiceMultiplication = [NSNumber numberWithBool:YES];
+    
+    
+    BOOL productAlwaysGreatest = YES;
+    for(int i = 0; i < 100 ; ++i){
+        [fact generateNewFactors];
+        if (fact.missingNumberPosition == RZMissingNumberPositionAnswer) {
+            for (NSNumber *choice in [fact getAnswerChoices:4]) {
+                if ([choice compare:[fact expectedMissingNumberValue]] == NSOrderedDescending) {
+                    productAlwaysGreatest = NO;
+                    break;
+                }
+            }
+            
+        }
+    }
+    
+    STAssertFalse(productAlwaysGreatest, @"In 100 tries, the produt was always the greatest value choice, making that too freakin easy");
+    
+    
+    
+}
+
+
 @end

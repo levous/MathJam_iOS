@@ -220,13 +220,15 @@
 #pragma mark - Behavior Methods
 
 - (int)generateAnAnswerChoice{
+    //TODO: break these up into strategies !!!
+    
     int upperThreshold = MAX(self.factorOne.integerValue, self.factorTwo.integerValue);
     upperThreshold = MAX(self.answer.integerValue, upperThreshold);
     upperThreshold++;
     
     
-    // cheap work arounds need improvement.  
-    if (self.mathOperation == RZMathOperationDivide || self.mathOperation == RZMathOperationSubtract )
+    // cheap work arounds need improvement.
+    if (self.mathOperation == RZMathOperationDivide || self.mathOperation == RZMathOperationSubtract)
     {
         // correct sometimes so as not to skew the other direction
         if (arc4random() % 3 == 0) {
@@ -240,6 +242,20 @@
             }
         }
     }
+    else if(self.mathOperation == RZMathOperationMultiply || self.mathOperation == RZMathOperationAdd)
+    {
+        // correct sometimes so as not to skew the other direction
+        if (arc4random() % 3 == 0) {
+            switch (self.missingNumberPosition){
+                case RZMissingNumberPositionAnswer:
+                    upperThreshold = upperThreshold * 2;
+                    break;
+                default:
+                    // leave it alone   
+                    break;
+            }
+        }
+    }
 
     int r = arc4random() % upperThreshold;
     // avoid having the correct answer twice...  prolly want to be more clever and prevent any number twice....
@@ -248,7 +264,6 @@
 }
 
 - (NSArray *)getAnswerChoices:(int)choiceCount{
-    //TODO: add logic for division so that the answer isn't always the largest number
     NSMutableArray *choices = [NSMutableArray new];
     int idx;
     int correctAnswerIdx = arc4random() % choiceCount;
