@@ -2,13 +2,16 @@
 PODS:
 - FRD3DBarChart (1.0.0)
 - FlurrySDK (4.0.5)
+- OCMock (2.0.1)
 
 DEPENDENCIES:
 - FRD3DBarChart
 - FlurrySDK
+- OCMock
 
 SPEC CHECKSUMS:
   FRD3DBarChart: 81f10a7f693bbef97020557c7baec04d05b40db8
   FlurrySDK: 75dec170404f5cb8344d2097b7e8df23a6ca9325
+  OCMock: 77a9c4c57af6bf258a537d34cf09abf422affede
 
 COCOAPODS: 0.15.2

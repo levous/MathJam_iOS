@@ -64,7 +64,8 @@ NSMutableArray *_vals = nil;
 
 -(NSString *) frd3DBarChartViewController:(FRD3DBarChartViewController *)frd3DBarChartViewController legendForValueLine:(int)line
 {
-    return [NSString stringWithFormat:@"%i", line + 1];
+    int lineValue = (_max / 5) * (line + 1);
+    return [NSString stringWithFormat:@"%i", lineValue];
 }
 
 -(int) frd3DBarChartViewControllerNumberHeightLines:(FRD3DBarChartViewController *)frd3DBarChartViewController
@@ -88,11 +89,8 @@ NSMutableArray *_vals = nil;
     
     }
     
-    /*for (int i=1; i<12; i++)
-    {
-        gVals[i] = 0.5 + (arc4random() % 100000) / 10000;
-        _max = MAX(_max, gVals[i]);
-    }*/
+    // set max to something divisible by 5
+    _max = (((int)(_max / 5)) + 1) * 5;
 }
 
 @end

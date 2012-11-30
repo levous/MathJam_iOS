@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0862D68F7E34497192BCB56E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16231168CCCE4C70916083E8 /* libPods.a */; };
+		345E52DCE6E14D7185CD3739 /* libPods-MathJamTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C295B82D631E4F2CBE0FE07A /* libPods-MathJamTests.a */; };
 		FB15664B1641759200F1C1DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB15664A1641759200F1C1DF /* UIKit.framework */; };
 		FB15664D1641759200F1C1DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB15664C1641759200F1C1DF /* Foundation.framework */; };
 		FB15664F1641759200F1C1DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB15664E1641759200F1C1DF /* CoreGraphics.framework */; };
@@ -67,6 +68,8 @@
 		FB611EE516437D22009B8612 /* clock-icon-trans@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB611EE216437D22009B8612 /* clock-icon-trans@2x.png */; };
 		FB611EE616437D22009B8612 /* clock-icon-trans@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB611EE216437D22009B8612 /* clock-icon-trans@2x.png */; };
 		FB611EE71643F11D009B8612 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB20DD201642E9E2002E2F33 /* CoreData.framework */; };
+		FB71CE401667D88F0076B6E3 /* BarChartViewControllerDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB71CE3F1667D88F0076B6E3 /* BarChartViewControllerDelegateTests.m */; };
+		FB71CE4D1667EDF80076B6E3 /* RZCoreDataManagerForTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB71CE4C1667EDF80076B6E3 /* RZCoreDataManagerForTests.m */; };
 		FB76374816444FC100C26C05 /* MissingNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1566661641759200F1C1DF /* MissingNumberViewController.m */; };
 		FB76374916444FC100C26C05 /* RZCustomSeque.m in Sources */ = {isa = PBXBuildFile; fileRef = FB278F941641AF41001BB6FA /* RZCustomSeque.m */; };
 		FB76374A164450C400C26C05 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB15664E1641759200F1C1DF /* CoreGraphics.framework */; };
@@ -95,6 +98,8 @@
 /* Begin PBXFileReference section */
 		16231168CCCE4C70916083E8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADCF32FC04804310AC89E3E1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		C295B82D631E4F2CBE0FE07A /* libPods-MathJamTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MathJamTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA139ED483A945ED8B5A75FA /* Pods-MathJamTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MathJamTests.xcconfig"; path = "Pods/Pods-MathJamTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		FB1566461641759200F1C1DF /* MathJam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathJam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB15664A1641759200F1C1DF /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB15664C1641759200F1C1DF /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -111,7 +116,7 @@
 		FB1566631641759200F1C1DF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		FB1566661641759200F1C1DF /* MissingNumberViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MissingNumberViewController.m; sourceTree = "<group>"; };
 		FB15666D1641759200F1C1DF /* MathJamTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathJamTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB15666E1641759200F1C1DF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		FB15666E1641759200F1C1DF /* SenTestingKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		FB1566761641759200F1C1DF /* MathJamTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MathJamTests-Info.plist"; sourceTree = "<group>"; };
 		FB1566781641759200F1C1DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FB15667A1641759200F1C1DF /* MathJamTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MathJamTests.h; sourceTree = "<group>"; };
@@ -155,6 +160,10 @@
 		FB611EDE16437A31009B8612 /* TimedSessionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimedSessionViewController.m; sourceTree = "<group>"; };
 		FB611EE116437D22009B8612 /* clock-icon-trans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-icon-trans.png"; sourceTree = "<group>"; };
 		FB611EE216437D22009B8612 /* clock-icon-trans@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-icon-trans@2x.png"; sourceTree = "<group>"; };
+		FB71CE3E1667D88F0076B6E3 /* BarChartViewControllerDelegateTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarChartViewControllerDelegateTests.h; sourceTree = "<group>"; };
+		FB71CE3F1667D88F0076B6E3 /* BarChartViewControllerDelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarChartViewControllerDelegateTests.m; sourceTree = "<group>"; };
+		FB71CE4B1667EDF80076B6E3 /* RZCoreDataManagerForTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZCoreDataManagerForTests.h; sourceTree = "<group>"; };
+		FB71CE4C1667EDF80076B6E3 /* RZCoreDataManagerForTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZCoreDataManagerForTests.m; sourceTree = "<group>"; };
 		FBC778F51644CC1B0046B1FC /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		FBC778F61644CC1B0046B1FC /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		FBC779021644CC420046B1FC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
@@ -188,6 +197,7 @@
 				FB1566701641759200F1C1DF /* UIKit.framework in Frameworks */,
 				FB1566711641759200F1C1DF /* Foundation.framework in Frameworks */,
 				FB76374A164450C400C26C05 /* CoreGraphics.framework in Frameworks */,
+				345E52DCE6E14D7185CD3739 /* libPods-MathJamTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +213,7 @@
 				FB1566471641759200F1C1DF /* Products */,
 				FB3A13AB165D7AE6005D1C42 /* Podfile */,
 				ADCF32FC04804310AC89E3E1 /* Pods.xcconfig */,
+				EA139ED483A945ED8B5A75FA /* Pods-MathJamTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -224,6 +235,7 @@
 				FB15664E1641759200F1C1DF /* CoreGraphics.framework */,
 				FB15666E1641759200F1C1DF /* SenTestingKit.framework */,
 				16231168CCCE4C70916083E8 /* libPods.a */,
+				C295B82D631E4F2CBE0FE07A /* libPods-MathJamTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -276,6 +288,7 @@
 		FB1566741641759200F1C1DF /* MathJamTests */ = {
 			isa = PBXGroup;
 			children = (
+				FB71CE1F1667D4F70076B6E3 /* UI */,
 				FB76374616444F4700C26C05 /* Model */,
 				FB15667A1641759200F1C1DF /* MathJamTests.h */,
 				FB15667B1641759200F1C1DF /* MathJamTests.m */,
@@ -371,9 +384,36 @@
 			name = Keyboard;
 			sourceTree = "<group>";
 		};
+		FB71CE1F1667D4F70076B6E3 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FB71CE211667D50A0076B6E3 /* Charting */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		FB71CE211667D50A0076B6E3 /* Charting */ = {
+			isa = PBXGroup;
+			children = (
+				FB71CE3E1667D88F0076B6E3 /* BarChartViewControllerDelegateTests.h */,
+				FB71CE3F1667D88F0076B6E3 /* BarChartViewControllerDelegateTests.m */,
+			);
+			name = Charting;
+			sourceTree = "<group>";
+		};
+		FB71CE4A1667EDE10076B6E3 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				FB71CE4B1667EDF80076B6E3 /* RZCoreDataManagerForTests.h */,
+				FB71CE4C1667EDF80076B6E3 /* RZCoreDataManagerForTests.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
 		FB76374616444F4700C26C05 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FB71CE4A1667EDE10076B6E3 /* CoreData */,
 				FB15668A1641788D00F1C1DF /* MathFactTests.h */,
 				FB15668B1641788D00F1C1DF /* MathFactTests.m */,
 			);
@@ -420,6 +460,7 @@
 				FB1566691641759200F1C1DF /* Frameworks */,
 				FB15666A1641759200F1C1DF /* Resources */,
 				FB15666B1641759200F1C1DF /* ShellScript */,
+				CB2C645C5E82483CBC73587C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -523,6 +564,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 		};
+		CB2C645C5E82483CBC73587C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-MathJamTests-resources.sh\"\n";
+		};
 		FB15666B1641759200F1C1DF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -581,6 +636,8 @@
 				FB611EE016437A31009B8612 /* TimedSessionViewController.m in Sources */,
 				FBD808E41644788100A1CD02 /* PracticeSession+Analytics.m in Sources */,
 				FBD808E916447E5200A1CD02 /* RZAnalyticsData.m in Sources */,
+				FB71CE401667D88F0076B6E3 /* BarChartViewControllerDelegateTests.m in Sources */,
+				FB71CE4D1667EDF80076B6E3 /* RZCoreDataManagerForTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,8 +701,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${PODS_HEADERS_SEARCH_PATHS}";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PODS_HEADERS_SEARCH_PATHS = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -665,8 +724,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${PODS_HEADERS_SEARCH_PATHS}";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PODS_HEADERS_SEARCH_PATHS = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -678,6 +739,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MathJam/MathJam-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${inherited}";
 				INFOPLIST_FILE = "MathJam/MathJam-Info.plist";
 				PODS_ROOT = "${SRCROOT}/Pods/";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -691,6 +753,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MathJam/MathJam-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${inherited}";
 				INFOPLIST_FILE = "MathJam/MathJam-Info.plist";
 				PODS_ROOT = "${SRCROOT}/Pods/";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -700,6 +763,7 @@
 		};
 		FB1566831641759200F1C1DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA139ED483A945ED8B5A75FA /* Pods-MathJamTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MathJam.app/MathJam";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -708,9 +772,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MathJam/MathJam-Prefix.pch";
-				HEADER_SEARCH_PATHS = "${PODS_HEADERS_SEARCH_PATHS}";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "MathJamTests/MathJamTests-Info.plist";
-				PODS_HEADERS_SEARCH_PATHS = "\"${SRCROOT}/Pods/Headers\" \"${SRCROOT}/Pods/Headers/FlurrySDK\"\n";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -719,6 +782,7 @@
 		};
 		FB1566841641759200F1C1DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA139ED483A945ED8B5A75FA /* Pods-MathJamTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MathJam.app/MathJam";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -727,9 +791,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MathJam/MathJam-Prefix.pch";
-				HEADER_SEARCH_PATHS = "${PODS_HEADERS_SEARCH_PATHS}";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "MathJamTests/MathJamTests-Info.plist";
-				PODS_HEADERS_SEARCH_PATHS = "\"${SRCROOT}/Pods/Headers\" \"${SRCROOT}/Pods/Headers/FlurrySDK\"\n";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
