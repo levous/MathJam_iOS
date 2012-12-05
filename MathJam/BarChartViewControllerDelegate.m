@@ -7,13 +7,28 @@
 //
 
 #import "BarChartViewControllerDelegate.h"
+#import "PracticeSession+ComputedValues.h"
 
-float gVals[] = { 1,2,2.1,4.5,4.3,4.2,6,8,9,10, 13, 5.5 };
 NSMutableArray *_vals = nil;
+
+
 
 @implementation BarChartViewControllerDelegate{
 
     float _max;
+    
+}
+
+- (id)init{
+    if(self = [super init]){
+        self.dateFormatter = [[NSDateFormatter alloc] init];
+        [self.dateFormatter setDateFormat:@"yyyy-MM-dd h:mm"];
+        
+        self.numberFormatter = [[NSNumberFormatter alloc] init];
+        [self.numberFormatter setPositiveFormat:@"###0.#"];
+        
+    }
+    return self;
 }
 
 -(int) frd3DBarChartViewControllerNumberRows:(FRD3DBarChartViewController *)frd3DBarChartViewController
@@ -29,7 +44,7 @@ NSMutableArray *_vals = nil;
 
 -(float) frd3DBarChartViewController:(FRD3DBarChartViewController *)frd3DBarChartViewController valueForBarAtRow:(int)row column:(int)column
 {
-    return [[_vals objectAtIndex:column] floatValue];
+    return [[[_vals objectAtIndex:column] valueForKey:@"equations_per_minute"] floatValue];
 }
 
 -(float) frd3DBarChartViewControllerMaxValue:(FRD3DBarChartViewController *)frd3DBarChartViewController
@@ -45,7 +60,16 @@ NSMutableArray *_vals = nil;
 
 -(NSString *)frd3DBarChartViewController:(FRD3DBarChartViewController *)frd3DBarChartViewController legendForColumn:(int)column
 {
-    return [NSString stringWithFormat:@"%i", column + 1];
+    
+    NSDictionary *hash = [_vals objectAtIndex:column];
+    float eqPerMinute = [[hash valueForKey:@"equations_per_minute"] floatValue];
+    
+    
+    NSString *columnLabel = [NSString stringWithFormat:@"%@",
+                             [self.numberFormatter stringFromNumber:[NSNumber numberWithFloat:eqPerMinute]]
+                             ];
+    
+    return columnLabel;
 }
 
 -(NSString *) frd3DBarChartViewController:(FRD3DBarChartViewController *)frd3DBarChartViewController legendForRow:(int)row
@@ -79,16 +103,23 @@ NSMutableArray *_vals = nil;
     
     _max = 0.0;
     _vals = [NSMutableArray array];
-    
     for(PracticeSession *practiceSession in allPracticeSessions){
         if (practiceSession.equations != nil) {
+            NSDictionary *hash = [NSMutableDictionary dictionary];
             int totalCount = practiceSession.equations.count;
-            [_vals addObject:[NSNumber numberWithInteger:totalCount]];
-            _max = MAX(_max, totalCount);
+            float equationsPerMinute = [practiceSession equationsPerMinute];
+            [hash setValue:[NSNumber numberWithInteger:totalCount] forKey:@"total_count"];
+            [hash setValue:practiceSession.endTime forKey:@"end_time"];
+            [hash setValue:[NSNumber numberWithFloat:equationsPerMinute] forKey:@"equations_per_minute"];
+            
+            [_vals addObject:hash];
+            _max = MAX(_max, (int)equationsPerMinute);
+            
         }
     
     }
     
+    if(_max == 0) _max = 1;
     // set max to something divisible by 5
     _max = (((int)(_max / 5)) + 1) * 5;
 }

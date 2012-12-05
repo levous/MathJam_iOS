@@ -9,30 +9,36 @@
 #import "BarChartViewControllerDelegateTests.h"
 #import "BarChartViewControllerDelegate.h"
 #import "RZCoreDataManagerForTests.h"
+#import "PracticeSession+ComputedValues.h"
 
-@implementation BarChartViewControllerDelegateTests
+@implementation BarChartViewControllerDelegateTests{
+    BarChartViewControllerDelegate *barChartViewControllerDelegate;
+    NSArray *sessions;
+    float maxScore;
+}
 
-
-
-- (void)testBarChartMaxValueAndValueLinesAreAppropriate{
-    BarChartViewControllerDelegate *barChartViewControllerDelegate = [BarChartViewControllerDelegate new];
-    
+- (void)setUp{
+    barChartViewControllerDelegate = [BarChartViewControllerDelegate new];
     
     RZCoreDataManager *cdMgr = [RZCoreDataManagerForTests sharedInstance];
     
-    NSArray *sessions = [cdMgr getAllPracticeSessions];
+    sessions = [cdMgr getAllPracticeSessions];
     
-    int maxCount = 0;
+    
     for(PracticeSession *session in sessions){
         if(session.equations){
-            maxCount = MAX(maxCount, session.equations.count);
+            maxScore = MAX(maxScore, [session equationsPerMinute]);
         }
     }
     
-    float chartMax = (((int)(maxCount / 5)) + 1 ) * 5;
-    
-    
     [barChartViewControllerDelegate setCoreDataManager:cdMgr];
+    
+
+}
+
+- (void)testBarChartMaxValueAndValueLinesAreAppropriate{
+    float chartMax = (((int)(maxScore / 5)) + 1 ) * 5;
+    
     [barChartViewControllerDelegate regenerateValues];
     
     STAssertEquals(chartMax, [barChartViewControllerDelegate frd3DBarChartViewControllerMaxValue:nil], @"The max chart value was not correct");
@@ -40,13 +46,12 @@
     
     PracticeSession *anySession = [sessions objectAtIndex:0];
     
-    for(int i = 0;i < 52;++i){
-        [cdMgr insertNewMathEquationInSession:anySession withFactorOne:[NSNumber numberWithInt:1] factorTwo:[NSNumber numberWithInt:1] operation:RZMathOperationAdd];
+    for(int i = 0;i < 200;++i){
+        [barChartViewControllerDelegate.coreDataManager insertNewMathEquationInSession:anySession withFactorOne:[NSNumber numberWithInt:1] factorTwo:[NSNumber numberWithInt:1] operation:RZMathOperationAdd];
         
     }
     
-    maxCount = anySession.equations.count;
-    float newChartMax = (((int)(maxCount / 5)) + 1 ) * 5;
+    float newChartMax = (((int)([anySession equationsPerMinute] / 5)) + 1 ) * 5;
     
     STAssertFalse(newChartMax == chartMax, @"Test is invalid, expected these values to not be equal");
     
@@ -54,5 +59,30 @@
     
     STAssertEquals(newChartMax, [barChartViewControllerDelegate frd3DBarChartViewControllerMaxValue:nil], @"The max chart value was not correct");
     
+    
 }
+
+- (void)testBarChartHorizontalLabelsShowDateAndScore{
+        
+    [barChartViewControllerDelegate regenerateValues];
+    
+    PracticeSession *thirdSession = [sessions objectAtIndex:2];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    [dateFormatter setDateFormat:@"yyyy-MM-dd h:mm"];
+    
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+    [numberFormatter setPositiveFormat:@"###0.#"];
+    NSString *formattedNumberString = [numberFormatter stringFromNumber:[NSNumber numberWithFloat:[thirdSession equationsPerMinute]]];
+    
+    
+    NSString *expectedLabel = [NSString stringWithFormat:@"%@", formattedNumberString];
+
+    NSString *labelForThirdColumn = [barChartViewControllerDelegate frd3DBarChartViewController:nil legendForColumn:2];
+    
+    STAssertEqualObjects(expectedLabel, labelForThirdColumn, @"Expected the label to include the date, time and score");
+    
+    
+}
+
 @end

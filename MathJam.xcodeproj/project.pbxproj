@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0862D68F7E34497192BCB56E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16231168CCCE4C70916083E8 /* libPods.a */; };
 		345E52DCE6E14D7185CD3739 /* libPods-MathJamTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C295B82D631E4F2CBE0FE07A /* libPods-MathJamTests.a */; };
+		FB114D5A166E5ED200B524FD /* PracticeSessionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB114D59166E5ED200B524FD /* PracticeSessionTests.m */; };
+		FB114D5E166E619700B524FD /* PracticeSession+ComputedValues.m in Sources */ = {isa = PBXBuildFile; fileRef = FB114D5D166E619700B524FD /* PracticeSession+ComputedValues.m */; };
+		FB114D5F166E619700B524FD /* PracticeSession+ComputedValues.m in Sources */ = {isa = PBXBuildFile; fileRef = FB114D5D166E619700B524FD /* PracticeSession+ComputedValues.m */; };
 		FB15664B1641759200F1C1DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB15664A1641759200F1C1DF /* UIKit.framework */; };
 		FB15664D1641759200F1C1DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB15664C1641759200F1C1DF /* Foundation.framework */; };
 		FB15664F1641759200F1C1DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB15664E1641759200F1C1DF /* CoreGraphics.framework */; };
@@ -100,6 +103,10 @@
 		ADCF32FC04804310AC89E3E1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		C295B82D631E4F2CBE0FE07A /* libPods-MathJamTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MathJamTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA139ED483A945ED8B5A75FA /* Pods-MathJamTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MathJamTests.xcconfig"; path = "Pods/Pods-MathJamTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		FB114D58166E5ED200B524FD /* PracticeSessionTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeSessionTests.h; sourceTree = "<group>"; };
+		FB114D59166E5ED200B524FD /* PracticeSessionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeSessionTests.m; sourceTree = "<group>"; };
+		FB114D5C166E619700B524FD /* PracticeSession+ComputedValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PracticeSession+ComputedValues.h"; sourceTree = "<group>"; };
+		FB114D5D166E619700B524FD /* PracticeSession+ComputedValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PracticeSession+ComputedValues.m"; sourceTree = "<group>"; };
 		FB1566461641759200F1C1DF /* MathJam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathJam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB15664A1641759200F1C1DF /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB15664C1641759200F1C1DF /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -351,6 +358,8 @@
 				FB20DD3F16431FE2002E2F33 /* PracticeSession.m */,
 				FB20DD1C1642E9B5002E2F33 /* RZCoreDataManager.h */,
 				FB20DD1D1642E9B5002E2F33 /* RZCoreDataManager.m */,
+				FB114D5C166E619700B524FD /* PracticeSession+ComputedValues.h */,
+				FB114D5D166E619700B524FD /* PracticeSession+ComputedValues.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -406,6 +415,8 @@
 			children = (
 				FB71CE4B1667EDF80076B6E3 /* RZCoreDataManagerForTests.h */,
 				FB71CE4C1667EDF80076B6E3 /* RZCoreDataManagerForTests.m */,
+				FB114D58166E5ED200B524FD /* PracticeSessionTests.h */,
+				FB114D59166E5ED200B524FD /* PracticeSessionTests.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -615,6 +626,7 @@
 				FB3A13B9165D7D54005D1C42 /* BarChartViewController.m in Sources */,
 				FB3A13BE165D7DD2005D1C42 /* BarChartViewControllerDelegate.m in Sources */,
 				FB3A13C1165D7EB9005D1C42 /* RZNavigationManager.m in Sources */,
+				FB114D5E166E619700B524FD /* PracticeSession+ComputedValues.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,6 +650,8 @@
 				FBD808E916447E5200A1CD02 /* RZAnalyticsData.m in Sources */,
 				FB71CE401667D88F0076B6E3 /* BarChartViewControllerDelegateTests.m in Sources */,
 				FB71CE4D1667EDF80076B6E3 /* RZCoreDataManagerForTests.m in Sources */,
+				FB114D5A166E5ED200B524FD /* PracticeSessionTests.m in Sources */,
+				FB114D5F166E619700B524FD /* PracticeSession+ComputedValues.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

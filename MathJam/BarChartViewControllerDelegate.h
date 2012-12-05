@@ -12,6 +12,8 @@
 
 @interface BarChartViewControllerDelegate : NSObject<FRD3DBarChartViewControllerDelegate>
 @property(strong, nonatomic) RZCoreDataManager *coreDataManager;
+@property(strong, nonatomic) NSDateFormatter *dateFormatter;
+@property(strong, nonatomic) NSNumberFormatter *numberFormatter;
 
 -(void) regenerateValues;
 
