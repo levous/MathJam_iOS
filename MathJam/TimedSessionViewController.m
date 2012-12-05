@@ -7,6 +7,7 @@
 //
 
 #import "TimedSessionViewController.h"
+#import "JZTimerMan.h"
 
 @interface TimedSessionViewController ()
 
@@ -76,6 +77,29 @@
 
 - (IBAction)cancelPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)beginPressed:(id)sender {
+    
+    // figure out how many seconds
+    int selectedIndex = [self.minutesPicker selectedRowInComponent:0];
+    int numberOfMinutes = selectedIndex + 1;
+    int numberOfSeconds = numberOfMinutes * 60;
+    
+    // developer impatience
+    // numberOfSeconds = 5;
+    
+    // make a timer man
+    JZTimerMan *timerMan = [[JZTimerMan alloc] initWithDuration:numberOfSeconds];
+    self.missingNumberViewController.timerMan = timerMan;
+    // start the timer man session
+    [timerMan startSession];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+    
+    
+    
 }
 
 

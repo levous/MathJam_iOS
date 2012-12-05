@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RZMissingNumberEquation.h"
 #import "RZCoreDataManager.h"
+#import "JZTimerMan.h"
 
 @interface MissingNumberViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *factOneLabel;
@@ -20,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *answerThreeButton;
 @property (weak, nonatomic) IBOutlet UIButton *answerFourButton;
 
+@property (strong, nonatomic) JZTimerMan *timerMan;
 @property (strong, nonatomic) RZCoreDataManager *coreDataManager;
 
 @property (strong, nonatomic) RZMissingNumberEquation *fact;

@@ -9,6 +9,7 @@
 #import "RZNavigationManager.h"
 #import "MissingNumberViewController.h"
 #import "SessionConfigViewController.h"
+#import "TimedSessionViewController.h"
 #import "BarChartViewControllerDelegate.h"
 
 @implementation RZNavigationManager
@@ -36,6 +37,8 @@
     {
         mnvcTo.practiceSession = mnvcFrom.practiceSession;
         mnvcTo.coreDataManager = mnvcFrom.coreDataManager;
+        mnvcTo.timerMan = mnvcFrom.timerMan;
+        
 
     }
     else if(([[segue identifier] isEqualToString:@"showChartSeque"]))
@@ -44,6 +47,12 @@
         barChartDelegate.coreDataManager = mnvcFrom.coreDataManager;
         [barChartDelegate regenerateValues];
         [segue.destinationViewController setFrd3dBarChartDelegate:barChartDelegate];
+        
+    }
+    else if(([[segue identifier] isEqualToString:@"showTimedPracticeSeque"]))
+    {
+        TimedSessionViewController *timedSessionVC = (TimedSessionViewController *)vcTo;
+        timedSessionVC.missingNumberViewController = mnvcFrom;
         
     }
 
