@@ -14,6 +14,7 @@
 @property (strong, nonatomic, readonly) NSTimer *timer;
 @property (strong, nonatomic) AVAudioPlayer *audioPlayer;
 @property (nonatomic, readonly) NSTimeInterval duration;
+@property (strong, nonatomic) UIView *splashView;
 - (id)initWithDuration:(NSTimeInterval)seconds;
 - (void)startSession;
 @end

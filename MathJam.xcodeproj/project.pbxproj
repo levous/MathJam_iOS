@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0862D68F7E34497192BCB56E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16231168CCCE4C70916083E8 /* libPods.a */; };
 		345E52DCE6E14D7185CD3739 /* libPods-MathJamTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C295B82D631E4F2CBE0FE07A /* libPods-MathJamTests.a */; };
+		A9D855A216710F60000ED6A0 /* TimerSplashView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9D855A116710F60000ED6A0 /* TimerSplashView.xib */; };
+		A9D855A5167119A2000ED6A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D855A4167119A2000ED6A0 /* QuartzCore.framework */; };
 		FB114D5A166E5ED200B524FD /* PracticeSessionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB114D59166E5ED200B524FD /* PracticeSessionTests.m */; };
 		FB114D5E166E619700B524FD /* PracticeSession+ComputedValues.m in Sources */ = {isa = PBXBuildFile; fileRef = FB114D5D166E619700B524FD /* PracticeSession+ComputedValues.m */; };
 		FB114D5F166E619700B524FD /* PracticeSession+ComputedValues.m in Sources */ = {isa = PBXBuildFile; fileRef = FB114D5D166E619700B524FD /* PracticeSession+ComputedValues.m */; };
@@ -105,6 +107,8 @@
 
 /* Begin PBXFileReference section */
 		16231168CCCE4C70916083E8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9D855A116710F60000ED6A0 /* TimerSplashView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimerSplashView.xib; sourceTree = "<group>"; };
+		A9D855A4167119A2000ED6A0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		ADCF32FC04804310AC89E3E1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		C295B82D631E4F2CBE0FE07A /* libPods-MathJamTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MathJamTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA139ED483A945ED8B5A75FA /* Pods-MathJamTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MathJamTests.xcconfig"; path = "Pods/Pods-MathJamTests.xcconfig"; sourceTree = SOURCE_ROOT; };
@@ -196,6 +200,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9D855A5167119A2000ED6A0 /* QuartzCore.framework in Frameworks */,
 				FB114D65166FB34D00B524FD /* AVFoundation.framework in Frameworks */,
 				FB20DD211642E9E2002E2F33 /* CoreData.framework in Frameworks */,
 				FB15664B1641759200F1C1DF /* UIKit.framework in Frameworks */,
@@ -252,6 +257,7 @@
 				FB15664C1641759200F1C1DF /* Foundation.framework */,
 				FB15664E1641759200F1C1DF /* CoreGraphics.framework */,
 				FB15666E1641759200F1C1DF /* SenTestingKit.framework */,
+				A9D855A4167119A2000ED6A0 /* QuartzCore.framework */,
 				16231168CCCE4C70916083E8 /* libPods.a */,
 				C295B82D631E4F2CBE0FE07A /* libPods-MathJamTests.a */,
 			);
@@ -391,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				FB1566621641759200F1C1DF /* MainStoryboard.storyboard */,
+				A9D855A116710F60000ED6A0 /* TimerSplashView.xib */,
 				FB3A13BB165D7DC7005D1C42 /* Charting */,
 				FB611EC9164367F4009B8612 /* Keyboard */,
 				FB20DCFC1642E13B002E2F33 /* View Controllers */,
@@ -550,6 +557,7 @@
 				FBC779031644CC420046B1FC /* Icon.png in Resources */,
 				FBC779051644CC480046B1FC /* Icon@2x.png in Resources */,
 				FB114D67166FB3CD00B524FD /* DogBark.mp3 in Resources */,
+				A9D855A216710F60000ED6A0 /* TimerSplashView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

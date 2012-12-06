@@ -7,6 +7,8 @@
 //
 
 #import "JZTimerMan.h"
+#import <QuartzCore/QuartzCore.h>
+
 @implementation JZTimerMan
 
 - (id)initWithDuration:(NSTimeInterval)seconds{
@@ -17,8 +19,47 @@
     return self;
 }
 
+//TODO: refactor this UI access out of the timer man and into a delegate
+- (void)showTimerSplash{
+    UIViewController *container = [[UIViewController alloc] init];
+    [[NSBundle mainBundle] loadNibNamed:@"TimerSplashView" owner:container options:nil];
+    
+    self.splashView = container.view;
+    
+    UIWindow *mainWindow = [[[UIApplication sharedApplication] windows] objectAtIndex:0];
+    
+    
+    // so naughty
+    UIView *box = [[[self.splashView.subviews objectAtIndex:0] subviews] objectAtIndex:0];
+    [box.layer setCornerRadius:30.0f];
+    [box.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+    [box.layer setBorderWidth:1.5f];
+    [box.layer setShadowColor:[UIColor blackColor].CGColor];
+    [box.layer setShadowOpacity:0.8];
+    [box.layer setShadowRadius:3.0];
+    [box.layer setShadowOffset:CGSizeMake(2.0, 2.0)];
+    
+    [mainWindow addSubview:self.splashView];
+    
+    [UIView animateWithDuration:1
+                          delay:1
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         self.splashView.alpha = 0.0;
+                     }
+                     completion:^(BOOL finished){
+                         [self.splashView removeFromSuperview];
+                     }
+     ];
+    
+    
+}
+
+
 - (void)startSession{
     _timer = [NSTimer scheduledTimerWithTimeInterval:self.duration target:self selector:@selector(timerComplete:) userInfo:nil repeats:NO];
+    [self showTimerSplash];
+    
 }
 
 - (AVAudioPlayer *)defaultAudioPlayer{
