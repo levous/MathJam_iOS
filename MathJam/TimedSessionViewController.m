@@ -8,6 +8,7 @@
 
 #import "TimedSessionViewController.h"
 #import "JZTimerMan.h"
+#import "RZNavigationManager.h"
 
 @interface TimedSessionViewController ()
 
@@ -32,6 +33,10 @@
     // if iPhone 4 or older
     CGRect pickerFrame = self.minutesPicker.frame;
     self.minutesPicker.frame = CGRectMake(pickerFrame.origin.x, pickerFrame.origin.y - 85, pickerFrame.size.width, pickerFrame.size.height);
+    
+    if(self.missingNumberViewController.timerMan != nil){
+        [self.missingNumberViewController.timerMan cancelSession];
+    }
 
 }
 
@@ -81,6 +86,8 @@
 
 - (IBAction)beginPressed:(id)sender {
     
+    
+    
     // figure out how many seconds
     int selectedIndex = [self.minutesPicker selectedRowInComponent:0];
     int numberOfMinutes = selectedIndex + 1;
@@ -90,7 +97,7 @@
     // numberOfSeconds = 5;
     
     // make a timer man
-    JZTimerMan *timerMan = [[JZTimerMan alloc] initWithDuration:numberOfSeconds];
+    JZTimerMan *timerMan = [[JZTimerMan alloc] initWithDuration:numberOfSeconds delegate:[RZNavigationManager sharedInstance]];
     self.missingNumberViewController.timerMan = timerMan;
     // start the timer man session
     [timerMan startSession];

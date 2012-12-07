@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0862D68F7E34497192BCB56E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16231168CCCE4C70916083E8 /* libPods.a */; };
 		345E52DCE6E14D7185CD3739 /* libPods-MathJamTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C295B82D631E4F2CBE0FE07A /* libPods-MathJamTests.a */; };
-		A9D855A216710F60000ED6A0 /* TimerSplashView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9D855A116710F60000ED6A0 /* TimerSplashView.xib */; };
+		A9D855A216710F60000ED6A0 /* TimerSplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9D855A116710F60000ED6A0 /* TimerSplashViewController.xib */; };
 		A9D855A5167119A2000ED6A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D855A4167119A2000ED6A0 /* QuartzCore.framework */; };
 		FB114D5A166E5ED200B524FD /* PracticeSessionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB114D59166E5ED200B524FD /* PracticeSessionTests.m */; };
 		FB114D5E166E619700B524FD /* PracticeSession+ComputedValues.m in Sources */ = {isa = PBXBuildFile; fileRef = FB114D5D166E619700B524FD /* PracticeSession+ComputedValues.m */; };
@@ -19,6 +19,9 @@
 		FB114D65166FB34D00B524FD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB114D64166FB34D00B524FD /* AVFoundation.framework */; };
 		FB114D67166FB3CD00B524FD /* DogBark.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB114D66166FB3CD00B524FD /* DogBark.mp3 */; };
 		FB114D68166FB3CD00B524FD /* DogBark.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB114D66166FB3CD00B524FD /* DogBark.mp3 */; };
+		FB114D72167288AD00B524FD /* JZTimerManTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB114D71167288AD00B524FD /* JZTimerManTests.m */; };
+		FB114D7E167294C900B524FD /* TimerSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB114D7D167294C900B524FD /* TimerSplashViewController.m */; };
+		FB114D7F167294C900B524FD /* TimerSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB114D7D167294C900B524FD /* TimerSplashViewController.m */; };
 		FB15664B1641759200F1C1DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB15664A1641759200F1C1DF /* UIKit.framework */; };
 		FB15664D1641759200F1C1DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB15664C1641759200F1C1DF /* Foundation.framework */; };
 		FB15664F1641759200F1C1DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB15664E1641759200F1C1DF /* CoreGraphics.framework */; };
@@ -107,7 +110,7 @@
 
 /* Begin PBXFileReference section */
 		16231168CCCE4C70916083E8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9D855A116710F60000ED6A0 /* TimerSplashView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimerSplashView.xib; sourceTree = "<group>"; };
+		A9D855A116710F60000ED6A0 /* TimerSplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimerSplashViewController.xib; sourceTree = "<group>"; };
 		A9D855A4167119A2000ED6A0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		ADCF32FC04804310AC89E3E1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		C295B82D631E4F2CBE0FE07A /* libPods-MathJamTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MathJamTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +123,10 @@
 		FB114D61166FA8DA00B524FD /* JZTimerMan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZTimerMan.m; sourceTree = "<group>"; };
 		FB114D64166FB34D00B524FD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		FB114D66166FB3CD00B524FD /* DogBark.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = DogBark.mp3; path = MathJam/DogBark.mp3; sourceTree = SOURCE_ROOT; };
+		FB114D70167288AD00B524FD /* JZTimerManTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZTimerManTests.h; sourceTree = "<group>"; };
+		FB114D71167288AD00B524FD /* JZTimerManTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZTimerManTests.m; sourceTree = "<group>"; };
+		FB114D7C167294C900B524FD /* TimerSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerSplashViewController.h; sourceTree = "<group>"; };
+		FB114D7D167294C900B524FD /* TimerSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerSplashViewController.m; sourceTree = "<group>"; };
 		FB1566461641759200F1C1DF /* MathJam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathJam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB15664A1641759200F1C1DF /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB15664C1641759200F1C1DF /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -355,6 +362,9 @@
 				FB20DD3016431059002E2F33 /* SessionConfigViewController.m */,
 				FB611EDD16437A31009B8612 /* TimedSessionViewController.h */,
 				FB611EDE16437A31009B8612 /* TimedSessionViewController.m */,
+				FB114D7C167294C900B524FD /* TimerSplashViewController.h */,
+				FB114D7D167294C900B524FD /* TimerSplashViewController.m */,
+				A9D855A116710F60000ED6A0 /* TimerSplashViewController.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -397,7 +407,6 @@
 			isa = PBXGroup;
 			children = (
 				FB1566621641759200F1C1DF /* MainStoryboard.storyboard */,
-				A9D855A116710F60000ED6A0 /* TimerSplashView.xib */,
 				FB3A13BB165D7DC7005D1C42 /* Charting */,
 				FB611EC9164367F4009B8612 /* Keyboard */,
 				FB20DCFC1642E13B002E2F33 /* View Controllers */,
@@ -448,6 +457,8 @@
 				FB71CE4A1667EDE10076B6E3 /* CoreData */,
 				FB15668A1641788D00F1C1DF /* MathFactTests.h */,
 				FB15668B1641788D00F1C1DF /* MathFactTests.m */,
+				FB114D70167288AD00B524FD /* JZTimerManTests.h */,
+				FB114D71167288AD00B524FD /* JZTimerManTests.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -557,7 +568,7 @@
 				FBC779031644CC420046B1FC /* Icon.png in Resources */,
 				FBC779051644CC480046B1FC /* Icon@2x.png in Resources */,
 				FB114D67166FB3CD00B524FD /* DogBark.mp3 in Resources */,
-				A9D855A216710F60000ED6A0 /* TimerSplashView.xib in Resources */,
+				A9D855A216710F60000ED6A0 /* TimerSplashViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,6 +663,7 @@
 				FB3A13C1165D7EB9005D1C42 /* RZNavigationManager.m in Sources */,
 				FB114D5E166E619700B524FD /* PracticeSession+ComputedValues.m in Sources */,
 				FB114D62166FA8DA00B524FD /* JZTimerMan.m in Sources */,
+				FB114D7E167294C900B524FD /* TimerSplashViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,6 +690,8 @@
 				FB114D5A166E5ED200B524FD /* PracticeSessionTests.m in Sources */,
 				FB114D5F166E619700B524FD /* PracticeSession+ComputedValues.m in Sources */,
 				FB114D63166FA8DA00B524FD /* JZTimerMan.m in Sources */,
+				FB114D72167288AD00B524FD /* JZTimerManTests.m in Sources */,
+				FB114D7F167294C900B524FD /* TimerSplashViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

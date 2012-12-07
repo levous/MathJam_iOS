@@ -9,58 +9,40 @@
 #import "JZTimerMan.h"
 #import <QuartzCore/QuartzCore.h>
 
-@implementation JZTimerMan
+@implementation JZTimerMan{
+    NSDate *completeTime;
+    
+}
 
-- (id)initWithDuration:(NSTimeInterval)seconds{
+- (id)initWithDuration:(NSTimeInterval)seconds delegate:(id<JZTimerManDelegate>)delegate
+{
     if(self = [super init]){
         _duration = seconds;
+        _timerManDelegate = delegate;
         self.audioPlayer = [self defaultAudioPlayer];
     }
     return self;
 }
 
-//TODO: refactor this UI access out of the timer man and into a delegate
-- (void)showTimerSplash{
-    UIViewController *container = [[UIViewController alloc] init];
-    [[NSBundle mainBundle] loadNibNamed:@"TimerSplashView" owner:container options:nil];
-    
-    self.splashView = container.view;
-    
-    UIWindow *mainWindow = [[[UIApplication sharedApplication] windows] objectAtIndex:0];
-    
-    
-    // so naughty.  Really need to wire this up properly
-    //TODO: wire up the box view with a proper class.
-    UIView *box = [[[self.splashView.subviews objectAtIndex:0] subviews] objectAtIndex:0];
-    [box.layer setCornerRadius:30.0f];
-    [box.layer setBorderColor:[UIColor lightGrayColor].CGColor];
-    [box.layer setBorderWidth:1.0f];
-    [box.layer setShadowColor:[UIColor blackColor].CGColor];
-    [box.layer setShadowOpacity:0.5];
-    [box.layer setShadowRadius:3.0];
-    [box.layer setShadowOffset:CGSizeMake(2.0, 2.0)];
-    
-    [mainWindow addSubview:self.splashView];
-    
-    [UIView animateWithDuration:0.2
-                          delay:0.5
-                        options:UIViewAnimationOptionCurveEaseInOut
-                     animations:^{
-                         self.splashView.alpha = 0.0;
-                     }
-                     completion:^(BOOL finished){
-                         [self.splashView removeFromSuperview];
-                     }
-     ];
-    
-    
-}
-
 
 - (void)startSession{
     _timer = [NSTimer scheduledTimerWithTimeInterval:self.duration target:self selector:@selector(timerComplete:) userInfo:nil repeats:NO];
-    [self showTimerSplash];
+    _endTime = [NSDate dateWithTimeIntervalSinceNow:self.duration];
+    _progressTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(timerTick:) userInfo:nil repeats:YES];
+    completeTime = [NSDate dateWithTimeIntervalSinceNow:self.duration];
     
+    if (self.timerManDelegate != nil) {
+        [self.timerManDelegate jzTimerMan:self didStartSessionWithDuration:self.duration];
+    }
+    
+}
+
+- (void)cancelSession{
+    [self.timer invalidate];
+    [self.progressTimer invalidate];
+    if (self.timerManDelegate != nil) {
+        [self.timerManDelegate jzTimerMan:self didCancelSessionWithDurationRemaining:[self.endTime timeIntervalSinceNow]];
+    }
 }
 
 - (AVAudioPlayer *)defaultAudioPlayer{
@@ -81,8 +63,17 @@
 - (void)timerComplete:(NSTimer*)theTimer{
     [self playAlarmSound];
     [[[UIAlertView alloc] initWithTitle:@"Timer Alert" message:@"Nice job, JACKSON!" delegate:nil cancelButtonTitle:@"Bark" otherButtonTitles:nil] show];
-    
+    if (self.timerManDelegate != nil) {
+        [self.timerManDelegate jzTimerMan:self didCompleteSessionWithTotalDuration:self.duration];
+    }
        
+}
+              
+- (void)timerTick:(NSTimer*)theTimer{
+    if (self.timerManDelegate != nil) {
+        [self.timerManDelegate jzTimerMan:self didTickWithTimeRemaining:[self.endTime timeIntervalSinceNow]];
+    }
+
 }
 
 @end

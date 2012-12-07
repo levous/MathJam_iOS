@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "RZCoreDataManager.h"
+#import "JZTimerMan.h"
 
-@interface RZNavigationManager : NSObject
+@interface RZNavigationManager : NSObject<JZTimerManDelegate>
+
++ (RZNavigationManager *)sharedInstance;
 
 - (void)handleSegue:(UIStoryboardSegue *)segue sender:(id)sender;
 
