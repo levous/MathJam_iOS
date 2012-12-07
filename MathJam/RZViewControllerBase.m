@@ -1,18 +1,18 @@
 //
-//  BarChartViewController.m
+//  RZViewControllerBase.m
 //  MathJam
 //
-//  Created by Rusty Zarse on 11/21/12.
+//  Created by Rusty Zarse on 12/7/12.
 //  Copyright (c) 2012 Levous, LLC. All rights reserved.
 //
 
-#import "BarChartViewController.h"
+#import "RZViewControllerBase.h"
 
-@interface BarChartViewController ()
+@interface RZViewControllerBase ()
 
 @end
 
-@implementation BarChartViewController
+@implementation RZViewControllerBase
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -21,17 +21,6 @@
         // Custom initialization
     }
     return self;
-}
-
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    [[self navigationController] setNavigationBarHidden:NO animated:animated];
-}
-
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    [[self navigationController] setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)viewDidLoad
@@ -46,6 +35,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Rotation
 
 // disable rotation
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation{
@@ -56,6 +46,12 @@
     return NO;
 }
 
+- (NSUInteger)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
+}
 
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    return UIInterfaceOrientationPortrait;
+}
 
 @end

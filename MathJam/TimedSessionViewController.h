@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "MissingNumberViewController.h"
+#import "RZViewControllerBase.h"
 
-@interface TimedSessionViewController : UIViewController
+@interface TimedSessionViewController : RZViewControllerBase
 @property (weak, nonatomic) IBOutlet UISwitch *timedSwitch;
 @property (weak, nonatomic) IBOutlet UIPickerView *minutesPicker;
 @property (weak, nonatomic) MissingNumberViewController *missingNumberViewController;

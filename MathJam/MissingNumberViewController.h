@@ -10,8 +10,9 @@
 #import "RZMissingNumberEquation.h"
 #import "RZCoreDataManager.h"
 #import "JZTimerMan.h"
+#import "RZViewControllerBase.h"
 
-@interface MissingNumberViewController : UIViewController
+@interface MissingNumberViewController : RZViewControllerBase
 @property (weak, nonatomic) IBOutlet UILabel *factOneLabel;
 @property (weak, nonatomic) IBOutlet UILabel *factTwoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *answerLabel;

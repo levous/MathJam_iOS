@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PracticeSession.h"
+#import "RZViewControllerBase.h"
 
 @protocol SessionConfigDelegate <NSObject>
 
@@ -15,7 +16,7 @@
 
 @end
 
-@interface SessionConfigViewController : UIViewController<UITextFieldDelegate>
+@interface SessionConfigViewController : RZViewControllerBase<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UISwitch *plusSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *minusSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *timesSwitch;

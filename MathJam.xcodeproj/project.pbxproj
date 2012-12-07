@@ -10,6 +10,8 @@
 		0862D68F7E34497192BCB56E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16231168CCCE4C70916083E8 /* libPods.a */; };
 		345E52DCE6E14D7185CD3739 /* libPods-MathJamTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C295B82D631E4F2CBE0FE07A /* libPods-MathJamTests.a */; };
 		A92EE7AB16729CC400BC955B /* go.wav in Resources */ = {isa = PBXBuildFile; fileRef = A92EE7AA16729CC400BC955B /* go.wav */; };
+		A92EE7AF16729F9800BC955B /* RZViewControllerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = A92EE7AE16729F9800BC955B /* RZViewControllerBase.m */; };
+		A92EE7B016729F9800BC955B /* RZViewControllerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = A92EE7AE16729F9800BC955B /* RZViewControllerBase.m */; };
 		A9D855A216710F60000ED6A0 /* TimerSplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9D855A116710F60000ED6A0 /* TimerSplashViewController.xib */; };
 		A9D855A5167119A2000ED6A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D855A4167119A2000ED6A0 /* QuartzCore.framework */; };
 		FB114D5A166E5ED200B524FD /* PracticeSessionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB114D59166E5ED200B524FD /* PracticeSessionTests.m */; };
@@ -112,6 +114,8 @@
 /* Begin PBXFileReference section */
 		16231168CCCE4C70916083E8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A92EE7AA16729CC400BC955B /* go.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = go.wav; sourceTree = "<group>"; };
+		A92EE7AD16729F9800BC955B /* RZViewControllerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZViewControllerBase.h; sourceTree = "<group>"; };
+		A92EE7AE16729F9800BC955B /* RZViewControllerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZViewControllerBase.m; sourceTree = "<group>"; };
 		A9D855A116710F60000ED6A0 /* TimerSplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimerSplashViewController.xib; sourceTree = "<group>"; };
 		A9D855A4167119A2000ED6A0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		ADCF32FC04804310AC89E3E1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -368,6 +372,8 @@
 				FB114D7C167294C900B524FD /* TimerSplashViewController.h */,
 				FB114D7D167294C900B524FD /* TimerSplashViewController.m */,
 				A9D855A116710F60000ED6A0 /* TimerSplashViewController.xib */,
+				A92EE7AD16729F9800BC955B /* RZViewControllerBase.h */,
+				A92EE7AE16729F9800BC955B /* RZViewControllerBase.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -668,6 +674,7 @@
 				FB114D5E166E619700B524FD /* PracticeSession+ComputedValues.m in Sources */,
 				FB114D62166FA8DA00B524FD /* JZTimerMan.m in Sources */,
 				FB114D7E167294C900B524FD /* TimerSplashViewController.m in Sources */,
+				A92EE7AF16729F9800BC955B /* RZViewControllerBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,6 +703,7 @@
 				FB114D63166FA8DA00B524FD /* JZTimerMan.m in Sources */,
 				FB114D72167288AD00B524FD /* JZTimerManTests.m in Sources */,
 				FB114D7F167294C900B524FD /* TimerSplashViewController.m in Sources */,
+				A92EE7B016729F9800BC955B /* RZViewControllerBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

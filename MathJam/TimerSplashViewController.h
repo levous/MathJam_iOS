@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TimerSplashViewController : UIViewController
+#import "RZViewControllerBase.h"
+
+@interface TimerSplashViewController : RZViewControllerBase
 @property (weak, nonatomic) IBOutlet UILabel *goLabel;
 @property (weak, nonatomic) IBOutlet UIView *box;
 
