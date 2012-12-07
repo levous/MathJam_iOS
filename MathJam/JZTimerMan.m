@@ -19,9 +19,39 @@
     if(self = [super init]){
         _duration = seconds;
         _timerManDelegate = delegate;
-        self.audioPlayer = [self defaultAudioPlayer];
+        [self initDefaultAudioPlayers];
     }
     return self;
+}
+
+
+- (void)initDefaultAudioPlayers{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"DogBark" ofType:@"mp3"];
+    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath: path];
+    AVAudioPlayer *theAudio=[[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:NULL];
+    theAudio.volume = 1.0;
+    [theAudio prepareToPlay];
+    
+    self.sessionCompleteAudioPlayer = theAudio;
+    
+    path = [[NSBundle mainBundle] pathForResource:@"go" ofType:@"wav"];
+    fileURL = [[NSURL alloc] initFileURLWithPath: path];
+    theAudio=[[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:NULL];
+    theAudio.volume = 1.0;
+    [theAudio prepareToPlay];
+    
+    self.sessionBeginAudioPlayer = theAudio;
+    
+}
+
+- (void)playStartSound{
+    [self.sessionBeginAudioPlayer play];
+    
+}
+
+- (void)playAlarmSound{
+    [self.sessionCompleteAudioPlayer play];
+    
 }
 
 
@@ -35,6 +65,7 @@
         [self.timerManDelegate jzTimerMan:self didStartSessionWithDuration:self.duration];
     }
     
+    [self playStartSound];
 }
 
 - (void)cancelSession{
@@ -45,20 +76,6 @@
     }
 }
 
-- (AVAudioPlayer *)defaultAudioPlayer{
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"DogBark" ofType:@"mp3"];
-    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath: path];
-    AVAudioPlayer *theAudio=[[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:NULL];
-    theAudio.volume = 1.0;
-    [theAudio prepareToPlay];
-    return theAudio;
-    
-}
-
-- (void)playAlarmSound{
-    [self.audioPlayer play];
-    
-}
 
 - (void)timerComplete:(NSTimer*)theTimer{
     [self playAlarmSound];

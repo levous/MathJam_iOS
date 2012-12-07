@@ -24,7 +24,7 @@
 @property (strong, nonatomic, readonly) NSDate *endTime;
 
 @property (weak, nonatomic, readonly) id<JZTimerManDelegate> timerManDelegate;
-@property (strong, nonatomic) AVAudioPlayer *audioPlayer;
+@property (strong, nonatomic) AVAudioPlayer *sessionCompleteAudioPlayer, *sessionBeginAudioPlayer;
 @property (nonatomic, readonly) NSTimeInterval duration;
 @property (strong, nonatomic) UIView *splashView;
 @property (weak, nonatomic) UILabel *tickLabel;
