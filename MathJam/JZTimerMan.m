@@ -29,20 +29,21 @@
     UIWindow *mainWindow = [[[UIApplication sharedApplication] windows] objectAtIndex:0];
     
     
-    // so naughty
+    // so naughty.  Really need to wire this up properly
+    //TODO: wire up the box view with a proper class.
     UIView *box = [[[self.splashView.subviews objectAtIndex:0] subviews] objectAtIndex:0];
     [box.layer setCornerRadius:30.0f];
     [box.layer setBorderColor:[UIColor lightGrayColor].CGColor];
-    [box.layer setBorderWidth:1.5f];
+    [box.layer setBorderWidth:1.0f];
     [box.layer setShadowColor:[UIColor blackColor].CGColor];
-    [box.layer setShadowOpacity:0.8];
+    [box.layer setShadowOpacity:0.5];
     [box.layer setShadowRadius:3.0];
     [box.layer setShadowOffset:CGSizeMake(2.0, 2.0)];
     
     [mainWindow addSubview:self.splashView];
     
-    [UIView animateWithDuration:1
-                          delay:1
+    [UIView animateWithDuration:0.2
+                          delay:0.5
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
                          self.splashView.alpha = 0.0;
