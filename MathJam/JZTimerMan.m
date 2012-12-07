@@ -7,9 +7,13 @@
 //
 
 #import "JZTimerMan.h"
-@implementation JZTimerMan
+@implementation JZTimerMan{
+    NSDate *completeTime;
+    
+}
 
-- (id)initWithDuration:(NSTimeInterval)seconds{
+- (id)initWithDuration:(NSTimeInterval)seconds
+{
     if(self = [super init]){
         _duration = seconds;
         self.audioPlayer = [self defaultAudioPlayer];
@@ -19,6 +23,11 @@
 
 - (void)startSession{
     _timer = [NSTimer scheduledTimerWithTimeInterval:self.duration target:self selector:@selector(timerComplete:) userInfo:nil repeats:NO];
+    _progressTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(timerTick:) userInfo:nil repeats:YES];
+    completeTime = [NSDate dateWithTimeIntervalSinceNow:self.duration];
+    self.tickLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100.0, 50.0)];
+    
+    
 }
 
 - (AVAudioPlayer *)defaultAudioPlayer{
@@ -41,6 +50,10 @@
     [[[UIAlertView alloc] initWithTitle:@"Timer Alert" message:@"Nice job, JACKSON!" delegate:nil cancelButtonTitle:@"Bark" otherButtonTitles:nil] show];
     
        
+}
+              
+- (void)timerTick:(NSTimer*)theTimer{
+    
 }
 
 @end

@@ -11,9 +11,10 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface JZTimerMan : NSObject
-@property (strong, nonatomic, readonly) NSTimer *timer;
+@property (strong, nonatomic, readonly) NSTimer *timer, *progressTimer;
 @property (strong, nonatomic) AVAudioPlayer *audioPlayer;
 @property (nonatomic, readonly) NSTimeInterval duration;
+@property (weak, nonatomic) UILabel *tickLabel;
 - (id)initWithDuration:(NSTimeInterval)seconds;
 - (void)startSession;
 @end
