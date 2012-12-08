@@ -12,6 +12,7 @@
 #import "TimedSessionViewController.h"
 #import "BarChartViewControllerDelegate.h"
 #import "TimerSplashViewController.h"
+#import "TimedSessionSummaryViewController.h"
 
 @implementation RZNavigationManager{
     UILabel *tickLabel;
@@ -73,6 +74,11 @@ static RZNavigationManager *sharedInstance = nil;
         TimedSessionViewController *timedSessionVC = (TimedSessionViewController *)vcTo;
         timedSessionVC.missingNumberViewController = mnvcFrom;
         
+    }
+    else if(([[segue identifier] isEqualToString:@"showTimedPracticeSummarySegue"]))
+    {
+        TimedSessionSummaryViewController *tsvc = (TimedSessionSummaryViewController *)vcTo;
+        tsvc.practiceSession = mnvcFrom.practiceSession;
     }
 
 

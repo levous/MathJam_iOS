@@ -79,7 +79,6 @@
 
 - (void)timerComplete:(NSTimer*)theTimer{
     [self playAlarmSound];
-    [[[UIAlertView alloc] initWithTitle:@"Timer Alert" message:@"Nice job, JACKSON!" delegate:nil cancelButtonTitle:@"Bark" otherButtonTitles:nil] show];
     if (self.timerManDelegate != nil) {
         [self.timerManDelegate jzTimerMan:self didCompleteSessionWithTotalDuration:self.duration];
     }

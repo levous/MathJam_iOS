@@ -99,6 +99,8 @@
 		FBD808E41644788100A1CD02 /* PracticeSession+Analytics.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD808E21644788100A1CD02 /* PracticeSession+Analytics.m */; };
 		FBD808E816447E5200A1CD02 /* RZAnalyticsData.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD808E716447E5200A1CD02 /* RZAnalyticsData.m */; };
 		FBD808E916447E5200A1CD02 /* RZAnalyticsData.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD808E716447E5200A1CD02 /* RZAnalyticsData.m */; };
+		FBDF7A771672BA3B00C49FA4 /* TimedSessionSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDF7A761672BA3B00C49FA4 /* TimedSessionSummaryViewController.m */; };
+		FBDF7A781672BA3B00C49FA4 /* TimedSessionSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDF7A761672BA3B00C49FA4 /* TimedSessionSummaryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -206,6 +208,8 @@
 		FBD808E516447D1600A1CD02 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		FBD808E616447E5200A1CD02 /* RZAnalyticsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZAnalyticsData.h; sourceTree = "<group>"; };
 		FBD808E716447E5200A1CD02 /* RZAnalyticsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZAnalyticsData.m; sourceTree = "<group>"; };
+		FBDF7A751672BA3B00C49FA4 /* TimedSessionSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimedSessionSummaryViewController.h; sourceTree = "<group>"; };
+		FBDF7A761672BA3B00C49FA4 /* TimedSessionSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimedSessionSummaryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -374,6 +378,8 @@
 				A9D855A116710F60000ED6A0 /* TimerSplashViewController.xib */,
 				A92EE7AD16729F9800BC955B /* RZViewControllerBase.h */,
 				A92EE7AE16729F9800BC955B /* RZViewControllerBase.m */,
+				FBDF7A751672BA3B00C49FA4 /* TimedSessionSummaryViewController.h */,
+				FBDF7A761672BA3B00C49FA4 /* TimedSessionSummaryViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -675,6 +681,7 @@
 				FB114D62166FA8DA00B524FD /* JZTimerMan.m in Sources */,
 				FB114D7E167294C900B524FD /* TimerSplashViewController.m in Sources */,
 				A92EE7AF16729F9800BC955B /* RZViewControllerBase.m in Sources */,
+				FBDF7A771672BA3B00C49FA4 /* TimedSessionSummaryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,6 +711,7 @@
 				FB114D72167288AD00B524FD /* JZTimerManTests.m in Sources */,
 				FB114D7F167294C900B524FD /* TimerSplashViewController.m in Sources */,
 				A92EE7B016729F9800BC955B /* RZViewControllerBase.m in Sources */,
+				FBDF7A781672BA3B00C49FA4 /* TimedSessionSummaryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
