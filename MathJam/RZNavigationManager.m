@@ -72,7 +72,7 @@ static RZNavigationManager *sharedInstance = nil;
     else if(([[segue identifier] isEqualToString:@"showTimedPracticeSeque"]))
     {
         TimedSessionViewController *timedSessionVC = (TimedSessionViewController *)vcTo;
-        timedSessionVC.missingNumberViewController = mnvcFrom;
+        timedSessionVC.timedSessionConfigDelegate = (id<TimedSessionConfigDelegate>)mnvcFrom;
         
     }
     else if(([[segue identifier] isEqualToString:@"showTimedPracticeSummarySegue"]))
@@ -154,12 +154,13 @@ static RZNavigationManager *sharedInstance = nil;
     tickLabel.textColor = [UIColor grayColor];
     tickLabel.font = [UIFont fontWithName:@"ChalkboardSE-Regular" size:8.0];
     tickLabel.userInteractionEnabled = NO;
+    
     [[self mainWindow] addSubview:tickLabel];
     
 }
 
 - (void)jzTimerMan:(id)timerMan didCompleteSessionWithTotalDuration:(NSTimeInterval)duration{
-    [tickLabel removeFromSuperview];
+    [tickLabel removeFromSuperview];		
 }
 
 

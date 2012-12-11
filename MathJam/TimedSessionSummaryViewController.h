@@ -10,12 +10,13 @@
 #import "RZViewControllerBase.h"
 #import "JZTimerMan.h"
 #import "PracticeSession.h"
+#import "MathEquation.h"
 
 @interface TimedSessionSummaryViewController : RZViewControllerBase
 @property (weak, nonatomic) IBOutlet UILabel *equationsPerMinuteLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalAnsweredLabel;
 @property (weak, nonatomic) IBOutlet UILabel *answeredCorrectlyFirstTryLabel;
-@property (weak, nonatomic) IBOutlet UILabel *totalIncorrectAnsersLabel;
+@property (weak, nonatomic) IBOutlet UILabel *totalIncorrectAnswersLabel;
 @property (weak, nonatomic) IBOutlet UIView *highScoreView;
 
 @property(strong, nonatomic) NSNumberFormatter *numberFormatter;

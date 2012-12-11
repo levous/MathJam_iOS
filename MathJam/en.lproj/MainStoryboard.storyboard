@@ -318,7 +318,7 @@
                         <outlet property="equationsPerMinuteLabel" destination="V2a-Pe-Eg7" id="Ocp-Ii-B8K"/>
                         <outlet property="highScoreView" destination="XNg-VT-iQZ" id="eWV-30-8vf"/>
                         <outlet property="totalAnsweredLabel" destination="MqE-CY-hWy" id="DPh-cX-g9f"/>
-                        <outlet property="totalIncorrectAnsersLabel" destination="sjr-oU-nzE" id="Sv7-gi-si6"/>
+                        <outlet property="totalIncorrectAnswersLabel" destination="sjr-oU-nzE" id="Ox6-eD-4WM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kF9-6H-Fis" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -547,65 +547,6 @@
         <image name="operations-44px.png" width="44" height="44"/>
         <image name="whitepaper.jpg" width="2048" height="1536"/>
     </resources>
-    <classes>
-        <class className="BarChartViewController" superclassName="FRD3DBarChartViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BarChartViewController.h"/>
-        </class>
-        <class className="FRD3DBarChartViewController" superclassName="GLKViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FRD3DBarChartViewController.h"/>
-        </class>
-        <class className="MissingNumberViewController" superclassName="RZViewControllerBase">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MissingNumberViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="answerPressed:"/>
-                <relationship kind="outlet" name="answerFourButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="answerLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="answerOneButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="answerThreeButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="answerTwoButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="factOneLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="factTwoLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="operationLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="RZViewControllerBase" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RZViewControllerBase.h"/>
-        </class>
-        <class className="SessionConfigViewController" superclassName="RZViewControllerBase">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SessionConfigViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="divideSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="factorOneLowerBound" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="factorOneUpperBound" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="factorTwoLowerBound" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="factorTwoUpperBound" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="minusSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="plusSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="timesSwitch" candidateClass="UISwitch"/>
-            </relationships>
-        </class>
-        <class className="TimedSessionSummaryViewController" superclassName="RZViewControllerBase">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimedSessionSummaryViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="donePressed:"/>
-                <relationship kind="outlet" name="answeredCorrectlyFirstTryLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="equationsPerMinuteLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="highScoreView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="totalAnsweredLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="totalIncorrectAnsersLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="TimedSessionViewController" superclassName="RZViewControllerBase">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimedSessionViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="beginPressed:"/>
-                <relationship kind="action" name="cancelPressed:"/>
-                <relationship kind="action" name="timedSwitchChanged:"/>
-                <relationship kind="outlet" name="minutesPicker" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="timedSwitch" candidateClass="UISwitch"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

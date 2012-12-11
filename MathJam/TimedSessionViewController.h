@@ -9,13 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "MissingNumberViewController.h"
 #import "RZViewControllerBase.h"
+#import "JZTimerMan.h"
+@protocol TimedSessionConfigDelegate
+@property JZTimerMan *timerMan;
+@property PracticeSession *practiceSession;
+@end
 
 @interface TimedSessionViewController : RZViewControllerBase
 @property (weak, nonatomic) IBOutlet UISwitch *timedSwitch;
 @property (weak, nonatomic) IBOutlet UIPickerView *minutesPicker;
-@property (weak, nonatomic) MissingNumberViewController *missingNumberViewController;
+@property (weak, nonatomic) id<TimedSessionConfigDelegate> timedSessionConfigDelegate;
 - (IBAction)timedSwitchChanged:(id)sender;
 - (IBAction)cancelPressed:(id)sender;
 - (IBAction)beginPressed:(id)sender;
+
 
 @end

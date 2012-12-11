@@ -34,8 +34,8 @@
     CGRect pickerFrame = self.minutesPicker.frame;
     self.minutesPicker.frame = CGRectMake(pickerFrame.origin.x, pickerFrame.origin.y - 85, pickerFrame.size.width, pickerFrame.size.height);
     
-    if(self.missingNumberViewController.timerMan != nil){
-        [self.missingNumberViewController.timerMan cancelSession];
+    if(self.timedSessionConfigDelegate.timerMan != nil){
+        [self.timedSessionConfigDelegate.timerMan cancelSession];
     }
 
 }
@@ -98,7 +98,10 @@
     
     // make a timer man
     JZTimerMan *timerMan = [[JZTimerMan alloc] initWithDuration:numberOfSeconds delegate:[RZNavigationManager sharedInstance]];
-    self.missingNumberViewController.timerMan = timerMan;
+    if(self.timedSessionConfigDelegate != nil){
+        self.timedSessionConfigDelegate.timerMan = timerMan;
+        self.timedSessionConfigDelegate.practiceSession = [[RZCoreDataManager sharedInstance] insertCopyOfPracticeSession:self.timedSessionConfigDelegate.practiceSession];
+    }
     // start the timer man session
     [timerMan startSession];
     
