@@ -33,5 +33,8 @@
 
 - (IBAction)answerPressed:(id)sender;
 
+- (void)nextEquation;
+
+- (void)presentSessionSummary;
 
 @end

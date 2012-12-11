@@ -15,7 +15,6 @@
 @end
 
 @implementation MissingNumberViewController
-int wrongAnswerCount = 0;
 
 - (UILabel *)missingNumberLabel{
     switch (self.fact.missingNumberPosition){
@@ -103,7 +102,6 @@ int wrongAnswerCount = 0;
         [self startCorrectAnswerAnimation];
         
     }else{
-        ++wrongAnswerCount;
         [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     }
 }
@@ -122,6 +120,10 @@ int wrongAnswerCount = 0;
 
 - (void)nextEquation{
     [self performSegueWithIdentifier:@"nextEquationSeque" sender:self];
+}
+
+- (void)presentSessionSummary{
+    [self performSegueWithIdentifier:@"showTimedPracticeSummarySegue" sender:self];   
 }
 
 #define RADIANS(degrees) ((degrees * M_PI) / 180.0)

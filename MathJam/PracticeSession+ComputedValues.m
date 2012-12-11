@@ -7,6 +7,7 @@
 //
 
 #import "PracticeSession+ComputedValues.h"
+#import "MathEquation.h"
 
 @implementation PracticeSession (ComputedValues)
 
@@ -16,9 +17,19 @@
         return 0;
     }
     
-    NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
+    int equationsAnswered = 0;
     
-    return ( self.equations.count / ( interval / 60.0 ) );
+    for(MathEquation *eq in self.equations)
+    {
+        if ([eq.wrongAnswerCount intValue] > 0 || eq.answeredCorrectlyAt != nil) {
+            ++equationsAnswered;
+        }
+    }
+    
+    NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
+    int seconds = lroundf(interval);
+    float result =  ( equationsAnswered / ( seconds  / 60.0 ) );
+    return result;
 }
 
 @end

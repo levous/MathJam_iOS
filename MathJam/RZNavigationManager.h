@@ -14,6 +14,10 @@
 
 + (RZNavigationManager *)sharedInstance;
 
+@property(weak, nonatomic) UINavigationController *navigationController;
+
 - (void)handleSegue:(UIStoryboardSegue *)segue sender:(id)sender;
+
+- (void)presentSessionSummary;
 
 @end

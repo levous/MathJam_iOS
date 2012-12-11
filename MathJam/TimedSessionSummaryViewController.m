@@ -17,18 +17,24 @@
     self.numberFormatter = [[NSNumberFormatter alloc] init];
     [self.numberFormatter setPositiveFormat:@"###0.#"];
     
+    int totalEquationsAnswers = 0;
     int totalIncorrectAnswers = 0;
     int answeredCorrectlyFirstTry = 0;
     for (MathEquation *equation in self.practiceSession.equations) {
-        totalIncorrectAnswers += equation.wrongAnswerCount.integerValue;
-        if (equation.wrongAnswerCount == 0 && equation.answeredCorrectlyAt != nil) {
+        totalIncorrectAnswers += [equation.wrongAnswerCount intValue];
+        
+        if ([equation.wrongAnswerCount intValue] > 0 || equation.answeredCorrectlyAt != nil) {
+            ++totalEquationsAnswers;
+        }
+        
+        if ([equation.wrongAnswerCount intValue] == 0 && equation.answeredCorrectlyAt != nil) {
             ++answeredCorrectlyFirstTry;
         }
     }
 
     
     self.equationsPerMinuteLabel.text = [self.numberFormatter stringFromNumber:[NSNumber numberWithFloat:[self.practiceSession equationsPerMinute]]];
-    self.totalAnsweredLabel.text = [NSString stringWithFormat:@"%i", self.practiceSession.equations.count];
+    self.totalAnsweredLabel.text = [NSString stringWithFormat:@"%i", totalEquationsAnswers];
     self.answeredCorrectlyFirstTryLabel.text = [NSString stringWithFormat:@"%i", answeredCorrectlyFirstTry];
     self.totalIncorrectAnswersLabel.text = [NSString stringWithFormat:@"%i", totalIncorrectAnswers];
     

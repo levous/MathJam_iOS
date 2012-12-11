@@ -34,6 +34,16 @@ static RZNavigationManager *sharedInstance = nil;
     return sharedInstance;
 }
 
+- (id)init{
+    if( self = [super init])
+    {
+        UIViewController *rootViewController = [self mainWindow].rootViewController;
+        // the rootViewController appears to be a nav controller.  This might be a brittle assumption
+        self.navigationController = (UINavigationController *)rootViewController;
+    }
+    return self;
+}
+
 - (void)handleSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     UIViewController *vcFrom  = [segue sourceViewController];
@@ -80,8 +90,29 @@ static RZNavigationManager *sharedInstance = nil;
         TimedSessionSummaryViewController *tsvc = (TimedSessionSummaryViewController *)vcTo;
         tsvc.practiceSession = mnvcFrom.practiceSession;
     }
+}
 
+- (void)endCurrentSession{
+    // this is really not appreopriate here
+    //TODO: refactor to move session management responsbility out of nav mgr
+    UIViewController *topController = self.navigationController.topViewController;
+    if ([topController isKindOfClass:[MissingNumberViewController class]]) {
+        [[((MissingNumberViewController *)topController) practiceSession] setEndTime:[NSDate date]];
+    }
+}
 
+- (void)presentSessionSummary{
+    UIViewController *topController = self.navigationController.topViewController;
+    if ([topController isKindOfClass:[MissingNumberViewController class]]) {
+        [((MissingNumberViewController *)topController) presentSessionSummary];
+    }
+}
+
+- (void)presentNextEquation{
+    UIViewController *topController = self.navigationController.topViewController;
+    if ([topController isKindOfClass:[MissingNumberViewController class]]) {
+        [((MissingNumberViewController *)topController) nextEquation];
+    }
 }
 
 - (UIWindow *)mainWindow{
@@ -131,6 +162,7 @@ static RZNavigationManager *sharedInstance = nil;
                                               box.frame = newBoxFrame;
                                           }
                                           completion:^(BOOL finished){
+                                              [self presentNextEquation];
                                               [splashView removeFromSuperview];
                                           }
                           ];
@@ -160,7 +192,9 @@ static RZNavigationManager *sharedInstance = nil;
 }
 
 - (void)jzTimerMan:(id)timerMan didCompleteSessionWithTotalDuration:(NSTimeInterval)duration{
-    [tickLabel removeFromSuperview];		
+    [tickLabel removeFromSuperview];
+    [self endCurrentSession];
+    [self presentSessionSummary];
 }
 
 
