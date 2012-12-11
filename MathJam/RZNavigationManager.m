@@ -44,6 +44,8 @@ static RZNavigationManager *sharedInstance = nil;
     return self;
 }
 
+#pragma mark - Seque Management
+
 - (void)handleSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     UIViewController *vcFrom  = [segue sourceViewController];
@@ -91,6 +93,26 @@ static RZNavigationManager *sharedInstance = nil;
         tsvc.practiceSession = mnvcFrom.practiceSession;
     }
 }
+
+#pragma mark - AutoRotation
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return UIInterfaceOrientationIsPortrait(interfaceOrientation);
+}
+
+- (BOOL)shouldAutorotate
+{
+    return NO;
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+
+#pragma mark -
 
 - (void)endCurrentSession{
     // this is really not appreopriate here

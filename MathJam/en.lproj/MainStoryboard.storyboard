@@ -522,10 +522,10 @@
             </objects>
             <point key="canvasLocation" x="1456" y="-527"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation Manager-->
         <scene sceneID="ZFW-9l-n05">
             <objects>
-                <navigationController storyboardIdentifier="mainNavigationController" navigationBarHidden="YES" id="0GH-ZD-efL" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="mainNavigationController" navigationBarHidden="YES" id="0GH-ZD-efL" customClass="RZNavigationManager" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EDz-4g-M3j">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -568,6 +568,9 @@
                 <relationship kind="outlet" name="factTwoLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="operationLabel" candidateClass="UILabel"/>
             </relationships>
+        </class>
+        <class className="RZNavigationManager" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RZNavigationManager.h"/>
         </class>
         <class className="RZViewControllerBase" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RZViewControllerBase.h"/>
