@@ -113,13 +113,20 @@ NSString *_databaseRelPath = @"Library/MathJam.sqlite";
 	return [self managedObjectContextForThread:[NSThread currentThread]];
 }
 
++ (void)removeDatabase{
+    NSString *databasePath = [NSHomeDirectory() stringByAppendingPathComponent:_databaseRelPath];
+    [[NSFileManager defaultManager] removeItemAtPath:databasePath error:NULL];
+    
+
+}
+
 - (void)clearAllData{
     NSLog(@"Warning: Blowing away existing database!");
     for(NSPersistentStore *store in self.persistentStoreCoordinator.persistentStores){
         [self.persistentStoreCoordinator removePersistentStore:store error:nil];
     }
+    [RZCoreDataManager removeDatabase];
     NSString *databasePath = [NSHomeDirectory() stringByAppendingPathComponent:_databaseRelPath];
-    [[NSFileManager defaultManager] removeItemAtPath:databasePath error:NULL];
     [self initializeCoreDataStack:[NSURL fileURLWithPath:databasePath]];
 }
 

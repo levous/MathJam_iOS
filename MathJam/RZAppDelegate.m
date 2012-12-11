@@ -10,6 +10,7 @@
 #import "RZCoreDataManager.h"
 #import "Flurry.h"
 #import "RZAnalyticsData.h"
+#import "RZNavigationManager.h"
 
 @implementation RZAppDelegate
 
@@ -23,6 +24,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(logAnalyticsEvent:) name:kRZ_LOG_ANALYTICS_EVENT_NOTIFICATION_NAME
                                                object:nil];
+
     
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil];
     UINavigationController *navController = (UINavigationController*)[mainStoryboard instantiateViewControllerWithIdentifier: @"mainNavigationController"];
@@ -32,6 +34,10 @@
     
     // initialize CoreData stack
     [RZCoreDataManager sharedInstance];
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"clear_on_launch"]) {
+        [self clearData];
+    }
       
     // return to system
     return YES;
@@ -69,9 +75,25 @@
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
+- (void)clearData{
+    [[RZCoreDataManager sharedInstance] clearAllData];
+    RZAnalyticsData *data = [RZAnalyticsData new];
+    data.eventName = @"ClearSessionData";
+    [data fireAnalytics];
+    
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"clear_on_launch"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"clear_on_launch"]) {
+        [self clearData];
+        [[RZNavigationManager sharedInstance] presentAndResetRootView];
+    }
+
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

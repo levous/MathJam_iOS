@@ -103,6 +103,8 @@
 		FBD808E41644788100A1CD02 /* PracticeSession+Analytics.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD808E21644788100A1CD02 /* PracticeSession+Analytics.m */; };
 		FBD808E816447E5200A1CD02 /* RZAnalyticsData.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD808E716447E5200A1CD02 /* RZAnalyticsData.m */; };
 		FBD808E916447E5200A1CD02 /* RZAnalyticsData.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD808E716447E5200A1CD02 /* RZAnalyticsData.m */; };
+		FBDEF0A21677E41000FF4035 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FBDEF0A11677E41000FF4035 /* Settings.bundle */; };
+		FBDEF0A31677E41000FF4035 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FBDEF0A11677E41000FF4035 /* Settings.bundle */; };
 		FBDF7A771672BA3B00C49FA4 /* TimedSessionSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDF7A761672BA3B00C49FA4 /* TimedSessionSummaryViewController.m */; };
 		FBDF7A781672BA3B00C49FA4 /* TimedSessionSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDF7A761672BA3B00C49FA4 /* TimedSessionSummaryViewController.m */; };
 /* End PBXBuildFile section */
@@ -216,6 +218,7 @@
 		FBD808E516447D1600A1CD02 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		FBD808E616447E5200A1CD02 /* RZAnalyticsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZAnalyticsData.h; sourceTree = "<group>"; };
 		FBD808E716447E5200A1CD02 /* RZAnalyticsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZAnalyticsData.m; sourceTree = "<group>"; };
+		FBDEF0A11677E41000FF4035 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		FBDF7A751672BA3B00C49FA4 /* TimedSessionSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimedSessionSummaryViewController.h; sourceTree = "<group>"; };
 		FBDF7A761672BA3B00C49FA4 /* TimedSessionSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimedSessionSummaryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -304,6 +307,7 @@
 				FB20DCFA1642E0F0002E2F33 /* Model */,
 				FB20DCFD1642E166002E2F33 /* Seques */,
 				FB1566511641759200F1C1DF /* Supporting Files */,
+				FBDEF0A11677E41000FF4035 /* Settings.bundle */,
 			);
 			path = MathJam;
 			sourceTree = "<group>";
@@ -599,6 +603,7 @@
 				A92EE7AB16729CC400BC955B /* go.wav in Resources */,
 				FB85D9F01677999200DA09F5 /* chart@2x.png in Resources */,
 				FB85D9F316779B4000DA09F5 /* chart.png in Resources */,
+				FBDEF0A21677E41000FF4035 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,6 +625,7 @@
 				FBC778FA1644CC1B0046B1FC /* Icon-Small@2x.png in Resources */,
 				FBC778FC1644CC1B0046B1FC /* Icon-Small.png in Resources */,
 				FB114D68166FB3CD00B524FD /* DogBark.mp3 in Resources */,
+				FBDEF0A31677E41000FF4035 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

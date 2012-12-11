@@ -23,8 +23,12 @@
 // Get singleton instance of core data manager
 + (RZCoreDataManager *)sharedInstance;
 
++ (void)removeDatabase;
+
 // Initialize with path on disk to the desired SQLite database
 - (id)initWithURL:(NSURL *)databaseURL;
+
+- (void)clearAllData;
 
 // Get the managed object context for a thread. Context will be created if it doesn't exist
 - (NSManagedObjectContext *)managedObjectContextForThread:(NSThread *)thread;

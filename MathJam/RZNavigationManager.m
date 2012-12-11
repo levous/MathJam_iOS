@@ -120,6 +120,24 @@ static RZNavigationManager *sharedInstance = nil;
     }
 }
 
+- (void)presentRootView{
+    [[self navigationController] popToRootViewControllerAnimated:YES];
+}
+
+- (void)presentAndResetRootView{
+    // slightly hacky
+    // pop to root 
+    [self presentRootView];
+    // its a missing number vc :)
+    MissingNumberViewController *vc = (MissingNumberViewController *)[self.navigationController topViewController];
+    // reset the cdm (this is to prevent core data refs from going kaboom when deleting data history
+    vc.coreDataManager = [RZCoreDataManager sharedInstance];
+    // copy the practice session to retain values
+    vc.practiceSession = [vc.coreDataManager insertNewPracticeSession];
+    // transition to new vc to pick up new details
+    [self presentNextEquation];
+}
+ 
 - (UIWindow *)mainWindow{
     return [[[UIApplication sharedApplication] windows] objectAtIndex:0];
 }

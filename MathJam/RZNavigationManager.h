@@ -20,4 +20,8 @@
 
 - (void)presentSessionSummary;
 
+- (void)presentRootView;
+
+- (void)presentAndResetRootView;
+
 @end

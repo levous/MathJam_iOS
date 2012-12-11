@@ -94,7 +94,7 @@
     int numberOfSeconds = numberOfMinutes * 60;
     
     // developer impatience
-    numberOfSeconds = 5;
+    //numberOfSeconds = 5;
     
     // make a timer man
     JZTimerMan *timerMan = [[JZTimerMan alloc] initWithDuration:numberOfSeconds delegate:[RZNavigationManager sharedInstance]];

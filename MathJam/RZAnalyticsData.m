@@ -10,4 +10,9 @@
 
 @implementation RZAnalyticsData
 
+- (void)fireAnalytics{
+    [[NSNotificationCenter defaultCenter] postNotificationName:kRZ_LOG_ANALYTICS_EVENT_NOTIFICATION_NAME object:nil userInfo:[NSDictionary dictionaryWithObject:self forKey:kRZ_LOG_ANALYTICS_NOTIFICATION_DATA_KEY]];
+}
+
 @end
+

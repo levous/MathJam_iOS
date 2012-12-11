@@ -11,4 +11,5 @@
 @interface RZAnalyticsData : NSObject
 @property(strong, nonatomic) NSString *eventName;
 @property(strong, nonatomic) NSDictionary *eventParameters;
+- (void)fireAnalytics;
 @end
