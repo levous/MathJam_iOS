@@ -91,6 +91,8 @@
 		FB76374A164450C400C26C05 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB15664E1641759200F1C1DF /* CoreGraphics.framework */; };
 		FB85D9F01677999200DA09F5 /* chart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB85D9EF1677999200DA09F5 /* chart@2x.png */; };
 		FB85D9F316779B4000DA09F5 /* chart.png in Resources */ = {isa = PBXBuildFile; fileRef = FB85D9F216779B4000DA09F5 /* chart.png */; };
+		FB85D9FE1677D1C000DA09F5 /* RZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB85D9FD1677D1C000DA09F5 /* RZNavigationController.m */; };
+		FB85D9FF1677D1C000DA09F5 /* RZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB85D9FD1677D1C000DA09F5 /* RZNavigationController.m */; };
 		FBC778F91644CC1B0046B1FC /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC778F51644CC1B0046B1FC /* Icon-Small@2x.png */; };
 		FBC778FA1644CC1B0046B1FC /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC778F51644CC1B0046B1FC /* Icon-Small@2x.png */; };
 		FBC778FB1644CC1B0046B1FC /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC778F61644CC1B0046B1FC /* Icon-Small.png */; };
@@ -203,6 +205,8 @@
 		FB71CE4C1667EDF80076B6E3 /* RZCoreDataManagerForTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZCoreDataManagerForTests.m; sourceTree = "<group>"; };
 		FB85D9EF1677999200DA09F5 /* chart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chart@2x.png"; sourceTree = "<group>"; };
 		FB85D9F216779B4000DA09F5 /* chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chart.png; sourceTree = "<group>"; };
+		FB85D9FC1677D1C000DA09F5 /* RZNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZNavigationController.h; sourceTree = "<group>"; };
+		FB85D9FD1677D1C000DA09F5 /* RZNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZNavigationController.m; sourceTree = "<group>"; };
 		FBC778F51644CC1B0046B1FC /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		FBC778F61644CC1B0046B1FC /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		FBC779021644CC420046B1FC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
@@ -293,6 +297,8 @@
 				FB20DD221642F2EA002E2F33 /* Enums.h */,
 				FB1566591641759200F1C1DF /* RZAppDelegate.h */,
 				FB15665A1641759200F1C1DF /* RZAppDelegate.m */,
+				FB85D9FC1677D1C000DA09F5 /* RZNavigationController.h */,
+				FB85D9FD1677D1C000DA09F5 /* RZNavigationController.m */,
 				FB3A13BF165D7EB9005D1C42 /* RZNavigationManager.h */,
 				FB3A13C0165D7EB9005D1C42 /* RZNavigationManager.m */,
 				FB20DCFA1642E0F0002E2F33 /* Model */,
@@ -690,6 +696,7 @@
 				FB114D7E167294C900B524FD /* TimerSplashViewController.m in Sources */,
 				A92EE7AF16729F9800BC955B /* RZViewControllerBase.m in Sources */,
 				FBDF7A771672BA3B00C49FA4 /* TimedSessionSummaryViewController.m in Sources */,
+				FB85D9FE1677D1C000DA09F5 /* RZNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -720,6 +727,7 @@
 				FB114D7F167294C900B524FD /* TimerSplashViewController.m in Sources */,
 				A92EE7B016729F9800BC955B /* RZViewControllerBase.m in Sources */,
 				FBDF7A781672BA3B00C49FA4 /* TimedSessionSummaryViewController.m in Sources */,
+				FB85D9FF1677D1C000DA09F5 /* RZNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

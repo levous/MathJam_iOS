@@ -10,7 +10,7 @@
 #import "RZCoreDataManager.h"
 #import "JZTimerMan.h"
 
-@interface RZNavigationManager : UINavigationController<JZTimerManDelegate>
+@interface RZNavigationManager : NSObject<JZTimerManDelegate>
 
 + (RZNavigationManager *)sharedInstance;
 

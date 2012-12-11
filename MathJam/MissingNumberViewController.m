@@ -114,7 +114,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    RZNavigationManager *navManager = [RZNavigationManager new];
+    RZNavigationManager *navManager = [RZNavigationManager sharedInstance];
     [navManager handleSegue:segue sender:sender];
 }
 
