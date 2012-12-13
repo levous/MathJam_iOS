@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *answeredCorrectlyFirstTryLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalIncorrectAnswersLabel;
 @property (weak, nonatomic) IBOutlet UIView *highScoreView;
+@property (weak, nonatomic) IBOutlet UILabel *sessionTitleLabel;
 
 @property(strong, nonatomic) NSNumberFormatter *numberFormatter;
 @property (strong, nonatomic) PracticeSession *practiceSession;

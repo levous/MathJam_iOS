@@ -35,22 +35,26 @@
     }
 
     int equationsPerMinute = [self.practiceSession equationsPerMinute];
+    NSTimeInterval sessionLengthInSeconds = [self.practiceSession sessionLengthInSeconds];
+    
     
     self.equationsPerMinuteLabel.text = [self.numberFormatter stringFromNumber:[NSNumber numberWithFloat:equationsPerMinute]];
     self.totalAnsweredLabel.text = [NSString stringWithFormat:@"%i", totalEquationsAnswers];
     self.answeredCorrectlyFirstTryLabel.text = [NSString stringWithFormat:@"%i", answeredCorrectlyFirstTry];
     self.totalIncorrectAnswersLabel.text = [NSString stringWithFormat:@"%i", totalIncorrectAnswers];
+    self.sessionTitleLabel = [NSString stringWithFormat:@"%@ Minutes Practice", [self.numberFormatter stringFromNumber:[NSNumber numberWithFloat:sessionLengthInSeconds/60]]];
     
     [self sendAnalyticsWithTotalEquationsAnsweredCount:totalEquationsAnswers
                                          firstTryCount:answeredCorrectlyFirstTry
                                    totalIncorrectCount:totalIncorrectAnswers
                                     equationsPerMinute:equationsPerMinute
-                                         sessionLength:[self.practiceSession sessionLengthInSeconds]];
+                                         sessionLength:sessionLengthInSeconds];
     
     ADBannerView *adView = [[ADBannerView alloc] initWithFrame:CGRectZero];
     adView.AutoresizingMask = UIViewAutoresizingFlexibleWidth;
     // don't care yet adView.delegate = self;
     [self.view addSubview:adView];
+    
 }
 
 - (void)sendAnalyticsWithTotalEquationsAnsweredCount:(int)eqCount firstTryCount:(int)firstTry totalIncorrectCount:(int)wrongAnswers equationsPerMinute:(int)eqPerMinute sessionLength:(NSTimeInterval)sessionLength{
