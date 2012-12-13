@@ -9,5 +9,6 @@
 #import "PracticeSession.h"
 
 @interface PracticeSession (ComputedValues)
+- (NSTimeInterval)sessionLengthInSeconds;
 - (float)equationsPerMinute;
 @end

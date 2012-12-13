@@ -7,7 +7,9 @@
 //
 
 #import "TimedSessionSummaryViewController.h"
+
 #import "PracticeSession+ComputedValues.h"
+#import "RZAnalyticsData.h"
 
 @implementation TimedSessionSummaryViewController
 
@@ -32,15 +34,36 @@
         }
     }
 
+    int equationsPerMinute = [self.practiceSession equationsPerMinute];
     
-    self.equationsPerMinuteLabel.text = [self.numberFormatter stringFromNumber:[NSNumber numberWithFloat:[self.practiceSession equationsPerMinute]]];
+    self.equationsPerMinuteLabel.text = [self.numberFormatter stringFromNumber:[NSNumber numberWithFloat:equationsPerMinute]];
     self.totalAnsweredLabel.text = [NSString stringWithFormat:@"%i", totalEquationsAnswers];
     self.answeredCorrectlyFirstTryLabel.text = [NSString stringWithFormat:@"%i", answeredCorrectlyFirstTry];
     self.totalIncorrectAnswersLabel.text = [NSString stringWithFormat:@"%i", totalIncorrectAnswers];
     
+    [self sendAnalyticsWithTotalEquationsAnsweredCount:totalEquationsAnswers
+                                         firstTryCount:answeredCorrectlyFirstTry
+                                   totalIncorrectCount:totalIncorrectAnswers
+                                    equationsPerMinute:equationsPerMinute
+                                         sessionLength:[self.practiceSession sessionLengthInSeconds]];
     
+    ADBannerView *adView = [[ADBannerView alloc] initWithFrame:CGRectZero];
+    adView.AutoresizingMask = UIViewAutoresizingFlexibleWidth;
+    // don't care yet adView.delegate = self;
+    [self.view addSubview:adView];
 }
 
+- (void)sendAnalyticsWithTotalEquationsAnsweredCount:(int)eqCount firstTryCount:(int)firstTry totalIncorrectCount:(int)wrongAnswers equationsPerMinute:(int)eqPerMinute sessionLength:(NSTimeInterval)sessionLength{
+    NSMutableDictionary *data = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                 [NSNumber numberWithInt:eqCount], @"TotalAnswered",
+                                 [NSNumber numberWithInt:firstTry], @"FirstTry",
+                                 [NSNumber numberWithInt:wrongAnswers], @"WrongAnswers",
+                                 [NSNumber numberWithInt:eqPerMinute], @"EqPerMinute",
+                                 [NSNumber numberWithInt:(int)sessionLength], @"SessionSeconds",
+                                 nil];
+    
+    [RZAnalyticsData fireAnalyticsWithEventNamed:@"TimedSessionSummaryViewed" andParameters:data];
+}
 
 - (IBAction)donePressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];

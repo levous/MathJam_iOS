@@ -67,6 +67,7 @@
 		FB3A13B9165D7D54005D1C42 /* BarChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3A13B8165D7D54005D1C42 /* BarChartViewController.m */; };
 		FB3A13BE165D7DD2005D1C42 /* BarChartViewControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3A13BD165D7DD2005D1C42 /* BarChartViewControllerDelegate.m */; };
 		FB3A13C1165D7EB9005D1C42 /* RZNavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3A13C0165D7EB9005D1C42 /* RZNavigationManager.m */; };
+		FB59376716797AC300406AB0 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB59376616797AC300406AB0 /* iAd.framework */; };
 		FB611ECF164369DB009B8612 /* RZNumericKeyboardHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FB611ECE164369DB009B8612 /* RZNumericKeyboardHelper.m */; };
 		FB611ED0164369DB009B8612 /* RZNumericKeyboardHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FB611ECE164369DB009B8612 /* RZNumericKeyboardHelper.m */; };
 		FB611ED516436AE3009B8612 /* DoneDown3.png in Resources */ = {isa = PBXBuildFile; fileRef = FB611ED116436AE3009B8612 /* DoneDown3.png */; };
@@ -191,6 +192,7 @@
 		FB3A13BD165D7DD2005D1C42 /* BarChartViewControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarChartViewControllerDelegate.m; sourceTree = "<group>"; };
 		FB3A13BF165D7EB9005D1C42 /* RZNavigationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZNavigationManager.h; sourceTree = "<group>"; };
 		FB3A13C0165D7EB9005D1C42 /* RZNavigationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZNavigationManager.m; sourceTree = "<group>"; };
+		FB59376616797AC300406AB0 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		FB611ECA16436821009B8612 /* RZNumericKeyboardHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZNumericKeyboardHelper.h; sourceTree = "<group>"; };
 		FB611ECE164369DB009B8612 /* RZNumericKeyboardHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZNumericKeyboardHelper.m; sourceTree = "<group>"; };
 		FB611ED116436AE3009B8612 /* DoneDown3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneDown3.png; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB59376716797AC300406AB0 /* iAd.framework in Frameworks */,
 				A9D855A5167119A2000ED6A0 /* QuartzCore.framework in Frameworks */,
 				FB114D65166FB34D00B524FD /* AVFoundation.framework in Frameworks */,
 				FB20DD211642E9E2002E2F33 /* CoreData.framework in Frameworks */,
@@ -279,6 +282,7 @@
 		FB1566491641759200F1C1DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FB59376616797AC300406AB0 /* iAd.framework */,
 				FB114D64166FB34D00B524FD /* AVFoundation.framework */,
 				FB20DD201642E9E2002E2F33 /* CoreData.framework */,
 				FB15664A1641759200F1C1DF /* UIKit.framework */,

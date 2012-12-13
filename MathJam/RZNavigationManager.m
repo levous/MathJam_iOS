@@ -7,6 +7,8 @@
 //
 
 #import "RZNavigationManager.h"
+
+#import "Constants.h"
 #import "MissingNumberViewController.h"
 #import "SessionConfigViewController.h"
 #import "TimedSessionViewController.h"
@@ -207,7 +209,7 @@ static RZNavigationManager *sharedInstance = nil;
     tickLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 20.0, 70.0, 20.0)];
     tickLabel.backgroundColor = [UIColor clearColor];
     tickLabel.textColor = [UIColor grayColor];
-    tickLabel.font = [UIFont fontWithName:@"ChalkboardSE-Regular" size:8.0];
+    tickLabel.font = [UIFont fontWithName:kRZ_DEFAULT_FONT_NAME size:8.0];
     tickLabel.userInteractionEnabled = NO;
     
     [[self mainWindow] addSubview:tickLabel];

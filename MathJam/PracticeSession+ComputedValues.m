@@ -11,6 +11,10 @@
 
 @implementation PracticeSession (ComputedValues)
 
+- (NSTimeInterval)sessionLengthInSeconds{
+    return [self.endTime timeIntervalSinceDate:self.startTime];
+}
+
 - (float)equationsPerMinute{
     
     if (self.equations == nil || self.equations.count == 0 || self.startTime == nil || self.endTime == nil) {
@@ -26,7 +30,7 @@
         }
     }
     
-    NSTimeInterval interval = [self.endTime timeIntervalSinceDate:self.startTime];
+    NSTimeInterval interval = [self sessionLengthInSeconds];
     int seconds = lroundf(interval);
     float result =  ( equationsAnswered / ( seconds  / 60.0 ) );
     return result;

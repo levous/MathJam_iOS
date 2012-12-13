@@ -9,6 +9,7 @@
 #import "MissingNumberViewController.h"
 #import "RZCoreDataManager.h"
 #import "RZNavigationManager.h"
+#import "RZAnalyticsData.h"
 
 @interface MissingNumberViewController ()
 
@@ -72,7 +73,6 @@
     self.navigationController.viewControllers = viewControllers;
 }
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -84,6 +84,8 @@
     
     
     [self setUpMissingNumberEquation];
+    
+    [RZAnalyticsData fireAnalyticsWithEventNamed:@"MissingNumberCardViewed"];
     
 }
 

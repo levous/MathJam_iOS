@@ -7,6 +7,8 @@
 //
 
 #import "BarChartViewController.h"
+#import "RZAnalyticsData.h"
+#import "Constants.h"
 
 @interface BarChartViewController ()
 
@@ -27,6 +29,10 @@
 {
     [super viewDidAppear:animated];
     [[self navigationController] setNavigationBarHidden:NO animated:animated];
+    
+    RZAnalyticsData *data = [RZAnalyticsData new];
+    data.eventName = @"ChartViewed";
+    [data fireAnalytics];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
@@ -38,6 +44,31 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self addTitleLabel];
+    [self addInfoLabel];
+
+}
+
+- (void)addTitleLabel{
+    UILabel *viewTitle = [[UILabel alloc] initWithFrame:CGRectMake(20.0, 20.0, 280.0, 24.0)];
+    [viewTitle setFont:[UIFont fontWithName:kRZ_DEFAULT_FONT_NAME size:14.0]];
+    viewTitle.text = @"Answers Per Minute";
+    viewTitle.textAlignment = NSTextAlignmentCenter;
+    viewTitle.textColor = [UIColor greenColor];
+    viewTitle.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:viewTitle];
+}
+
+
+- (void)addInfoLabel{
+    UILabel *viewTitle = [[UILabel alloc] initWithFrame:CGRectMake(20.0, 350.0, 280.0, 48.0)];
+    [viewTitle setFont:[UIFont fontWithName:kRZ_DEFAULT_FONT_NAME size:10.0]];
+    viewTitle.numberOfLines = 3;
+    viewTitle.text = @"This is your performance history from oldest on the left to most recent on the right!";
+    viewTitle.textAlignment = NSTextAlignmentCenter;
+    viewTitle.textColor = [UIColor grayColor];
+    viewTitle.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:viewTitle];
 }
 
 - (void)didReceiveMemoryWarning

@@ -8,3 +8,5 @@
 
 #define kRZ_LOG_ANALYTICS_EVENT_NOTIFICATION_NAME @"LogAnalyticsEvent"
 #define kRZ_LOG_ANALYTICS_NOTIFICATION_DATA_KEY @"AnalyticsData"
+
+#define kRZ_DEFAULT_FONT_NAME @"ChalkboardSE-Regular"

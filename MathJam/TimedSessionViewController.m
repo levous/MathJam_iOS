@@ -9,6 +9,7 @@
 #import "TimedSessionViewController.h"
 #import "JZTimerMan.h"
 #import "RZNavigationManager.h"
+#import "RZAnalyticsData.h"
 
 @interface TimedSessionViewController ()
 
@@ -81,6 +82,9 @@
 }
 
 - (IBAction)cancelPressed:(id)sender {
+    
+    [RZAnalyticsData fireAnalyticsWithEventNamed:@"TimedSessionCancelled"];
+
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -105,6 +109,8 @@
     // start the timer man session
     [timerMan startSession];
     
+    [RZAnalyticsData fireAnalyticsWithEventNamed:@"TimedSessionStarted"];
+
     [self dismissViewControllerAnimated:YES completion:nil];
 
     

@@ -16,10 +16,10 @@
         self.factorOneUpperBound,    @"FactorOneUB", 
         self.factorTwoLowerBound,    @"FactorTwoLB", 
         self.factorTwoUpperBound,    @"FactorTwoUB",
-        self.practiceAddition,       @"Add",  
-        self.practiceSubtraction,    @"Sub",        
-        self.practiceMultiplication, @"Mul",      
-        self.practiceDivision,       @"Div",  
+        self.practiceAddition,       @"Addition",  
+        self.practiceSubtraction,    @"Subtraction",        
+        self.practiceMultiplication, @"Multiplication",      
+        self.practiceDivision,       @"Division",  
      nil];
 }
 @end
