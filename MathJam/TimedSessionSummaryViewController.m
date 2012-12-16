@@ -50,10 +50,7 @@
                                     equationsPerMinute:equationsPerMinute
                                          sessionLength:sessionLengthInSeconds];
     
-    ADBannerView *adView = [[ADBannerView alloc] initWithFrame:CGRectZero];
-    adView.AutoresizingMask = UIViewAutoresizingFlexibleWidth;
-    // don't care yet adView.delegate = self;
-    [self.view addSubview:adView];
+    [self presentAdView];
     
 }
 

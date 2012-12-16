@@ -59,6 +59,18 @@ RZNumericKeyboardHelper *keyboardHelper;
         [alert show];
         return NO;
     }
+
+    if (self.factorOneLowerBound.text.length > 3 ||
+        self.factorTwoLowerBound.text.length > 3 ||
+        self.factorOneUpperBound.text.length > 3 ||
+        self.factorTwoUpperBound.text.length > 3
+        
+        ) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oooops..." message:@"Sorry, we jusrt can't fit numbers that large into the buttons.  Could you limit your practice to three digit factors or smaller?  please..." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+        return NO;
+    }
+
     return YES;
 }
 

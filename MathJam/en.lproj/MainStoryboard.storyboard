@@ -16,28 +16,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="325" height="548"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="11" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AOT-EL-eSQ">
-                                <rect key="frame" x="86" y="12" width="138" height="70"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="62"/>
-                                <color key="textColor" red="0.14503105484098777" green="0.0" blue="0.76721722146739135" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="12" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dz4-cV-3qc">
-                                <rect key="frame" x="86" y="90" width="138" height="70"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="62"/>
-                                <color key="textColor" red="0.40396468308443589" green="0.0" blue="0.57387907608695654" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="+" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2IS-p6-b4r">
                                 <rect key="frame" x="20" y="90" width="73" height="70"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="62"/>
                                 <color key="textColor" red="0.387215592" green="0.249453955" blue="0.69246773100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="23" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iKS-NQ-jM2">
-                                <rect key="frame" x="86" y="181" width="138" height="70"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="62"/>
-                                <color key="textColor" red="0.55211871603260865" green="0.0" blue="0.51096549961145976" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xq6-M5-EH3">
@@ -110,12 +92,30 @@
                                     <segue destination="2" kind="custom" identifier="nextEquationSeque" customClass="RZCustomSeque" id="vT1-sB-09D"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1123" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="AOT-EL-eSQ">
+                                <rect key="frame" x="87" y="12" width="146" height="70"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="62"/>
+                                <color key="textColor" red="0.14503105484098777" green="0.0" blue="0.76721722146739135" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="12" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="Dz4-cV-3qc">
+                                <rect key="frame" x="87" y="90" width="146" height="70"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="62"/>
+                                <color key="textColor" red="0.40396468308443589" green="0.0" blue="0.57387907608695654" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" id="4lc-ra-wQM">
-                                <rect key="frame" x="86" y="168" width="138" height="5"/>
+                                <rect key="frame" x="87" y="168" width="146" height="5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.49854636081496312" green="0.0" blue="0.55046280570652173" alpha="1" colorSpace="calibratedRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
                             </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="23" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="iKS-NQ-jM2">
+                                <rect key="frame" x="87" y="181" width="146" height="70"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="62"/>
+                                <color key="textColor" red="0.55211871603260865" green="0.0" blue="0.51096549961145976" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" alpha="0.50000000000000011" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2yV-bE-2hb">
                                 <rect key="frame" x="18" y="17" width="44" height="44"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -556,69 +556,6 @@
         <image name="operations-44px.png" width="44" height="44"/>
         <image name="whitepaper.jpg" width="2048" height="1536"/>
     </resources>
-    <classes>
-        <class className="BarChartViewController" superclassName="FRD3DBarChartViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BarChartViewController.h"/>
-        </class>
-        <class className="FRD3DBarChartViewController" superclassName="GLKViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FRD3DBarChartViewController.h"/>
-        </class>
-        <class className="MissingNumberViewController" superclassName="RZViewControllerBase">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MissingNumberViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="answerPressed:"/>
-                <relationship kind="outlet" name="answerFourButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="answerLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="answerOneButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="answerThreeButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="answerTwoButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="factOneLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="factTwoLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="operationLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="RZNavigationController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RZNavigationController.h"/>
-        </class>
-        <class className="RZViewControllerBase" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RZViewControllerBase.h"/>
-        </class>
-        <class className="SessionConfigViewController" superclassName="RZViewControllerBase">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SessionConfigViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="divideSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="factorOneLowerBound" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="factorOneUpperBound" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="factorTwoLowerBound" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="factorTwoUpperBound" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="minusSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="plusSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="timesSwitch" candidateClass="UISwitch"/>
-            </relationships>
-        </class>
-        <class className="TimedSessionSummaryViewController" superclassName="RZViewControllerBase">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimedSessionSummaryViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="donePressed:"/>
-                <relationship kind="outlet" name="answeredCorrectlyFirstTryLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="equationsPerMinuteLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="highScoreView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="sessionTitleLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="totalAnsweredLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="totalIncorrectAnswersLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="TimedSessionViewController" superclassName="RZViewControllerBase">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimedSessionViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="beginPressed:"/>
-                <relationship kind="action" name="cancelPressed:"/>
-                <relationship kind="action" name="timedSwitchChanged:"/>
-                <relationship kind="outlet" name="minutesPicker" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="timedSwitch" candidateClass="UISwitch"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

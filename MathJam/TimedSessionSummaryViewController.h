@@ -8,13 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-#import <iAd/iAd.h>
 #import "RZViewControllerBase.h"
 #import "JZTimerMan.h"
 #import "PracticeSession.h"
 #import "MathEquation.h"
 
-@interface TimedSessionSummaryViewController : RZViewControllerBase<ADBannerViewDelegate>
+@interface TimedSessionSummaryViewController : RZViewControllerBase
 @property (weak, nonatomic) IBOutlet UILabel *equationsPerMinuteLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalAnsweredLabel;
 @property (weak, nonatomic) IBOutlet UILabel *answeredCorrectlyFirstTryLabel;

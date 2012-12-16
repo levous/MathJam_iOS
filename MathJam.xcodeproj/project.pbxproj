@@ -94,7 +94,6 @@
 		FB85D9F316779B4000DA09F5 /* chart.png in Resources */ = {isa = PBXBuildFile; fileRef = FB85D9F216779B4000DA09F5 /* chart.png */; };
 		FB85D9FE1677D1C000DA09F5 /* RZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB85D9FD1677D1C000DA09F5 /* RZNavigationController.m */; };
 		FB85D9FF1677D1C000DA09F5 /* RZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB85D9FD1677D1C000DA09F5 /* RZNavigationController.m */; };
-		FBA2748D167AF4E30001ABD0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBA2748C167AF4E30001ABD0 /* Default@2x.png */; };
 		FBC778F91644CC1B0046B1FC /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC778F51644CC1B0046B1FC /* Icon-Small@2x.png */; };
 		FBC778FA1644CC1B0046B1FC /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC778F51644CC1B0046B1FC /* Icon-Small@2x.png */; };
 		FBC778FB1644CC1B0046B1FC /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC778F61644CC1B0046B1FC /* Icon-Small.png */; };
@@ -212,7 +211,6 @@
 		FB85D9F216779B4000DA09F5 /* chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chart.png; sourceTree = "<group>"; };
 		FB85D9FC1677D1C000DA09F5 /* RZNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZNavigationController.h; sourceTree = "<group>"; };
 		FB85D9FD1677D1C000DA09F5 /* RZNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZNavigationController.m; sourceTree = "<group>"; };
-		FBA2748C167AF4E30001ABD0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		FBC778F51644CC1B0046B1FC /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		FBC778F61644CC1B0046B1FC /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		FBC779021644CC420046B1FC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
@@ -321,7 +319,6 @@
 		FB1566511641759200F1C1DF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FBA2748C167AF4E30001ABD0 /* Default@2x.png */,
 				FB85D9F216779B4000DA09F5 /* chart.png */,
 				FB85D9EF1677999200DA09F5 /* chart@2x.png */,
 				A92EE7AA16729CC400BC955B /* go.wav */,
@@ -611,7 +608,6 @@
 				FB85D9F01677999200DA09F5 /* chart@2x.png in Resources */,
 				FB85D9F316779B4000DA09F5 /* chart.png in Resources */,
 				FBDEF0A21677E41000FF4035 /* Settings.bundle in Resources */,
-				FBA2748D167AF4E30001ABD0 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -841,12 +837,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ADCF32FC04804310AC89E3E1 /* Pods.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rusty Zarse (62F7A7GAFD)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MathJam/MathJam-Prefix.pch";
 				HEADER_SEARCH_PATHS = "${inherited}";
 				INFOPLIST_FILE = "MathJam/MathJam-Info.plist";
 				PODS_ROOT = "${SRCROOT}/Pods/";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "28EB2C20-8DE2-46C7-B221-F091C1F051C1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -855,12 +853,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ADCF32FC04804310AC89E3E1 /* Pods.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: LeVous, LLC";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MathJam/MathJam-Prefix.pch";
 				HEADER_SEARCH_PATHS = "${inherited}";
 				INFOPLIST_FILE = "MathJam/MathJam-Info.plist";
 				PODS_ROOT = "${SRCROOT}/Pods/";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "72A4258F-D748-48E8-94C5-4C7C1D33314B";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

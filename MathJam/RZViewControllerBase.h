@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
 
-@interface RZViewControllerBase : UIViewController
+@interface RZViewControllerBase : UIViewController<ADBannerViewDelegate>
+
+@property(nonatomic)BOOL isAdBannerVisible;
+@property (strong, nonatomic) UIView *adBannerView;
+
+- (void)presentAdView;
 
 @end

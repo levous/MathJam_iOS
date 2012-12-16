@@ -73,6 +73,14 @@
     self.navigationController.viewControllers = viewControllers;
 }
 
+- (void)fixButtonFonts{
+    self.answerOneButton.titleLabel.adjustsFontSizeToFitWidth = YES;
+    self.answerTwoButton.titleLabel.adjustsFontSizeToFitWidth = YES;
+    self.answerThreeButton.titleLabel.adjustsFontSizeToFitWidth = YES;
+    self.answerFourButton.titleLabel.adjustsFontSizeToFitWidth = YES;
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -82,6 +90,7 @@
     if (self.coreDataManager == nil) self.coreDataManager = [RZCoreDataManager sharedInstance];
     if (self.practiceSession == nil) self.practiceSession = [self.coreDataManager insertNewPracticeSession];
     
+    [self fixButtonFonts];
     
     [self setUpMissingNumberEquation];
     
