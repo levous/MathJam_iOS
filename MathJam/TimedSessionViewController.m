@@ -31,9 +31,16 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    // if iPhone 4 or older
-    CGRect pickerFrame = self.minutesPicker.frame;
-    self.minutesPicker.frame = CGRectMake(pickerFrame.origin.x, pickerFrame.origin.y - 85, pickerFrame.size.width, pickerFrame.size.height);
+    
+    if( IS_IPHONE_5 )
+    {}
+    else
+    {
+        // if iPhone 4 or older
+        CGRect pickerFrame = self.minutesPicker.frame;
+        self.minutesPicker.frame = CGRectMake(pickerFrame.origin.x, pickerFrame.origin.y - 85, pickerFrame.size.width, pickerFrame.size.height);
+    }
+    
     
     if(self.timedSessionConfigDelegate.timerMan != nil){
         [self.timedSessionConfigDelegate.timerMan cancelSession];
