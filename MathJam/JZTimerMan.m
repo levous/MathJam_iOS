@@ -7,7 +7,6 @@
 //
 
 #import "JZTimerMan.h"
-#import <QuartzCore/QuartzCore.h>
 
 @implementation JZTimerMan{
     NSDate *completeTime;

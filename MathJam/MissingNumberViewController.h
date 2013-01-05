@@ -21,6 +21,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *answerTwoButton;
 @property (weak, nonatomic) IBOutlet UIButton *answerThreeButton;
 @property (weak, nonatomic) IBOutlet UIButton *answerFourButton;
+@property (weak, nonatomic) IBOutlet UIView *cardView;
+@property (weak, nonatomic) IBOutlet UIView *cardContainerView;
+@property (strong, nonatomic) UIImage *previousCardImage;
+@property (strong, nonatomic) UIView *previousCardView;
 
 @property (strong, nonatomic) JZTimerMan *timerMan;
 @property (strong, nonatomic) RZCoreDataManager *coreDataManager;

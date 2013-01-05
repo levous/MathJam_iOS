@@ -15,7 +15,9 @@
 
 @end
 
-@implementation MissingNumberViewController
+@implementation MissingNumberViewController{
+    UILabel *test;
+}
 
 - (UILabel *)missingNumberLabel{
     switch (self.fact.missingNumberPosition){
@@ -81,6 +83,52 @@
     
 }
 
+- (void)preparePreviousCardTransition{
+    
+    //if (self.previousCardImage != nil) {
+    self.previousCardView = [[UIImageView alloc] initWithImage:self.previousCardImage];
+    self.previousCardView.backgroundColor = [UIColor purpleColor];
+        
+    [self.cardContainerView addSubview:self.previousCardView];
+    //}
+    
+}
+
+- (void)performPreviousCardTransition{
+    //if (self.previousCardView != nil) {
+    
+    
+        [UIView transitionWithView:self.cardContainerView
+                          duration:0.2
+                           options:UIViewAnimationOptionTransitionFlipFromLeft
+                        animations: ^{
+                            [self.previousCardView removeFromSuperview];
+                        }
+                        completion:NULL];
+    
+    
+       
+    //}
+}
+
+- (void)decorateViews{
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ){
+        
+        UIView *card = self.cardView;
+        [card.layer setCornerRadius:8.0f];
+        [card.layer setBorderColor:[UIColor whiteColor].CGColor];
+        [card.layer setBorderWidth:3.0f];
+        [card.layer setShadowColor:[UIColor blackColor].CGColor];
+        [card.layer setShadowOpacity:0.9];
+        [card.layer setShadowRadius:3.0];
+        [card.layer setShadowOffset:CGSizeMake(0, 1)];
+        
+        
+    }
+    
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -92,9 +140,23 @@
     
     [self fixButtonFonts];
     
+    [self decorateViews];
+        
     [self setUpMissingNumberEquation];
     
+    
+        
+    
+        
+    
     [RZAnalyticsData fireAnalyticsWithEventNamed:@"MissingNumberCardViewed"];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [self preparePreviousCardTransition];
+    [self performSelector:@selector(performPreviousCardTransition) withObject:nil afterDelay:0.1 ];
+
     
 }
 
@@ -130,6 +192,18 @@
 }
 
 - (void)nextEquation{
+    
+    UIGraphicsBeginImageContext(self.cardView.frame.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [self.cardView.layer renderInContext:context];
+    self.previousCardImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+
+    [self performNextEquationSegue];
+    //[self performSelector:@selector(performNextEquationSegue) withObject:nil afterDelay:2.0];
+}
+
+- (void)performNextEquationSegue{
     [self performSegueWithIdentifier:@"nextEquationSeque" sender:self];
 }
 

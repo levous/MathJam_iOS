@@ -8,6 +8,8 @@
 
 #import "TimerSplashViewController.h"
 
+#import <QuartzCore/QuartzCore.h>
+
 @interface TimerSplashViewController ()
 
 @end
@@ -18,7 +20,18 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
+        UIView *box = self.box;
+        [box.layer setCornerRadius:30.0f];
+        [box.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+        [box.layer setBorderWidth:1.0f];
+        [box.layer setShadowColor:[UIColor blackColor].CGColor];
+        [box.layer setShadowOpacity:0.5];
+        [box.layer setShadowRadius:3.0];
+        [box.layer setShadowOffset:CGSizeMake(0.0, 0.0)];
+        
+
+        
     }
     return self;
 }

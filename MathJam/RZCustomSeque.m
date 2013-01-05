@@ -7,10 +7,33 @@
 //
 
 #import "RZCustomSeque.h"
+#import "MissingNumberViewController.h"
 
 @implementation RZCustomSeque
 - (void) perform {
+    if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ){
+        [self iPadPerform];
+        //[self iPhonePerform];
+    }else{
+        [self iPhonePerform];
+    }
+}
+
+
+- (void)iPadPerform{
+    MissingNumberViewController *src = (MissingNumberViewController *) self.sourceViewController;
+    MissingNumberViewController *dst = (MissingNumberViewController *) self.destinationViewController;
     
+    UIView *oldCardView = src.cardView;
+    
+    [src.navigationController pushViewController:dst animated:NO];
+    
+    dst.previousCardView = oldCardView;
+        
+}
+
+
+- (void)iPhonePerform{
     UIViewController *src = (UIViewController *) self.sourceViewController;
     UIViewController *dst = (UIViewController *) self.destinationViewController;
     

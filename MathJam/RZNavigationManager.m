@@ -72,7 +72,7 @@ static RZNavigationManager *sharedInstance = nil;
         mnvcTo.practiceSession = mnvcFrom.practiceSession;
         mnvcTo.coreDataManager = mnvcFrom.coreDataManager;
         mnvcTo.timerMan = mnvcFrom.timerMan;
-        
+        mnvcTo.previousCardImage = mnvcFrom.previousCardImage;
 
     }
     else if(([[segue identifier] isEqualToString:@"showChartSeque"]))
@@ -151,18 +151,9 @@ static RZNavigationManager *sharedInstance = nil;
     TimerSplashViewController *controller = [[TimerSplashViewController alloc] initWithNibName:@"TimerSplashViewController" bundle:nil];
     
     UIView *splashView = controller.view;
-    
+    splashView.alpha = 0.0;
 
     UIView *box = controller.box;
-    [box.layer setCornerRadius:30.0f];
-    [box.layer setBorderColor:[UIColor lightGrayColor].CGColor];
-    [box.layer setBorderWidth:1.0f];
-    [box.layer setShadowColor:[UIColor blackColor].CGColor];
-    [box.layer setShadowOpacity:0.5];
-    [box.layer setShadowRadius:3.0];
-    [box.layer setShadowOffset:CGSizeMake(0.0, 0.0)];
-    splashView.alpha = 0.0;
-    
     CGRect newBoxFrame = box.frame;
     newBoxFrame.origin.y = -newBoxFrame.size.height;
     
