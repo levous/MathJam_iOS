@@ -79,20 +79,21 @@
     NSLog(@"%i Minute(s)", row + 1);
 }
 
-#pragma mark - Switches
+#pragma mark - Buttons
 
-- (IBAction)timedSwitchChanged:(id)sender {
-    float opacity = (((UISwitch *) sender).on) ? 1.0 : 0.0;
-    [UIView beginAnimations:nil context:nil];
-    self.minutesPicker.alpha = opacity;
-    [UIView commitAnimations];
-}
 
 - (IBAction)cancelPressed:(id)sender {
     
     [RZAnalyticsData fireAnalyticsWithEventNamed:@"TimedSessionCancelled"];
 
+    [self dismissSelf];
+}
+
+- (void)dismissSelf {
     [self dismissViewControllerAnimated:YES completion:nil];
+    if (self.parentPopoverController != nil){
+        [self.parentPopoverController dismissPopoverAnimated:YES];
+    }
 }
 
 - (IBAction)beginPressed:(id)sender {
@@ -118,8 +119,7 @@
     
     [RZAnalyticsData fireAnalyticsWithEventNamed:@"TimedSessionStarted"];
 
-    [self dismissViewControllerAnimated:YES completion:nil];
-
+    [self dismissSelf];
     
     
     

@@ -9,6 +9,8 @@
 #import "TimerSplashViewController.h"
 
 #import <QuartzCore/QuartzCore.h>
+#import "RZViewHelper.h"
+
 
 @interface TimerSplashViewController ()
 
@@ -21,14 +23,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
-        UIView *box = self.box;
-        [box.layer setCornerRadius:30.0f];
-        [box.layer setBorderColor:[UIColor lightGrayColor].CGColor];
-        [box.layer setBorderWidth:1.0f];
-        [box.layer setShadowColor:[UIColor blackColor].CGColor];
-        [box.layer setShadowOpacity:0.5];
-        [box.layer setShadowRadius:3.0];
-        [box.layer setShadowOffset:CGSizeMake(0.0, 0.0)];
         
 
         
@@ -40,6 +34,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+        
+    [self.view setFrame:[RZViewHelper windowFrame]];
+    
+    UIView *box = self.box;
+    [box.layer setCornerRadius:30.0f];
+    [box.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+    [box.layer setBorderWidth:1.0f];
+    [box.layer setShadowColor:[UIColor blackColor].CGColor];
+    [box.layer setShadowOpacity:0.5];
+    [box.layer setShadowRadius:3.0];
+    [box.layer setShadowOffset:CGSizeMake(0.0, 0.0)];
 }
 
 - (void)didReceiveMemoryWarning

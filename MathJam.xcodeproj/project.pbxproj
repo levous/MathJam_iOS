@@ -85,6 +85,7 @@
 		FB611EE516437D22009B8612 /* clock-icon-trans@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB611EE216437D22009B8612 /* clock-icon-trans@2x.png */; };
 		FB611EE616437D22009B8612 /* clock-icon-trans@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB611EE216437D22009B8612 /* clock-icon-trans@2x.png */; };
 		FB611EE71643F11D009B8612 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB20DD201642E9E2002E2F33 /* CoreData.framework */; };
+		FB6521BC16A5CCE000E835EA /* RZViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FB6521BB16A5CCE000E835EA /* RZViewHelper.m */; };
 		FB71CE401667D88F0076B6E3 /* BarChartViewControllerDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB71CE3F1667D88F0076B6E3 /* BarChartViewControllerDelegateTests.m */; };
 		FB71CE4D1667EDF80076B6E3 /* RZCoreDataManagerForTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB71CE4C1667EDF80076B6E3 /* RZCoreDataManagerForTests.m */; };
 		FB76374816444FC100C26C05 /* MissingNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1566661641759200F1C1DF /* MissingNumberViewController.m */; };
@@ -204,6 +205,8 @@
 		FB611EDE16437A31009B8612 /* TimedSessionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimedSessionViewController.m; sourceTree = "<group>"; };
 		FB611EE116437D22009B8612 /* clock-icon-trans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-icon-trans.png"; sourceTree = "<group>"; };
 		FB611EE216437D22009B8612 /* clock-icon-trans@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-icon-trans@2x.png"; sourceTree = "<group>"; };
+		FB6521BA16A5CCE000E835EA /* RZViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZViewHelper.h; sourceTree = "<group>"; };
+		FB6521BB16A5CCE000E835EA /* RZViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZViewHelper.m; sourceTree = "<group>"; };
 		FB71CE3E1667D88F0076B6E3 /* BarChartViewControllerDelegateTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarChartViewControllerDelegateTests.h; sourceTree = "<group>"; };
 		FB71CE3F1667D88F0076B6E3 /* BarChartViewControllerDelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarChartViewControllerDelegateTests.m; sourceTree = "<group>"; };
 		FB71CE4B1667EDF80076B6E3 /* RZCoreDataManagerForTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZCoreDataManagerForTests.h; sourceTree = "<group>"; };
@@ -448,6 +451,8 @@
 				FB3A13BB165D7DC7005D1C42 /* Charting */,
 				FB611EC9164367F4009B8612 /* Keyboard */,
 				FB20DCFC1642E13B002E2F33 /* View Controllers */,
+				FB6521BA16A5CCE000E835EA /* RZViewHelper.h */,
+				FB6521BB16A5CCE000E835EA /* RZViewHelper.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -711,6 +716,7 @@
 				A92EE7AF16729F9800BC955B /* RZViewControllerBase.m in Sources */,
 				FBDF7A771672BA3B00C49FA4 /* TimedSessionSummaryViewController.m in Sources */,
 				FB85D9FE1677D1C000DA09F5 /* RZNavigationController.m in Sources */,
+				FB6521BC16A5CCE000E835EA /* RZViewHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,6 @@
 
 @interface TimerSplashViewController : RZViewControllerBase
 @property (weak, nonatomic) IBOutlet UILabel *goLabel;
-@property (weak, nonatomic) IBOutlet UIView *box;
+@property (weak, nonatomic) IBOutlet UIView *box, *background;
 
 @end

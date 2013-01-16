@@ -31,7 +31,7 @@ RZNumericKeyboardHelper *keyboardHelper;
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
+    [super viewWillAppear:animated];
 	// Do any additional setup after loading the view.
     if (keyboardHelper == nil) {
         keyboardHelper = [RZNumericKeyboardHelper new];

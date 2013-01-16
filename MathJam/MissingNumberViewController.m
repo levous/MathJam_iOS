@@ -85,17 +85,17 @@
 
 - (void)preparePreviousCardTransition{
     
-    //if (self.previousCardImage != nil) {
-    self.previousCardView = [[UIImageView alloc] initWithImage:self.previousCardImage];
-    self.previousCardView.backgroundColor = [UIColor purpleColor];
-        
-    [self.cardContainerView addSubview:self.previousCardView];
-    //}
+    if (self.previousCardImage != nil) {
+        self.previousCardView = [[UIImageView alloc] initWithImage:self.previousCardImage];
+        self.previousCardView.backgroundColor = [UIColor purpleColor];
+            
+        [self.cardContainerView addSubview:self.previousCardView];
+    }
     
 }
 
 - (void)performPreviousCardTransition{
-    //if (self.previousCardView != nil) {
+    if (self.previousCardView != nil) {
     
     
         [UIView transitionWithView:self.cardContainerView
@@ -108,7 +108,7 @@
     
     
        
-    //}
+    }
 }
 
 - (void)decorateViews{

@@ -87,6 +87,9 @@ static RZNavigationManager *sharedInstance = nil;
     {
         TimedSessionViewController *timedSessionVC = (TimedSessionViewController *)vcTo;
         timedSessionVC.timedSessionConfigDelegate = (id<TimedSessionConfigDelegate>)mnvcFrom;
+        if ([segue isKindOfClass:[UIStoryboardPopoverSegue class]]) {
+            timedSessionVC.parentPopoverController = [(UIStoryboardPopoverSegue *)segue popoverController];
+        }
         
     }
     else if(([[segue identifier] isEqualToString:@"showTimedPracticeSummarySegue"]))

@@ -16,10 +16,9 @@
 @end
 
 @interface TimedSessionViewController : RZViewControllerBase
-@property (weak, nonatomic) IBOutlet UISwitch *timedSwitch;
 @property (weak, nonatomic) IBOutlet UIPickerView *minutesPicker;
 @property (weak, nonatomic) id<TimedSessionConfigDelegate> timedSessionConfigDelegate;
-- (IBAction)timedSwitchChanged:(id)sender;
+@property (weak, nonatomic) UIPopoverController *parentPopoverController;
 - (IBAction)cancelPressed:(id)sender;
 - (IBAction)beginPressed:(id)sender;
 
