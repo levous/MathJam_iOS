@@ -266,6 +266,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1123" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bx4-VB-2fN">
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="JwH-eX-YMC"/>
                                                     <constraint firstAttribute="width" constant="300" id="svT-c4-OMC"/>
@@ -307,9 +308,11 @@
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.089812247979999996" blue="0.44669858870000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" constant="384" type="user" id="1mZ-u2-n6b"/>
                                             <constraint firstItem="D9i-o5-qSk" firstAttribute="trailing" secondItem="Bx4-VB-2fN" secondAttribute="trailing" type="default" id="5jB-1g-WXK"/>
                                             <constraint firstItem="vTX-ZC-fmg" firstAttribute="top" secondItem="c8r-oT-pcu" secondAttribute="top" constant="375" type="user" id="7WL-8g-rrM"/>
                                             <constraint firstItem="D9i-o5-qSk" firstAttribute="baseline" secondItem="zAe-19-DMy" secondAttribute="baseline" type="default" id="7ga-ZC-vk2"/>
+                                            <constraint firstAttribute="height" constant="620" type="user" id="7tQ-Lp-IcF"/>
                                             <constraint firstItem="zAe-19-DMy" firstAttribute="top" secondItem="Bx4-VB-2fN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="AGJ-K6-46E"/>
                                             <constraint firstAttribute="bottom" secondItem="agN-SA-SnQ" secondAttribute="bottom" constant="110" type="user" id="ASX-x4-zUM"/>
                                             <constraint firstItem="D9i-o5-qSk" firstAttribute="leading" secondItem="Bx4-VB-2fN" secondAttribute="leading" type="default" id="N9t-Yf-8Dp"/>
@@ -332,9 +335,9 @@
                                     <constraint firstItem="c8r-oT-pcu" firstAttribute="bottom" secondItem="KUt-iD-4tF" secondAttribute="bottom" type="user" id="2G5-A5-Ptq"/>
                                     <constraint firstItem="c8r-oT-pcu" firstAttribute="top" secondItem="KUt-iD-4tF" secondAttribute="top" type="user" id="2Sh-Q4-BdM"/>
                                     <constraint firstAttribute="height" constant="620" type="user" id="EXG-Ei-fmZ"/>
-                                    <constraint firstItem="c8r-oT-pcu" firstAttribute="leading" secondItem="KUt-iD-4tF" secondAttribute="leading" type="default" id="I5V-Uu-MdZ"/>
+                                    <constraint firstItem="c8r-oT-pcu" firstAttribute="leading" secondItem="KUt-iD-4tF" secondAttribute="leading" type="user" id="I5V-Uu-MdZ"/>
                                     <constraint firstAttribute="height" constant="620" type="user" id="TI7-S4-xr8"/>
-                                    <constraint firstItem="c8r-oT-pcu" firstAttribute="trailing" secondItem="KUt-iD-4tF" secondAttribute="trailing" type="default" id="fyV-7I-gbf"/>
+                                    <constraint firstItem="c8r-oT-pcu" firstAttribute="trailing" secondItem="KUt-iD-4tF" secondAttribute="trailing" type="user" id="fyV-7I-gbf"/>
                                 </constraints>
                             </view>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeQ-am-vxN">
@@ -490,7 +493,7 @@
                             <constraint firstItem="RYH-ki-gcY" firstAttribute="top" secondItem="JZ5-hO-DEJ" secondAttribute="top" type="default" id="2Bv-R2-dEX"/>
                             <constraint firstItem="cQE-Al-SUU" firstAttribute="centerX" secondItem="1Fk-8x-bCU" secondAttribute="centerX" type="default" id="7rr-cg-3uU"/>
                             <constraint firstItem="2MM-EI-NpB" firstAttribute="top" secondItem="1Fk-8x-bCU" secondAttribute="top" type="default" id="Che-Km-PsG"/>
-                            <constraint firstItem="KUt-iD-4tF" firstAttribute="leading" secondItem="b8b-Yc-SD2" secondAttribute="leading" constant="192" id="DBG-45-3Sl"/>
+                            <constraint firstItem="KUt-iD-4tF" firstAttribute="leading" secondItem="b8b-Yc-SD2" secondAttribute="leading" constant="192" type="user" id="DBG-45-3Sl"/>
                             <constraint firstItem="MeQ-am-vxN" firstAttribute="top" secondItem="b8b-Yc-SD2" secondAttribute="top" constant="288" id="EBZ-zF-M2T"/>
                             <constraint firstItem="cQE-Al-SUU" firstAttribute="top" secondItem="b8b-Yc-SD2" secondAttribute="top" constant="229" id="G5r-oG-a3d"/>
                             <constraint firstItem="cQE-Al-SUU" firstAttribute="leading" secondItem="b8b-Yc-SD2" secondAttribute="leading" constant="13" id="GWB-6J-oDb"/>
@@ -514,7 +517,7 @@
                             <constraint firstItem="RYH-ki-gcY" firstAttribute="top" secondItem="b50-JY-cDE" secondAttribute="top" type="default" id="rrI-p1-2QF"/>
                             <constraint firstItem="1Fk-8x-bCU" firstAttribute="top" secondItem="b8b-Yc-SD2" secondAttribute="top" constant="17" id="s3g-mV-5pJ"/>
                             <constraint firstItem="b50-JY-cDE" firstAttribute="leading" secondItem="b8b-Yc-SD2" secondAttribute="leading" constant="100" id="trB-kJ-vTT"/>
-                            <constraint firstItem="KUt-iD-4tF" firstAttribute="centerX" secondItem="b8b-Yc-SD2" secondAttribute="centerX" type="default" id="w2l-BI-GPf"/>
+                            <constraint firstItem="KUt-iD-4tF" firstAttribute="centerX" secondItem="b8b-Yc-SD2" secondAttribute="centerX" type="user" id="w2l-BI-GPf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="d2M-si-je6"/>

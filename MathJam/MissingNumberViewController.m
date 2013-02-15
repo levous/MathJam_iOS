@@ -172,7 +172,7 @@
     NSNumber *selectedAnswer = [NSNumber numberWithFloat:[button.currentTitle floatValue]];
     if([self.fact verifyAnswer:selectedAnswer]){
         [button setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
-        [self startCorrectAnswerAnimation];
+        [self performSelector:@selector(startCorrectAnswerAnimation) withObject:nil afterDelay:3.0];
         
     }else{
         [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
@@ -215,10 +215,19 @@
 
 - (void)startCorrectAnswerAnimation {
     
+    CGSize s = [self.missingNumberLabel.text sizeWithFont:self.missingNumberLabel.font constrainedToSize:CGSizeMake(300.0, MAXFLOAT) lineBreakMode:self.missingNumberLabel.lineBreakMode];
+    CGRect labelFrame = self.missingNumberLabel.frame;
+    self.missingNumberLabel.frame = CGRectMake(labelFrame.origin.x + (labelFrame.size.width - s.width), labelFrame.origin.y, s.width, s.height);
+    self.missingNumberLabel.backgroundColor = [UIColor blueColor];
+    
+    [self performSelector:@selector(nextEquation) withObject:nil afterDelay:0.5];
+    return;
+    
     [UIView animateWithDuration:0.25
                           delay:0.0
                         options:(UIViewAnimationOptionAllowUserInteraction)
                      animations:^ {
+                                                  
                          self.missingNumberLabel.transform = CGAffineTransformRotate(CGAffineTransformIdentity, RADIANS(180));
                      }
                      completion:^ (BOOL finished){

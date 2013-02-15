@@ -9,6 +9,7 @@
 #import "BarChartViewController.h"
 #import "RZAnalyticsData.h"
 #import "Constants.h"
+#import "RZViewHelper.h"
 
 @interface BarChartViewController ()
 
@@ -61,7 +62,8 @@
 
 
 - (void)addInfoLabel{
-    UILabel *viewTitle = [[UILabel alloc] initWithFrame:CGRectMake(20.0, 350.0, 280.0, 48.0)];
+    CGRect windowFrame = [RZViewHelper windowFrame];
+    UILabel *viewTitle = [[UILabel alloc] initWithFrame:CGRectMake(20.0, windowFrame.size.height - 120, 280.0, 48.0)];
     [viewTitle setFont:[UIFont fontWithName:kRZ_DEFAULT_FONT_NAME size:10.0]];
     viewTitle.numberOfLines = 3;
     viewTitle.text = @"This is your performance history from oldest on the left to most recent on the right!";
