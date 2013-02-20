@@ -96,6 +96,7 @@
 		FB85D9FE1677D1C000DA09F5 /* RZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB85D9FD1677D1C000DA09F5 /* RZNavigationController.m */; };
 		FB85D9FF1677D1C000DA09F5 /* RZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB85D9FD1677D1C000DA09F5 /* RZNavigationController.m */; };
 		FB85DA0A167F9E3900DA09F5 /* iPadStoryboard.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB85DA09167F9E3900DA09F5 /* iPadStoryboard.Storyboard */; };
+		FB8970D816CE803F00E6A6BF /* PrintableFactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8970D716CE803F00E6A6BF /* PrintableFactsViewController.m */; };
 		FBC778F91644CC1B0046B1FC /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC778F51644CC1B0046B1FC /* Icon-Small@2x.png */; };
 		FBC778FA1644CC1B0046B1FC /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC778F51644CC1B0046B1FC /* Icon-Small@2x.png */; };
 		FBC778FB1644CC1B0046B1FC /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC778F61644CC1B0046B1FC /* Icon-Small.png */; };
@@ -216,6 +217,8 @@
 		FB85D9FC1677D1C000DA09F5 /* RZNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZNavigationController.h; sourceTree = "<group>"; };
 		FB85D9FD1677D1C000DA09F5 /* RZNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZNavigationController.m; sourceTree = "<group>"; };
 		FB85DA09167F9E3900DA09F5 /* iPadStoryboard.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPadStoryboard.Storyboard; sourceTree = "<group>"; };
+		FB8970D616CE803F00E6A6BF /* PrintableFactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintableFactsViewController.h; sourceTree = "<group>"; };
+		FB8970D716CE803F00E6A6BF /* PrintableFactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrintableFactsViewController.m; sourceTree = "<group>"; };
 		FBC778F51644CC1B0046B1FC /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		FBC778F61644CC1B0046B1FC /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		FBC779021644CC420046B1FC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
@@ -405,6 +408,8 @@
 				A92EE7AE16729F9800BC955B /* RZViewControllerBase.m */,
 				FBDF7A751672BA3B00C49FA4 /* TimedSessionSummaryViewController.h */,
 				FBDF7A761672BA3B00C49FA4 /* TimedSessionSummaryViewController.m */,
+				FB8970D616CE803F00E6A6BF /* PrintableFactsViewController.h */,
+				FB8970D716CE803F00E6A6BF /* PrintableFactsViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -717,6 +722,7 @@
 				FBDF7A771672BA3B00C49FA4 /* TimedSessionSummaryViewController.m in Sources */,
 				FB85D9FE1677D1C000DA09F5 /* RZNavigationController.m in Sources */,
 				FB6521BC16A5CCE000E835EA /* RZViewHelper.m in Sources */,
+				FB8970D816CE803F00E6A6BF /* PrintableFactsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

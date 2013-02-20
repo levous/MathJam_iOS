@@ -172,6 +172,20 @@
                                     <segue destination="6iq-mt-52b" kind="modal" identifier="showTimedPracticeSummarySegue" id="GUR-QW-mZQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tdH-ty-j5N">
+                                <rect key="frame" x="64" y="68" width="44" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="CmR-gZ-lSm" kind="modal" identifier="printableEquationsSegue" id="Zij-je-SLr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93690557065217395" green="0.93690557065217395" blue="0.93690557065217395" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -191,6 +205,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1030" y="80"/>
+        </scene>
+        <!--Printable Facts View Controller-->
+        <scene sceneID="yHc-h5-NBZ">
+            <objects>
+                <viewController id="CmR-gZ-lSm" customClass="PrintableFactsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zI8-wa-3ZE">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gko-CL-C7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1030" y="735"/>
         </scene>
         <!--Bar Chart View Controller-->
         <scene sceneID="O31-Rz-QfG">
@@ -575,6 +603,9 @@
                 <relationship kind="outlet" name="factTwoLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="operationLabel" candidateClass="UILabel"/>
             </relationships>
+        </class>
+        <class className="PrintableFactsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PrintableFactsViewController.h"/>
         </class>
         <class className="RZNavigationController" superclassName="UINavigationController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RZNavigationController.h"/>

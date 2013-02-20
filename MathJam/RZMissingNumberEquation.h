@@ -49,6 +49,8 @@ typedef NS_ENUM(NSInteger, RZMissingNumberPosition) {RZMissingNumberPositionFact
 // Checks the provided number and returns YES if the number matches the expected value
 - (BOOL) verifyAnswer:(NSNumber *)answer;
 
+// provides text representation of eqution with missing number
+- (NSString *)toText;
 
 
 

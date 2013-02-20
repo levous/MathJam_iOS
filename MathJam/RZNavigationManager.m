@@ -15,6 +15,7 @@
 #import "BarChartViewControllerDelegate.h"
 #import "TimerSplashViewController.h"
 #import "TimedSessionSummaryViewController.h"
+#import "PrintableFactsViewController.h"
 
 @implementation RZNavigationManager{
     UILabel *tickLabel;
@@ -75,7 +76,7 @@ static RZNavigationManager *sharedInstance = nil;
         mnvcTo.previousCardImage = mnvcFrom.previousCardImage;
 
     }
-    else if(([[segue identifier] isEqualToString:@"showChartSeque"]))
+    else if([[segue identifier] isEqualToString:@"showChartSeque"])
     {
         BarChartViewControllerDelegate *barChartDelegate = [[BarChartViewControllerDelegate alloc] init];
         barChartDelegate.coreDataManager = mnvcFrom.coreDataManager;
@@ -83,7 +84,7 @@ static RZNavigationManager *sharedInstance = nil;
         [segue.destinationViewController setFrd3dBarChartDelegate:barChartDelegate];
         
     }
-    else if(([[segue identifier] isEqualToString:@"showTimedPracticeSeque"]))
+    else if([[segue identifier] isEqualToString:@"showTimedPracticeSeque"])
     {
         TimedSessionViewController *timedSessionVC = (TimedSessionViewController *)vcTo;
         timedSessionVC.timedSessionConfigDelegate = (id<TimedSessionConfigDelegate>)mnvcFrom;
@@ -92,10 +93,14 @@ static RZNavigationManager *sharedInstance = nil;
         }
         
     }
-    else if(([[segue identifier] isEqualToString:@"showTimedPracticeSummarySegue"]))
+    else if([[segue identifier] isEqualToString:@"showTimedPracticeSummarySegue"])
     {
         TimedSessionSummaryViewController *tsvc = (TimedSessionSummaryViewController *)vcTo;
         tsvc.practiceSession = mnvcFrom.practiceSession;
+    }
+    else if([[segue identifier] isEqualToString:@"printableEquationsSegue"]){
+        PrintableFactsViewController *pevc = (PrintableFactsViewController *)vcTo;
+        pevc.practiceSession = mnvcFrom.practiceSession;
     }
 }
 

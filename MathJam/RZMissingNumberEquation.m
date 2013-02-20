@@ -318,4 +318,8 @@
     return NO;
 }
 
+- (NSString *)toText{
+    return [NSString stringWithFormat:@"%@ %@ %@ = %@", self.factorOneText, self.mathOperationText, self.factorTwoText, self.answerText];
+}
+
 @end
