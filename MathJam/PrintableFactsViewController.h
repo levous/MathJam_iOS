@@ -10,8 +10,12 @@
 
 #import "RZMissingNumberEquation.h"
 #import "PracticeSession.h"
+@class PrintableFactsLayoutHelper;
 
-@interface PrintableFactsViewController : UIViewController
+@interface PrintableFactsViewController : UIViewController<UIPrintInteractionControllerDelegate>{
+    PrintableFactsLayoutHelper *layoutHelper;
+}
+
 @property (strong, nonatomic) PracticeSession *practiceSession;
 @end
 

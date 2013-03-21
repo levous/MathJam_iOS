@@ -97,6 +97,15 @@
 		FB85D9FF1677D1C000DA09F5 /* RZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB85D9FD1677D1C000DA09F5 /* RZNavigationController.m */; };
 		FB85DA0A167F9E3900DA09F5 /* iPadStoryboard.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB85DA09167F9E3900DA09F5 /* iPadStoryboard.Storyboard */; };
 		FB8970D816CE803F00E6A6BF /* PrintableFactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8970D716CE803F00E6A6BF /* PrintableFactsViewController.m */; };
+		FBA7724616FB4CDE00666226 /* PrintableFactsLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA7724516FB4CDE00666226 /* PrintableFactsLayoutHelper.m */; };
+		FBA7724716FB4CF700666226 /* PrintableFactsLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA7724516FB4CDE00666226 /* PrintableFactsLayoutHelper.m */; };
+		FBA7724A16FB4D1700666226 /* PrintableFactsLayoutHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA7724916FB4D1700666226 /* PrintableFactsLayoutHelperTests.m */; };
+		FBA7724B16FB519500666226 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB59376616797AC300406AB0 /* iAd.framework */; };
+		FBA7724C16FB51AA00666226 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB114D64166FB34D00B524FD /* AVFoundation.framework */; };
+		FBA7725016FB5D1900666226 /* RZPdfGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA7724F16FB5D1900666226 /* RZPdfGenerator.m */; };
+		FBA7725116FB5D1900666226 /* RZPdfGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA7724F16FB5D1900666226 /* RZPdfGenerator.m */; };
+		FBA7725416FB651800666226 /* PrintableFactsPdfGeneratorContentDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA7725316FB651800666226 /* PrintableFactsPdfGeneratorContentDelegate.m */; };
+		FBA7725516FB651800666226 /* PrintableFactsPdfGeneratorContentDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBA7725316FB651800666226 /* PrintableFactsPdfGeneratorContentDelegate.m */; };
 		FBC778F91644CC1B0046B1FC /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC778F51644CC1B0046B1FC /* Icon-Small@2x.png */; };
 		FBC778FA1644CC1B0046B1FC /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC778F51644CC1B0046B1FC /* Icon-Small@2x.png */; };
 		FBC778FB1644CC1B0046B1FC /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC778F61644CC1B0046B1FC /* Icon-Small.png */; };
@@ -219,6 +228,14 @@
 		FB85DA09167F9E3900DA09F5 /* iPadStoryboard.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPadStoryboard.Storyboard; sourceTree = "<group>"; };
 		FB8970D616CE803F00E6A6BF /* PrintableFactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintableFactsViewController.h; sourceTree = "<group>"; };
 		FB8970D716CE803F00E6A6BF /* PrintableFactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrintableFactsViewController.m; sourceTree = "<group>"; };
+		FBA7724416FB4CDE00666226 /* PrintableFactsLayoutHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintableFactsLayoutHelper.h; sourceTree = "<group>"; };
+		FBA7724516FB4CDE00666226 /* PrintableFactsLayoutHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrintableFactsLayoutHelper.m; sourceTree = "<group>"; };
+		FBA7724816FB4D1700666226 /* PrintableFactsLayoutHelperTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintableFactsLayoutHelperTests.h; sourceTree = "<group>"; };
+		FBA7724916FB4D1700666226 /* PrintableFactsLayoutHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrintableFactsLayoutHelperTests.m; sourceTree = "<group>"; };
+		FBA7724E16FB5D1900666226 /* RZPdfGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZPdfGenerator.h; sourceTree = "<group>"; };
+		FBA7724F16FB5D1900666226 /* RZPdfGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZPdfGenerator.m; sourceTree = "<group>"; };
+		FBA7725216FB651800666226 /* PrintableFactsPdfGeneratorContentDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintableFactsPdfGeneratorContentDelegate.h; sourceTree = "<group>"; };
+		FBA7725316FB651800666226 /* PrintableFactsPdfGeneratorContentDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrintableFactsPdfGeneratorContentDelegate.m; sourceTree = "<group>"; };
 		FBC778F51644CC1B0046B1FC /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		FBC778F61644CC1B0046B1FC /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		FBC779021644CC420046B1FC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
@@ -253,6 +270,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBA7724C16FB51AA00666226 /* AVFoundation.framework in Frameworks */,
+				FBA7724B16FB519500666226 /* iAd.framework in Frameworks */,
 				FB611EE71643F11D009B8612 /* CoreData.framework in Frameworks */,
 				FB15666F1641759200F1C1DF /* SenTestingKit.framework in Frameworks */,
 				FB1566701641759200F1C1DF /* UIKit.framework in Frameworks */,
@@ -307,6 +326,7 @@
 		FB1566501641759200F1C1DF /* MathJam */ = {
 			isa = PBXGroup;
 			children = (
+				FBA7724D16FB5D0000666226 /* PDF */,
 				FB611EC8164367E5009B8612 /* UI */,
 				FBD808E516447D1600A1CD02 /* Constants.h */,
 				FB20DD221642F2EA002E2F33 /* Enums.h */,
@@ -458,6 +478,8 @@
 				FB20DCFC1642E13B002E2F33 /* View Controllers */,
 				FB6521BA16A5CCE000E835EA /* RZViewHelper.h */,
 				FB6521BB16A5CCE000E835EA /* RZViewHelper.m */,
+				FBA7724416FB4CDE00666226 /* PrintableFactsLayoutHelper.h */,
+				FBA7724516FB4CDE00666226 /* PrintableFactsLayoutHelper.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -475,6 +497,8 @@
 			isa = PBXGroup;
 			children = (
 				FB71CE211667D50A0076B6E3 /* Charting */,
+				FBA7724816FB4D1700666226 /* PrintableFactsLayoutHelperTests.h */,
+				FBA7724916FB4D1700666226 /* PrintableFactsLayoutHelperTests.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -509,6 +533,17 @@
 				FB114D71167288AD00B524FD /* JZTimerManTests.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		FBA7724D16FB5D0000666226 /* PDF */ = {
+			isa = PBXGroup;
+			children = (
+				FBA7724E16FB5D1900666226 /* RZPdfGenerator.h */,
+				FBA7724F16FB5D1900666226 /* RZPdfGenerator.m */,
+				FBA7725216FB651800666226 /* PrintableFactsPdfGeneratorContentDelegate.h */,
+				FBA7725316FB651800666226 /* PrintableFactsPdfGeneratorContentDelegate.m */,
+			);
+			name = PDF;
 			sourceTree = "<group>";
 		};
 		FBD808D71644781000A1CD02 /* Analytics */ = {
@@ -723,6 +758,9 @@
 				FB85D9FE1677D1C000DA09F5 /* RZNavigationController.m in Sources */,
 				FB6521BC16A5CCE000E835EA /* RZViewHelper.m in Sources */,
 				FB8970D816CE803F00E6A6BF /* PrintableFactsViewController.m in Sources */,
+				FBA7724616FB4CDE00666226 /* PrintableFactsLayoutHelper.m in Sources */,
+				FBA7725016FB5D1900666226 /* RZPdfGenerator.m in Sources */,
+				FBA7725416FB651800666226 /* PrintableFactsPdfGeneratorContentDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,6 +792,10 @@
 				A92EE7B016729F9800BC955B /* RZViewControllerBase.m in Sources */,
 				FBDF7A781672BA3B00C49FA4 /* TimedSessionSummaryViewController.m in Sources */,
 				FB85D9FF1677D1C000DA09F5 /* RZNavigationController.m in Sources */,
+				FBA7724716FB4CF700666226 /* PrintableFactsLayoutHelper.m in Sources */,
+				FBA7724A16FB4D1700666226 /* PrintableFactsLayoutHelperTests.m in Sources */,
+				FBA7725116FB5D1900666226 /* RZPdfGenerator.m in Sources */,
+				FBA7725516FB651800666226 /* PrintableFactsPdfGeneratorContentDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
