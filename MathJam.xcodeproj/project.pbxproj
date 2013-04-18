@@ -67,6 +67,8 @@
 		FB3A13B9165D7D54005D1C42 /* BarChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3A13B8165D7D54005D1C42 /* BarChartViewController.m */; };
 		FB3A13BE165D7DD2005D1C42 /* BarChartViewControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3A13BD165D7DD2005D1C42 /* BarChartViewControllerDelegate.m */; };
 		FB3A13C1165D7EB9005D1C42 /* RZNavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3A13C0165D7EB9005D1C42 /* RZNavigationManager.m */; };
+		FB3B34EE171E14C600B38EE1 /* printer.png in Resources */ = {isa = PBXBuildFile; fileRef = FB3B34EC171E14C600B38EE1 /* printer.png */; };
+		FB3B34EF171E14C600B38EE1 /* printer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB3B34ED171E14C600B38EE1 /* printer@2x.png */; };
 		FB59376716797AC300406AB0 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB59376616797AC300406AB0 /* iAd.framework */; };
 		FB611ECF164369DB009B8612 /* RZNumericKeyboardHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FB611ECE164369DB009B8612 /* RZNumericKeyboardHelper.m */; };
 		FB611ED0164369DB009B8612 /* RZNumericKeyboardHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FB611ECE164369DB009B8612 /* RZNumericKeyboardHelper.m */; };
@@ -204,6 +206,8 @@
 		FB3A13BD165D7DD2005D1C42 /* BarChartViewControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarChartViewControllerDelegate.m; sourceTree = "<group>"; };
 		FB3A13BF165D7EB9005D1C42 /* RZNavigationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZNavigationManager.h; sourceTree = "<group>"; };
 		FB3A13C0165D7EB9005D1C42 /* RZNavigationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZNavigationManager.m; sourceTree = "<group>"; };
+		FB3B34EC171E14C600B38EE1 /* printer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = printer.png; sourceTree = "<group>"; };
+		FB3B34ED171E14C600B38EE1 /* printer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "printer@2x.png"; sourceTree = "<group>"; };
 		FB59376616797AC300406AB0 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		FB611ECA16436821009B8612 /* RZNumericKeyboardHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZNumericKeyboardHelper.h; sourceTree = "<group>"; };
 		FB611ECE164369DB009B8612 /* RZNumericKeyboardHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZNumericKeyboardHelper.m; sourceTree = "<group>"; };
@@ -347,6 +351,8 @@
 		FB1566511641759200F1C1DF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FB3B34EC171E14C600B38EE1 /* printer.png */,
+				FB3B34ED171E14C600B38EE1 /* printer@2x.png */,
 				FB85D9F216779B4000DA09F5 /* chart.png */,
 				FB85D9EF1677999200DA09F5 /* chart@2x.png */,
 				A92EE7AA16729CC400BC955B /* go.wav */,
@@ -657,6 +663,8 @@
 				FB85D9F316779B4000DA09F5 /* chart.png in Resources */,
 				FBDEF0A21677E41000FF4035 /* Settings.bundle in Resources */,
 				FB85DA0A167F9E3900DA09F5 /* iPadStoryboard.Storyboard in Resources */,
+				FB3B34EE171E14C600B38EE1 /* printer.png in Resources */,
+				FB3B34EF171E14C600B38EE1 /* printer@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

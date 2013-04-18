@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3006" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="RVq-Mp-Rhd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3006" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="RVq-Mp-Rhd">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Timed Session View Controller-->
@@ -256,9 +256,9 @@
                         <subviews>
                             <view clipsSubviews="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="KUt-iD-4tF">
                                 <subviews>
-                                    <view clipsSubviews="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="c8r-oT-pcu">
+                                    <view clipsSubviews="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="c8r-oT-pcu" userLabel="CardView">
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="whitepaper.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="zIp-1C-rPJ">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000015" contentMode="scaleAspectFill" image="whitepaper.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="zIp-1C-rPJ" userLabel="PaperImage">
                                                 <constraints>
                                                     <constraint firstAttribute="width" priority="870" constant="404" type="user" id="hBK-In-nEi"/>
                                                     <constraint firstAttribute="height" priority="754" constant="640" type="user" id="hZz-s4-Chl"/>
@@ -289,7 +289,7 @@
                                                 <color key="textColor" red="0.387215592" green="0.249453955" blue="0.69246773100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="vTX-ZC-fmg">
+                                            <view autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="vTX-ZC-fmg" userLabel="UnderlineView">
                                                 <color key="backgroundColor" red="0.49854636079999998" green="0.0" blue="0.55046280569999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                                 <constraints>
@@ -306,7 +306,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="0.089812247979999996" blue="0.44669858870000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.089812247979999996" blue="0.44669858870000001" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="384" type="user" id="1mZ-u2-n6b"/>
                                             <constraint firstItem="D9i-o5-qSk" firstAttribute="trailing" secondItem="Bx4-VB-2fN" secondAttribute="trailing" type="default" id="5jB-1g-WXK"/>
@@ -487,9 +487,23 @@
                                     <action selector="answerPressed:" destination="QVc-9Q-XL1" eventType="touchUpInside" id="wuo-x7-BLk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPc-Gm-7Xz">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="mqO-Gk-hN0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" image="printer.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="bPc-Gm-7Xz" firstAttribute="baseline" secondItem="Wv6-AS-yXc" secondAttribute="baseline" type="default" id="05q-Iy-lnj"/>
                             <constraint firstItem="RYH-ki-gcY" firstAttribute="top" secondItem="JZ5-hO-DEJ" secondAttribute="top" type="default" id="2Bv-R2-dEX"/>
                             <constraint firstItem="cQE-Al-SUU" firstAttribute="centerX" secondItem="1Fk-8x-bCU" secondAttribute="centerX" type="default" id="7rr-cg-3uU"/>
                             <constraint firstItem="2MM-EI-NpB" firstAttribute="top" secondItem="1Fk-8x-bCU" secondAttribute="top" type="default" id="Che-Km-PsG"/>
@@ -500,10 +514,13 @@
                             <constraint firstAttribute="bottom" secondItem="KUt-iD-4tF" secondAttribute="bottom" constant="200" type="user" id="MQ7-h8-NzJ"/>
                             <constraint firstItem="JZ5-hO-DEJ" firstAttribute="top" secondItem="NZ8-HW-zbo" secondAttribute="top" type="default" id="OIA-Sl-Qso"/>
                             <constraint firstItem="2MM-EI-NpB" firstAttribute="leading" secondItem="1Fk-8x-bCU" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="RRt-wE-L2K"/>
+                            <constraint firstItem="bPc-Gm-7Xz" firstAttribute="bottom" secondItem="Wv6-AS-yXc" secondAttribute="bottom" type="default" id="S9M-Fy-upZ"/>
                             <constraint firstItem="Wv6-AS-yXc" firstAttribute="bottom" secondItem="2MM-EI-NpB" secondAttribute="bottom" type="default" id="UKZ-DZ-STR"/>
                             <constraint firstItem="NZ8-HW-zbo" firstAttribute="leading" secondItem="JZ5-hO-DEJ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="VHY-cA-rXQ"/>
                             <constraint firstItem="NZ8-HW-zbo" firstAttribute="bottom" secondItem="JZ5-hO-DEJ" secondAttribute="bottom" type="default" id="XoR-t1-7vQ"/>
                             <constraint firstItem="Wv6-AS-yXc" firstAttribute="top" secondItem="2MM-EI-NpB" secondAttribute="top" type="default" id="akk-OO-yRC"/>
+                            <constraint firstItem="bPc-Gm-7Xz" firstAttribute="leading" secondItem="Wv6-AS-yXc" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="b4U-8q-Cfw"/>
+                            <constraint firstItem="bPc-Gm-7Xz" firstAttribute="top" secondItem="Wv6-AS-yXc" secondAttribute="top" type="default" id="d8a-ri-Qat"/>
                             <constraint firstItem="2MM-EI-NpB" firstAttribute="bottom" secondItem="1Fk-8x-bCU" secondAttribute="bottom" type="default" id="d9x-lF-hK8"/>
                             <constraint firstItem="MeQ-am-vxN" firstAttribute="leading" secondItem="cQE-Al-SUU" secondAttribute="leading" type="default" id="fGK-Ib-gSk"/>
                             <constraint firstItem="RYH-ki-gcY" firstAttribute="leading" secondItem="b50-JY-cDE" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="gBF-08-ISp"/>
@@ -697,8 +714,72 @@
         <image name="chart.png" width="35" height="35"/>
         <image name="clock-icon-trans.png" width="44" height="44"/>
         <image name="operations-44px.png" width="44" height="44"/>
+        <image name="printer.png" width="44" height="44"/>
         <image name="whitepaper.jpg" width="2048" height="1536"/>
     </resources>
+    <classes>
+        <class className="BarChartViewController" superclassName="FRD3DBarChartViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BarChartViewController.h"/>
+        </class>
+        <class className="FRD3DBarChartViewController" superclassName="GLKViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FRD3DBarChartViewController.h"/>
+        </class>
+        <class className="MissingNumberViewController" superclassName="RZViewControllerBase">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MissingNumberViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="answerPressed:"/>
+                <relationship kind="outlet" name="answerFourButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answerLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="answerOneButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answerThreeButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="answerTwoButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="cardContainerView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="cardView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="factOneLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="factTwoLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="operationLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="RZViewControllerBase" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RZViewControllerBase.h"/>
+        </class>
+        <class className="SessionConfigViewController" superclassName="RZViewControllerBase">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SessionConfigViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="divideSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="factorOneLowerBound" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="factorOneUpperBound" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="factorTwoLowerBound" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="factorTwoUpperBound" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="minusSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="plusSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="timesSwitch" candidateClass="UISwitch"/>
+            </relationships>
+        </class>
+        <class className="TimedSessionSummaryViewController" superclassName="RZViewControllerBase">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimedSessionSummaryViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="donePressed:"/>
+                <relationship kind="outlet" name="answeredCorrectlyFirstTryLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="equationsPerMinuteLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="highScoreView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="sessionTitleLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalAnsweredLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalIncorrectAnswersLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="TimedSessionViewController" superclassName="RZViewControllerBase">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimedSessionViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="beginPressed:"/>
+                <relationship kind="action" name="cancelPressed:"/>
+                <relationship kind="outlet" name="minutesPicker" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
