@@ -11,5 +11,5 @@
 @interface RZViewHelper : NSObject
 
 + (CGRect)windowFrame;
-
++ (UIFont *)defaultFont;
 @end

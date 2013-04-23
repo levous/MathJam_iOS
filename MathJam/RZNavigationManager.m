@@ -205,8 +205,9 @@ static RZNavigationManager *sharedInstance = nil;
     if (tickLabel != nil) {
         [tickLabel removeFromSuperview];
     }
-    tickLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 20.0, 70.0, 20.0)];
-    tickLabel.backgroundColor = [UIColor clearColor];
+    tickLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 20.0, 30.0, 15.0)];
+    tickLabel.textAlignment = NSTextAlignmentCenter;
+    tickLabel.backgroundColor = [UIColor colorWithRed:255.0 green:255.0 blue:255.0 alpha:0.4];
     tickLabel.textColor = [UIColor grayColor];
     tickLabel.font = [UIFont fontWithName:kRZ_DEFAULT_FONT_NAME size:8.0];
     tickLabel.userInteractionEnabled = NO;

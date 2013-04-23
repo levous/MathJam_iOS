@@ -328,5 +328,31 @@ PracticeSession *ps = nil;
     
 }
 
+- (void)testAnswerChoicesDoNotRepeat{
+    RZMissingNumberEquation *fact = [self setUpDivisionEquation];
+
+    
+    for(int i = 0; i < 100 ; ++i){
+        [fact generateNewFactors];
+        NSArray *answerChoices = [fact getAnswerChoices:4];
+        for (int idx1 = 0; idx1 < [answerChoices count]; ++idx1) {
+            for (int idx2 = 0; idx2 < [answerChoices count]; ++idx2) {
+                if (idx1 != idx2){
+                    NSNumber *choice = [answerChoices objectAtIndex:idx1];
+                    NSNumber *choice2 = [answerChoices objectAtIndex:idx2];
+                    
+                    if([choice compare:choice2] == NSOrderedSame) {
+                        STFail(@"Answer choice %@ repeats", choice);
+                    }
+                }
+                
+            }
+            
+            
+        }
+    }
+
+}
+
 
 @end

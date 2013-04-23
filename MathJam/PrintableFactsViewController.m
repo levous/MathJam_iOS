@@ -44,6 +44,7 @@ static int  NUMBER_OF_COLUMNS       = 3,
     [self printContent:fileName];
     
     [self loadEquationLabels];
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 

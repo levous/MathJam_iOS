@@ -269,12 +269,29 @@
     int correctAnswerIdx = arc4random() % choiceCount;
     
     
-    for(idx = 0; idx < choiceCount; ++idx){
+    for(idx = 0; idx < choiceCount;){
+        int sanityCount = 0;
         if(correctAnswerIdx == idx){
             [choices addObject:self.expectedMissingNumberValue];
         }else{
-            [choices addObject:[NSNumber numberWithInt:[self generateAnAnswerChoice]]];
+            NSNumber *answerChoice = [NSNumber numberWithInt:[self generateAnAnswerChoice]];
+            // ensure its not a repeat of the correct answer
+            if ([answerChoice compare:self.expectedMissingNumberValue] == NSOrderedSame) {
+                if(++sanityCount < 100) continue;
+            }
+            
+            BOOL choiceRepeats = NO;
+            for (NSNumber *previousChoice in choices) {
+                if ([answerChoice compare:previousChoice] == NSOrderedSame) {
+                    choiceRepeats = YES;
+                }
+            }
+            
+            if(choiceRepeats && ++sanityCount < 100) continue;
+            
+            [choices addObject:answerChoice];
         }
+        ++idx;
     }
     return [NSArray arrayWithArray:choices];
 }

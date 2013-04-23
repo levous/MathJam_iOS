@@ -87,8 +87,6 @@
     
     if (self.previousCardImage != nil) {
         self.previousCardView = [[UIImageView alloc] initWithImage:self.previousCardImage];
-        self.previousCardView.backgroundColor = [UIColor purpleColor];
-            
         [self.cardContainerView addSubview:self.previousCardView];
     }
     
@@ -96,8 +94,7 @@
 
 - (void)performPreviousCardTransition{
     if (self.previousCardView != nil) {
-    
-    
+            
         [UIView transitionWithView:self.cardContainerView
                           duration:0.2
                            options:UIViewAnimationOptionTransitionFlipFromLeft
@@ -118,12 +115,7 @@
         [card.layer setCornerRadius:8.0f];
         [card.layer setBorderColor:[UIColor whiteColor].CGColor];
         [card.layer setBorderWidth:3.0f];
-        [card.layer setShadowColor:[UIColor blackColor].CGColor];
-        [card.layer setShadowOpacity:0.9];
-        [card.layer setShadowRadius:3.0];
-        [card.layer setShadowOffset:CGSizeMake(0, 1)];
-        
-        
+       
     }
     
     
@@ -172,8 +164,7 @@
     NSNumber *selectedAnswer = [NSNumber numberWithFloat:[button.currentTitle floatValue]];
     if([self.fact verifyAnswer:selectedAnswer]){
         [button setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
-        //[self performSelector:@selector(startCorrectAnswerAnimation) withObject:nil afterDelay:3.0];
-        [self startCorrectAnswerAnimation];
+        [self beginCorrectAnswerAnimation];
         
     }else{
         [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
@@ -213,23 +204,23 @@
 
 #define RADIANS(degrees) ((degrees * M_PI) / 180.0)
 
-- (void)startCorrectAnswerAnimation {
+- (void)beginCorrectAnswerAnimation {
     
-    NSString *missingNumberText = self.missingNumberLabel.text;
     CGSize s = [self.missingNumberLabel.text sizeWithFont:self.missingNumberLabel.font constrainedToSize:CGSizeMake(300.0, MAXFLOAT) lineBreakMode:self.missingNumberLabel.lineBreakMode];
     CGRect labelFrame = self.missingNumberLabel.frame;
     self.missingNumberLabel.frame = CGRectMake(labelFrame.origin.x + (labelFrame.size.width - s.width), labelFrame.origin.y, s.width, s.height);
-        
+    
+    
     [UIView animateWithDuration:0.25
                           delay:0.0
                         options:(UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionCurveEaseIn)
                      animations:^ {
-                        
                          self.missingNumberLabel.transform = CGAffineTransformRotate(CGAffineTransformIdentity, RADIANS(180));
-                        
+                         //self.missingNumberLabel.alpha = 0.5;
                      }
                      completion:^ (BOOL finished){
                          [self completeCorrectAnswerAnimation];
+                         [[self view] layoutIfNeeded];
                      }
      ];
 }
@@ -240,15 +231,19 @@
                           delay:0.0
                         options:(UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionCurveEaseOut)
                      animations:^ {
-                         
+                         self.missingNumberLabel.alpha = 1.0;
                          self.missingNumberLabel.transform = CGAffineTransformIdentity;
+                         [[self view] layoutIfNeeded];
+                         [[self view] setNeedsDisplay];
+                         
                      
                      }
-                     completion:NULL
+                     completion:^ (BOOL finished){
+                         [self performSelector:@selector(nextEquation) withObject:nil afterDelay:0.2];
+                     }
      ];
     
-    [self performSelector:@selector(nextEquation) withObject:nil afterDelay:0.2];
-
+    
     
     
     

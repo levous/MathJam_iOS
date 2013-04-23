@@ -19,4 +19,8 @@
     return window.frame;
 }
 
++ (UIFont *)defaultFont{
+    return [UIFont fontWithName:kRZ_DEFAULT_FONT_NAME size:10.0];
+}
+
 @end
